@@ -51,11 +51,14 @@
     animation: expand-in $main-logo-animation-duration;
     animation-delay: $main-logo-animation-delay;
     animation-fill-mode: both;
-    color: $color-primary;
+    color: $color-highlight;
     line-height: $header-height;
-    font-size: 120%;
-    font-weight: 300;
     padding: 0 $padding;
+
+    h1 {
+        font-size: 200%;
+        font-weight: 300;
+    }
 }
 
 @keyframes expand-in {
@@ -67,7 +70,7 @@
     cursor: pointer;
 
     div {
-        background-color: $color-primary;
+        background-color: $color-highlight;
         height: 5px;
         margin: 6px 0;
         width: 30px;
@@ -110,8 +113,9 @@
 }
 
 .navbar__toggle-btn {
-    background-color: $color-shadow;
+    background-color: $color-black;
     height: $header-height;
+    line-height: $header-height;
     width: $header-height;
 }
 
@@ -131,15 +135,15 @@
         opacity: 0.5;
         width: 0vw;
     }
-    
-    &--open { 
+
+    &--open {
         opacity: 1;
         width: 50vw;
     }
 }
 
 .sidebar-fog {
-    background-color: $color-shadow;
+    background-color: $color-black;
     height: 100vh;
     position: fixed;
     right: 0;
@@ -165,13 +169,13 @@
 
 .sidebar__link-item, .sidebar__toggle-btn {
     background-color: $color-white;
-    color: $color-shadow;
+    color: $color-black;
     height: $header-height;
     padding: 0 $padding;
     transition: $anchor-active-transition-duration;
 
     &:active {
-        background-color: $color-shadow;
+        background-color: $color-black;
         color: $color-primary;
         text-decoration: line-through;
     }
@@ -188,14 +192,13 @@
 .sidebar__toggle-btn {
     cursor: pointer;
     font-size: 150%;
-    font-weight: 300;
     text-align: right;
 }
 
 @media only screen and (min-width: 768px) {
     .navbar__logo-icon:hover {
         background-color: $color-primary;
-        color: $color-shadow;
+        color: $color-black;
     }
 
     .navbar__link-container {
@@ -210,7 +213,7 @@
 
             &:hover {
                 background-color: $color-primary;
-                color: $color-shadow;
+                color: $color-black;
             }
         }
     }
@@ -221,7 +224,7 @@
 
     .sidebar__link-item, .sidebar__toggle-btn {
         &:hover {
-            background-color: $color-shadow;
+            background-color: $color-black;
             color: $color-white;
         }
     }

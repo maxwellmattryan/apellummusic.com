@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { CoreModule } from '@ui/core/core.module';
-import { HomeModule } from '@ui/modules';
 
 @NgModule({
     declarations: [
@@ -18,7 +17,6 @@ import { HomeModule } from '@ui/modules';
         AppRoutingModule,
         BrowserModule,
         CoreModule,
-        HomeModule,
         ServiceWorkerModule.register('ngsw-worker.js', {
             enabled: environment.production,
             registrationStrategy: 'registerImmediately'

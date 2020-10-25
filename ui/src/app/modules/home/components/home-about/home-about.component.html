@@ -1,0 +1,21 @@
+<div class='section about'>
+    <h2 class='about__header'>About</h2>
+
+    <div class='about__line-divider line-divider'></div>
+
+    <div class='about__container'>
+        <div class='about__description-text'>
+            <p class='about__description'>
+                {{ paragraph }}
+            </p>
+        </div>
+
+        <div class='about__portrait-container'>
+            <picture>
+                <source [srcset]='imageUrl' type="image/webp">
+                <source [srcset]="imageUrl.substring(0, imageUrl.length - 4) + 'png'" type="image/png">
+                <img class='about__portrait' alt='Profile image' [src]='imageUrl.substring(0, imageUrl.length - 4) + "png"'>
+            </picture>
+        </div>
+    </div>
+</div>

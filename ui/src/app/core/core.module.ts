@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { FooterComponent, HeaderComponent, IconComponent, LoadingSpinnerComponent } from '@ui/core/components';
 import { CoreRoutingModule } from '@ui/core/core-routing.module';
+import { FooterComponent, HeaderComponent, IconComponent, LoadingSpinnerComponent } from '@ui/core/components';
 
 @NgModule({
     declarations: [
@@ -17,7 +17,9 @@ import { CoreRoutingModule } from '@ui/core/core-routing.module';
     ],
     exports: [
         FooterComponent,
-        HeaderComponent
+        HeaderComponent,
+        IconComponent,
+        LoadingSpinnerComponent
     ],
     providers: []
 })
