@@ -56,7 +56,7 @@
     padding: 0 $padding;
 
     h1 {
-        font-size: 200%;
+        font-size: 240%;
         font-weight: 300;
     }
 }
@@ -138,7 +138,7 @@
 
     &--open {
         opacity: 1;
-        width: 50vw;
+        width: 60vw;
     }
 }
 
@@ -164,13 +164,16 @@
 }
 
 .sidebar__link-conatiner {
-    background-color: $color-white;
+    background-color: $color-highlight;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar__link-item, .sidebar__toggle-btn {
     background-color: $color-highlight;
     color: $color-black;
     height: $header-height;
+    line-height: $header-height;
     padding: 0 $padding;
     transition: $anchor-active-transition-duration;
 
@@ -182,11 +185,17 @@
 }
 
 .sidebar__link-item {
+    align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     font-size: 120%;
+    height: $header-height;
+    justify-content: space-between;
     line-height: $header-height;
-    text-align: right;
+
+    &--icon {
+        height: $header-height;
+    }
 }
 
 .sidebar__toggle-btn {
@@ -226,6 +235,10 @@
         &:hover {
             background-color: $color-black;
             color: $color-highlight;
+        }
+
+        &--icon:hover {
+            fill: $color-highlight;
         }
     }
 }

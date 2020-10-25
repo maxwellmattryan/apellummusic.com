@@ -9,7 +9,8 @@
     <span class='fill-space'></span>
 
     <div class='navbar__link-container'>
-        <a class='link-item navbar__link-item' routerLink='/'>Home</a>
+        <a class='link-item navbar__link-item' routerLink='/'>Spotify</a>
+        <a class='link-item navbar__link-item' routerLink='/'>YouTube</a>
     </div>
 
     <button aria-label='Toggle the sidebar menu' class='navbar__toggle-btn' (click)='toggleSidebar()'>
@@ -37,6 +38,17 @@
     </button>
 
     <div class='sidebar__link-container'>
-        <a class='sidebar__link-item' routerLink='' (click)='toggleSidebar()'>Home</a>
+        <a class='sidebar__link-item' target='_blank' rel='nofollow noopener noreferrer' href='https://open.spotify.com/artist/2MOOYBdY5kjSsiTCugonnJ?si=F4KfVbhPTHql_2T0GBVkBQ' (click)='toggleSidebar()'>
+            <app-icon class='sidebar__link-item--icon' name='Spotify'></app-icon>
+            <span class='sidebar__link-item--text'>
+                Spotify
+            </span>
+        </a>
+        <a class='sidebar__link-item' target='_blank' rel='nofollow noopener noreferrer' href='https://www.youtube.com/channel/UCn5I3P_TfAJOpMxOFpQMHQQ' (click)='toggleSidebar()'>
+            <app-icon class='sidebar__link-item--icon' name='YouTube'></app-icon>
+            <span class='sidebar__link-item--text'>
+                YouTube
+            </span>
+        </a>
     </div>
 </div>
