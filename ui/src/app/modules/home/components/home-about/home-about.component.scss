@@ -1,11 +1,9 @@
 @import 'variables';
 
 .about {
-
 }
 
 .about__header {
-    
 }
 
 .about__container {
@@ -28,23 +26,8 @@
     margin-bottom: $margin;
 }
 
-.about__technology-list {
-    display: grid;
-    grid-column-gap: $margin;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: $margin;
-}
-
-.about__technology-list-item {
-    margin-bottom: $half-margin;
-}
-
-.about__portrait-container {
-}
-
 .about__portrait {
-    border: 1px solid black;
-    box-shadow: 0px 0px 5px $color-shadow;
+    border: 1px solid $color-highlight;
     max-height: 720px;
     max-width: 100%;
     width: auto;
@@ -58,9 +41,5 @@
         .about__description-text {
             margin-right: $margin;
         }
-    }
-
-    .about__technology-list {
-        margin-bottom: 0;
     }
 }

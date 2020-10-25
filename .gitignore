@@ -1,5 +1,8 @@
 # Files related to planning, design, etc.
 design
 
+# Remove deploy bash script from repo
+deploy.sh
+
 # IDE-related cache
 .idea

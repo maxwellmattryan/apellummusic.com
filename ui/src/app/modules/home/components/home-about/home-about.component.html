@@ -6,15 +6,23 @@
     <div class='about__container'>
         <div class='about__description-text'>
             <p class='about__description'>
-                {{ paragraph }}
+                I'm a producer based out of Austin, TX and I love messing with signals in all shapes, rates, and voltages whether that means composing music in the DAW, jamming on hardware, or even writing code to apply digital signal processing algorithms.
+            </p>
+
+            <p class='about__description'>
+                To see some of work, be sure to check out my <a class='text-link about__link' target='_blank' rel='nofollow noopener noreferrer' href='https://open.spotify.com/artist/2MOOYBdY5kjSsiTCugonnJ?si=F4KfVbhPTHql_2T0GBVkBQ'>Spotify profile</a> or my <a class='text-link about__link' target='_blank' rel='nofollow noopener noreferrer' href='https://www.youtube.com/channel/UCn5I3P_TfAJOpMxOFpQMHQQ'>YouTube channel</a>. You can also feel free to <a class='text-link about__link--email' [href]='"mailto:" + constructEmail()'>email</a> me as well - I am always down to chat!
+            </p>
+
+            <p class='about__description'>
+                Thanks for checking out my website. Cheers!
             </p>
         </div>
 
         <div class='about__portrait-container'>
             <picture>
-                <source [srcset]='imageUrl' type="image/webp">
-                <source [srcset]="imageUrl.substring(0, imageUrl.length - 4) + 'png'" type="image/png">
-                <img class='about__portrait' alt='Profile image' [src]='imageUrl.substring(0, imageUrl.length - 4) + "png"'>
+                <source srcset='assets/images/portrait-01.webp' type="image/webp">
+                <source srcset='assets/images/portrait-01.png' type="image/png">
+                <img class='about__portrait' alt='Profile image' src='assets/images/portrait-01.png'>
             </picture>
         </div>
     </div>
