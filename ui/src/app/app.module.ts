@@ -7,6 +7,7 @@ import { environment } from '@ui/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { CoreModule } from '@ui/core/core.module';
 import { HomeModule } from '@ui/modules';
 
 @NgModule({
@@ -14,8 +15,9 @@ import { HomeModule } from '@ui/modules';
         AppComponent
     ],
     imports: [
-        BrowserModule,
         AppRoutingModule,
+        BrowserModule,
+        CoreModule,
         HomeModule,
         ServiceWorkerModule.register('ngsw-worker.js', {
             enabled: environment.production,
