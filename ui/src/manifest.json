@@ -2,7 +2,7 @@
     "name": "ui",
     "short_name": "ui",
     "theme_color": "#AEC6F1",
-    "background_color": "#4B6185",
+    "background_color": "#141421",
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
