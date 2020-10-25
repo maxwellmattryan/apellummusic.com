@@ -24,6 +24,7 @@ export class HomeLandingComponent implements OnInit, OnDestroy {
     @Input() landing: string = 'I am a producer based out of Austin, TX.';
 
     public cycleTime: number = 3200;
+
     public words: string[] = [
         'Artist',
         'Producer',

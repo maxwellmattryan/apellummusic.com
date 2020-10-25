@@ -3,6 +3,14 @@
 .text-link {
     color: $color-primary;
     display: inline-block;
+
+  &--green {
+    color: $color-go-light;
+  }
+
+  &--red {
+    color: $color-warn-light;
+  }
 }
 
 @media only screen and (min-width: 768px) {
