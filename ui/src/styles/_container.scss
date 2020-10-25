@@ -1,0 +1,7 @@
+@import 'variables';
+
+.container {
+    display: grid;
+    grid-gap: $margin;
+    grid-template-columns: auto;
+}

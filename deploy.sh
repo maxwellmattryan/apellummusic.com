@@ -2,15 +2,8 @@
 
 start_time=$(date +%s)
 
-for i in "$@"; do
-    case $i in
-    -u|--ui)
-        git subtree push --prefix ui heroku master
-        echo -e "\nSUCCESS: Pushed UI source code to Heroku\n"
-        shift
-        ;;
-    esac
-done
+git subtree push --prefix ui heroku master
+echo -e "\nSUCCESS: Pushed UI source code to Heroku\n"
 
 convertsecs() {
     ((m = (${1} % 3600) / 60))

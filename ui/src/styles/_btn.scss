@@ -1,0 +1,48 @@
+@import 'variables';
+
+.btn {
+    background-color: $color-shadow;
+    border: 2px solid $color-shadow;
+    border-radius: 1000px;
+    color: $color-highlight;
+    cursor: pointer;
+    display: inline-block;
+    height: $btn-height;
+    margin-bottom: $quarter-margin;
+    text-align: center;
+    transform: perspective(1px) translateZ(0);
+    transition: transform $btn-active-transition-duration ease;
+    -webkit-transform: perspective(1px) translateZ(0);
+    -webkit-transition: transform $btn-active-transition-duration ease;
+
+    &--active, &:active {
+        background-color: $color-highlight;
+        color: $color-shadow;
+    }
+
+    &:active {
+        transform: scale($btn-active-transition-scale);
+        -webkit-transform: scale($btn-active-transition-scale);
+    }
+
+    &--inactive {
+        border: 2px solid $color-highlight;
+        color: $color-highlight;
+        cursor: auto;
+        pointer-events: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .btn {
+        &:hover {
+            background-color: $color-highlight;
+            color: $color-shadow;
+        }
+
+        &--inactive:hover {
+            background-color: $color-shadow;
+            color: $color-highlight;
+        }
+    }
+}

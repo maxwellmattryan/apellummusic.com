@@ -1,0 +1,21 @@
+@import 'variables';
+
+:host {
+    display: inline-block;
+    fill: $color-highlight;
+    height: $icon-height;
+    width: $icon-height;
+
+    svg {
+        all: inherit;
+        display: inline-block;
+
+        &:active {
+            fill: $color-highlight;
+        }
+
+        &--active, &--inactive {
+            fill: $color-highlight;
+        }
+    }
+}
