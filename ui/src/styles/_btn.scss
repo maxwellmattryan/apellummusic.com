@@ -40,18 +40,8 @@
             color: $color-shadow;
         }
 
-        &--warn:hover {
-            background-color: $color-warn;
-            color: $color-shadow;
-        }
-
-        &--go:hover {
-            background-color: $color-go;
-            color: $color-shadow;
-        }
-
         &--inactive:hover {
-            background-color: $color-dark;
+            background-color: $color-shadow;
             color: $color-primary;
         }
     }
