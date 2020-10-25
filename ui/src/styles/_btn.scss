@@ -2,9 +2,9 @@
 
 .btn {
     background-color: $color-shadow;
-    border: 2px solid $color-primary;
+    border: 2px solid $color-shadow;
     border-radius: 1000px;
-    color: $color-primary;
+    color: $color-highlight;
     cursor: pointer;
     display: inline-block;
     height: $btn-height;
@@ -16,7 +16,7 @@
     -webkit-transition: transform $btn-active-transition-duration ease;
 
     &--active, &:active {
-        background-color: $color-primary;
+        background-color: $color-highlight;
         color: $color-shadow;
     }
 
@@ -36,13 +36,13 @@
 @media only screen and (min-width: 768px) {
     .btn {
         &:hover {
-            background-color: $color-primary;
+            background-color: $color-highlight;
             color: $color-shadow;
         }
 
         &--inactive:hover {
             background-color: $color-shadow;
-            color: $color-primary;
+            color: $color-highlight;
         }
     }
 }

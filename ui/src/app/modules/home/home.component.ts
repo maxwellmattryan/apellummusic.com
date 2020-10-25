@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
-    isLoaded: boolean = false;
+    isLoaded: boolean = true;
 
     constructor() { }
 
