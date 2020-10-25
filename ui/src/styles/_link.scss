@@ -1,22 +1,26 @@
 @import 'variables';
 
 .text-link {
-    color: $color-primary;
-    display: inline-block;
+  color: $color-blue-light;
+  display: inline-block;
 
   &--green {
-    color: $color-go-light;
+    color: $color-green-light;
   }
 
   &--red {
-    color: $color-warn-light;
+    color: $color-red-light;
+  }
+
+  &--orange {
+    color: $color-orange-light;
   }
 }
 
 @media only screen and (min-width: 768px) {
-    .text-link {
-        &:hover {
-            text-decoration: underline;
-        }
+  .text-link {
+    &:hover {
+      text-decoration: underline;
     }
+  }
 }

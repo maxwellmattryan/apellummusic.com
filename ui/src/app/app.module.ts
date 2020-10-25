@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
@@ -15,6 +16,7 @@ import { CoreModule } from '@ui/core/core.module';
     ],
     imports: [
         AppRoutingModule,
+        BrowserAnimationsModule,
         BrowserModule,
         CoreModule,
         ServiceWorkerModule.register('ngsw-worker.js', {
