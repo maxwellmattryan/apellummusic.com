@@ -37,17 +37,17 @@
     .btn {
         &:hover {
             background-color: $color-primary;
-            color: $color-dark;
+            color: $color-shadow;
         }
 
         &--warn:hover {
             background-color: $color-warn;
-            color: $color-dark;
+            color: $color-shadow;
         }
 
         &--go:hover {
             background-color: $color-go;
-            color: $color-dark;
+            color: $color-shadow;
         }
 
         &--inactive:hover {
