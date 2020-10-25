@@ -9,4 +9,8 @@ export class HomeAboutComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void { }
+
+    constructEmail(name: string = 'apellummusic', domain: string = 'gmail'): string {
+        return `${name}@${domain}.com`;
+    }
 }
