@@ -6,7 +6,31 @@
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  height: calc(100vh - 1.0 * #{$header-height} - 1.5 * #{$footer-height})
+  height: calc(100vh - 1.0 * #{$header-height} - 1.5 * #{$footer-height});
+}
+
+.landing__image {
+  animation: swapImages 3200ms infinite;
+  animation-delay: 400ms;
+  animation-timing-function: ease-in-out;
+  -webkit-animation: swapImages 3200ms infinite;
+  -webkit-animation-delay: 400ms;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation: swapImages 3200ms infinite;
+  -moz-animation-delay: 400ms;
+  -moz-animation-timing-function: ease-in-out;
+  -o-animation: swapImages 3200ms infinite;
+  -o-animation-delay: 400ms;
+  -o-animation-timing-function: ease-in-out;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: calc(100vh - 1.0 * #{$header-height} - 1.5 * #{$footer-height});
+  max-height: calc(100vh - 1.0 * #{$header-height} - 1.5 * #{$footer-height});
+  max-width: 1060px;
+  opacity: 0.0;
+  position: absolute;
+  width: calc(100vw - 2.0 * #{$padding});
 }
 
 .landing__header {
@@ -33,13 +57,13 @@
   }
 
   &--emphasis {
-    animation: swap 3200ms infinite;
+    animation: swapWords 3200ms infinite;
     animation-timing-function: ease-in-out;
-    -webkit-animation: swap 3200ms infinite;
+    -webkit-animation: swapWords 3200ms infinite;
     -webkit-animation-timing-function: ease-in-out;
-    -moz-animation: swap 3200ms infinite;
+    -moz-animation: swapWords 3200ms infinite;
     -moz-animation-timing-function: ease-in-out;
-    -o-animation: swap 3200ms infinite;
+    -o-animation: swapWords 3200ms infinite;
     -o-animation-timing-function: ease-in-out;
     font-style: italic;
     font-weight: 500;
@@ -47,7 +71,22 @@
   }
 }
 
-@keyframes swap {
+@keyframes swapImages {
+  0% {
+    opacity: 0.0;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  80% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.0;
+  }
+}
+
+@keyframes swapWords {
   0% {
     opacity: 0.0;
   }

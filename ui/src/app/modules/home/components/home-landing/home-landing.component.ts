@@ -1,9 +1,19 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { interval, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { animate, animation, keyframes, style, transition, trigger, useAnimation } from '@angular/animations';
+import { animate, style, transition, trigger } from '@angular/animations';
 
-const cycleAnimation = trigger('cycle', [
+const swapImages = trigger('swapImages', [
+    transition(':enter', [
+        style({ opacity: 0.0 }),
+        animate('600ms ease-out', style({ opacity: 1.0 }))
+    ]),
+    transition(':leave', [
+        animate('200ms', style({ opacity: 0.0 }))
+    ])
+]);
+
+const swapWords = trigger('swapWords', [
     transition(':enter', [
         style({ opacity: 0.0 }),
         animate('600ms ease-out', style({ opacity: 1.0 }))
@@ -17,7 +27,10 @@ const cycleAnimation = trigger('cycle', [
     selector: 'app-home-landing',
     templateUrl: './home-landing.component.html',
     styleUrls: ['./home-landing.component.scss'],
-    animations: [cycleAnimation]
+    animations: [
+        swapImages,
+        swapWords
+    ]
 })
 export class HomeLandingComponent implements OnInit, OnDestroy {
     @Input() tagline: string = 'I make techno music.';
