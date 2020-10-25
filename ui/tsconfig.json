@@ -11,14 +11,20 @@
         "moduleResolution": "node",
         "importHelpers": true,
         "target": "es6",
-        "types": ["node"],
+        "types": [
+            "node"
+        ],
         "lib": [
             "es2018",
             "dom"
         ],
         "paths": {
-            "@ui/*": ["src/app/*"],
-            "@ui/environments/*": ["src/environments/*"]
+            "@ui/*": [
+                "src/app/*"
+            ],
+            "@ui/environments/*": [
+                "src/environments/*"
+            ]
         }
     },
     "angularCompilerOptions": {
