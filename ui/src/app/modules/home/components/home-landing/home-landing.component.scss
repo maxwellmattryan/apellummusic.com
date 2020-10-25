@@ -11,16 +11,12 @@
 
 .landing__image {
   animation: swapImages 3200ms infinite;
-  animation-delay: 400ms;
   animation-timing-function: ease-in-out;
   -webkit-animation: swapImages 3200ms infinite;
-  -webkit-animation-delay: 400ms;
   -webkit-animation-timing-function: ease-in-out;
   -moz-animation: swapImages 3200ms infinite;
-  -moz-animation-delay: 400ms;
   -moz-animation-timing-function: ease-in-out;
   -o-animation: swapImages 3200ms infinite;
-  -o-animation-delay: 400ms;
   -o-animation-timing-function: ease-in-out;
   background-repeat: no-repeat;
   background-attachment: fixed;
