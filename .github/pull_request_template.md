@@ -1,5 +1,8 @@
 These keywords are for differentiating between task types and should be used in the PR titles and branch names, like `prefix/branch_name`.
 
+- `build`
+  - dist bundle compiled from new changes is pushed
+  - usually automated in bash script
 - `chore`
   - simple grunt tasks (updating library, dependency, language spec, etc.)
   - no production code change
