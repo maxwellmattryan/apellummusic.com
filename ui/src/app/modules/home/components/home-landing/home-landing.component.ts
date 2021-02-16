@@ -6,10 +6,10 @@ import { animate, style, transition, trigger } from '@angular/animations';
 const swapImages = trigger('swapImages', [
     transition(':enter', [
         style({ opacity: 0.0 }),
-        animate('600ms ease-out', style({ opacity: 1.0 }))
+        animate('600ms ease-out', style({ opacity: 0.1 }))
     ]),
     transition(':leave', [
-        animate('200ms', style({ opacity: 0.0 }))
+        animate('0ms', style({ opacity: 0.0 }))
     ])
 ]);
 
