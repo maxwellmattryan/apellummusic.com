@@ -16,13 +16,13 @@ DOMAIN=apellum.com
 GCP_HOSTNAME=gcr.io
 GCP_PLATFORM=managed
 GCP_REGION=us-central1
-GCP_PROJECT_ID=apellum-304801
+GCP_PROJECT_ID=apellum
 GCP_UI_SERVICE=apellum-ui
 GCP_UI_IMAGE_PATH="$GCP_HOSTNAME/$GCP_PROJECT_ID/$UI_IMAGE"
 
 cd ui/ || echo -e "ERROR: UI folder does not exist\n" | exit
 
-echo -e "Starting API build and deployment...\n"
+echo -e "Starting UI build and deployment...\n"
 
 docker build . --tag "$UI_IMAGE"
 echo -e "\n(1/5) SUCCESS: Built UI image on local machine\n"
