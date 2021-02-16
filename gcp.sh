@@ -2,7 +2,7 @@
 
 BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 if [ "$BRANCH" != "main" ]; then
-    echo -e "App MUST be deployed from the main branch!\n\nAborting script"
+    echo -e "Oops! Unable to deploy from \"$BRANCH\". To switch to the correct branch, use:\n\n\tgit checkout main"
     exit 1;
 fi
 
@@ -20,9 +20,15 @@ GCP_PROJECT_ID=apellum
 GCP_UI_SERVICE=apellum-ui
 GCP_UI_IMAGE_PATH="$GCP_HOSTNAME/$GCP_PROJECT_ID/$UI_IMAGE"
 
+CURRENT_GCP_PROJECT=$(gcloud config get-value project)
+if [ "$CURRENT_GCP_PROJECT" != "$GCP_PROJECT_ID" ]; then
+    echo -e "Oops! The Cloud SDK is configured with a different project. To set the correct one, use:\n\n\tgcloud config set project $GCP_PROJECT_ID"
+    exit 1;
+fi
+
 cd ui/ || echo -e "ERROR: UI folder does not exist\n" | exit
 
-echo -e "Starting UI build and deployment...\n"
+echo -e "Project is correctly configured. Starting UI build and deployment...\n"
 
 docker build . --tag "$UI_IMAGE"
 echo -e "\n(1/5) SUCCESS: Built UI image on local machine\n"
