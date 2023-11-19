@@ -8,4 +8,6 @@
 	})
 </script>
 
-<Hello />
+<div class="w-full h-full">
+	<Hello />
+</div>
