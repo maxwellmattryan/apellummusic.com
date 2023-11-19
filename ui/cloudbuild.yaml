@@ -18,10 +18,11 @@ steps:
       - 'run'
       - 'deploy'
       - 'apellum-ui'
-      - '--image'
-      - 'gcr.io/$PROJECT_ID/apellum-ui:$COMMIT_SHA'
-      - '--region'
-      - 'us-central1'
+      - '--image=gcr.io/$PROJECT_ID/apellum-ui:$COMMIT_SHA'
+      - '--region=us-central1'
+      - '--cpu=1'
+      - '--memory=512Mi'
+      - '--allow-unauthenticated'
 images:
   - 'gcr.io/$PROJECT_ID/apellum-ui:$COMMIT_SHA'
 timeout: 300s
