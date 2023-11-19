@@ -14,6 +14,8 @@ steps:
   # Deploy
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
+    env:
+      - 'TEST=123'
     args:
       - 'run'
       - 'deploy'
@@ -23,6 +25,7 @@ steps:
       - '--cpu=1'
       - '--memory=512Mi'
       - '--allow-unauthenticated'
+      - '--set-env-vars'
 images:
   - 'gcr.io/$PROJECT_ID/apellum-ui:$COMMIT_SHA'
 timeout: 300s
