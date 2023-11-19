@@ -10,7 +10,6 @@ RUN yarn install
 COPY . .
 
 RUN yarn build
-RUN echo $(ls /usr/src/app)
 
 ## DEPLOY ##
 FROM node:18.18-alpine
@@ -23,7 +22,6 @@ RUN yarn install
 
 COPY . .
 
-RUN echo $(ls -a /usr/src/app)
 COPY --from=builder /usr/src/app/.svelte-kit/output ./
 
 CMD ["yarn", "start"]
