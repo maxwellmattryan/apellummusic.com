@@ -1,6 +1,6 @@
 steps:
   - name: gcr.io/cloud-builders/docker
-    id: UI Build
+    id: 'ui-build'
     args:
       - build
       - '--no-cache'
