@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
-	import { Hello } from '@components'
 	import { hello } from '@lib'
 
 	onMount(() => {
@@ -8,6 +7,8 @@
 	})
 </script>
 
-<div class="w-full h-full">
-	<Hello />
-</div>
+<home-page class="w-full h-full">
+	<div class="w-full h-full flex justify-center items-center">
+		<p>Hello!</p>
+	</div>
+</home-page>
