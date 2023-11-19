@@ -1,21 +1,11 @@
-## Type
-
-- [ ] _chore_ - simple, grunt tasks like updating a library
-- [ ] _feature_ - implementation of a new functionality, behavior, design, etc.
-- [ ] _fix_ - fixing bugs or other things
-- [ ] _refactor_ - improving existing code without changing external behavior
-- [ ] _sandbox_ - prototyping, designing, or testing new things
-- [ ] _spike_ - massive codebase changes, usually merging develop into main
-- [ ] _test_ - things related to tests
-
 ## Summary
 
-Provide an explanation for the pull request along with any important or cautionary information. 
+> Please summarize your changes, describing **what** they are and **why** they were made.
 
-[Trello Card](https://trello.com/c/card-id/card-name)
+...
 
-## Notes
+## Testing
 
-- [Note XXX]
-- [Note YYY]
-- [Note ZZZ]
+> Please describe the specific instructions, configurations, and/or test cases necessary to **test and verify** that your changes work as intended.
+
+...
