@@ -7,14 +7,24 @@ log_exit() {
   exit 1
 }
 
-NEW_VERSION="${1?Error: Requires a new version}"
-CURRENT_VERSION=$(node -p "require('./ui/package.json').version")
+NEW_VERSION="${1?[Error] Requires a new version}"
+CURRENT_VERSION=$(node -p "require('./ui/package.json').version" || log_exit "\n[Error] Unable get current app version")
 
-json -I -f ./ui/package.json -e "this.version=\"$NEW_VERSION\""
+overwrite_package_version() {
+  json -I -f ./ui/package.json -e "this.version=\"$NEW_VERSION\""
+}
 
-git add ./ui/package.json
-git commit -m "Increment version to \`$NEW_VERSION\`"
-git push
+commit_version_increment() {
+  git add ./ui/package.json
+  git commit -m "Increment version to \`$NEW_VERSION\`"
+  git push
+}
 
-git tag "v$NEW_VERSION"
-git push origin "v$NEW_VERSION"
+tag_new_version() {
+  git tag "v$NEW_VERSION"
+  git push origin "v$NEW_VERSION"
+}
+
+overwrite_package_version || log_exit "\n[Error] Unable to overwrite current version"
+commit_version_increment || log_exit "\n[Error] Unable to commit version increment"
+tag_new_version || log_exit "\n[Error] Unable to tag new version"
