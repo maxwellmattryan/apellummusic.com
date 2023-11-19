@@ -1,14 +1,14 @@
 #!/bin/bash
 
 BRANCH="$(git rev-parse --abbrev-ref HEAD)"
-if [ "$BRANCH" != "main" ]; then
-    echo -e "Oops! Unable to deploy from \"$BRANCH\". To switch to the correct branch, use:\n\n\tgit checkout main"
+if [ "$BRANCH" != "develop" ]; then
+    echo -e "Oops! Unable to deploy from \"$BRANCH\". To switch to the correct branch, use:\n\n\tgit checkout develop"
     exit 1;
 fi
 
 start_time=$(date +%s)
 
-NODE_VERSION=12.18-alpine
+NODE_VERSION=18.18-alpine
 
 UI_IMAGE=apellum-ui
 DOMAIN=apellum.com
