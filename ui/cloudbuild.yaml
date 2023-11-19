@@ -1,26 +1,26 @@
 steps:
-  # Build
-  - name: 'gcr.io/cloud-builders/docker'
-    id: 'ui-build'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/apellum-ui:$COMMIT_SHA, '.']
-  # Push
-  - name: 'gcr.io/cloud-builders/docker'
-    id: 'ui-push'
-    args: ['push', 'gcr.io/$PROJECT_ID/apellum-ui:$COMMIT_SHA']
-  # Deploy
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    id: 'ui-deploy'
-    entrypoint: gcloud
-    args:
-      - 'run'
-      - 'deploy'
-      - 'apellum-ui'
-      - '--image'
-      - 'gcr.io/$PROJECT_ID/apellum-ui:$COMMIT_SHA'
-      - '--region'
-      - 'us-central1'
-images:
+# Build
+- name: 'gcr.io/cloud-builders/docker'
+  id: 'ui-build'
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/apellum-ui:$COMMIT_SHA, '.' ]
+# Push
+- name: 'gcr.io/cloud-builders/docker'
+  id: 'ui-push'
+  args: [ 'push', 'gcr.io/$PROJECT_ID/apellum-ui:$COMMIT_SHA' ]
+# Deploy
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  id: 'ui-deploy'
+  entrypoint: gcloud
+  args:
+  - 'run'
+  - 'deploy'
+  - 'apellum-ui'
+  - '--image'
   - 'gcr.io/$PROJECT_ID/apellum-ui:$COMMIT_SHA'
+  - '--region'
+  - 'us-central1'
+images:
+- 'gcr.io/$PROJECT_ID/apellum-ui:$COMMIT_SHA'
 timeout: 300s
 tags:
-  - apellum-ui
+- apellum-ui
