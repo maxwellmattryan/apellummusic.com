@@ -1,29 +1,27 @@
-## BUILD STAGE ##
-FROM node:12.18-alpine AS builder
+## BUILD ##
+FROM node:18.18-alpine AS builder
 
 WORKDIR /usr/src/app
-
-COPY package*.json ./
+COPY package.json ../yarn.lock ./
 
 RUN apk add git
-RUN npm install
+RUN yarn install
 
 COPY . .
 
-RUN npm run build:prod
+RUN yarn build
 
-## PRODUCTION STAGE ##
-FROM node:12.18-alpine AS prod
+## DEPLOY ##
+FROM node:18.18-alpine
 
 WORKDIR /usr/src/app
-
-COPY package*.json ./
+COPY package.json ../yarn.lock ./
 
 RUN apk add git
-RUN npm install
+RUN yarn install
 
 COPY . .
 
-COPY --from=builder /usr/src/app/dist ./dist
+COPY --from=builder /usr/src/app/build .
 
-CMD ["npm", "run", "start:prod"]
+CMD ["yarn", "start"]
