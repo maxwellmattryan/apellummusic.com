@@ -27,4 +27,4 @@ tag_new_version() {
 
 overwrite_package_version || log_exit "\n[Error] Unable to overwrite current version"
 commit_version_increment || log_exit "\n[Error] Unable to commit version increment"
-tag_new_version || log_exit "\n[Error] Unable to tag new version"
+#tag_new_version || log_exit "\n[Error] Unable to tag new version"
