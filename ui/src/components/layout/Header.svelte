@@ -1,4 +1,4 @@
-<header class="flex flex-row justify-between">
+<header class="flex flex-row justify-between basis-0 grow">
 	<nav class="flex flex-col">
 		<a href="/">Home</a>
 		<a href="/">About</a>

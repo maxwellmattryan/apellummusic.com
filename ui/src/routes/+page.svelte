@@ -10,3 +10,9 @@
 		{/if}
 	</div>
 </home-page>
+
+<style lang="postcss">
+	home-page {
+		background-image: url('./photo_press_home.jpg');
+	}
+</style>
