@@ -1,3 +1,2 @@
-export function hello(): void {
-	console.log('Hello, world!')
-}
+export * from './stores'
+export * from './utils'
