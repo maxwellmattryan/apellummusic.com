@@ -8,7 +8,7 @@
 			case AppRoute.Error:
 			case AppRoute.About:
 			case AppRoute.PhotosAndVideos:
-				return '#eeeff9'
+				return '#eef2ff'
 			case AppRoute.Home:
 			default:
 				return 'slate-950'
@@ -24,7 +24,6 @@
 
 <style lang="postcss">
 	layout {
-		@apply bg-slate-950;
 		@apply text-indigo-50;
 	}
 </style>

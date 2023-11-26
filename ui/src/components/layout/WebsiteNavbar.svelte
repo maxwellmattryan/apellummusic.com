@@ -69,7 +69,7 @@
 
 <style lang="postcss">
 	website-navbar-link {
-		@apply text-[#eeeff9];
+		@apply text-indigo-50;
 		@apply opacity-60;
 		@apply transition-opacity;
 
@@ -77,7 +77,6 @@
 
 		&:hover,
 		&.selected {
-			@apply text-[#fafafd];
 			@apply opacity-100;
 		}
 

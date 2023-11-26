@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte'
 	import { AppRoute, setAppRoute } from '@lib/app'
 
-	const backgroundImageUrl = `${base}/images/photo_press_home.jpg`
+	const backgroundImageUrl = `${base}/images/press_home.jpg`
 
 	onMount(() => {
 		setAppRoute(AppRoute.Home)
@@ -18,7 +18,7 @@
 			<img src="{base}/logos/white.svg" alt="Apellum logo" />
 			<!-- ghost header -->
 			<h1 class="invisible h-0">Apellum</h1>
-			<h2 class="mt-4 italic text-right text-[#eeeff9] opacity-90">Techno producer & DJ</h2>
+			<h2 class="mt-4 italic text-right">Techno producer & DJ</h2>
 		</div>
 	</home-page-left>
 	<home-page-right class="w-1/2 h-full" style="--bg-image-url: url({backgroundImageUrl})">
@@ -27,6 +27,7 @@
 
 <style lang="postcss">
 	home-page-right {
+		@apply text-indigo-50;
 		background-image: var(--bg-image-url);
 		@apply bg-cover bg-center;
 	}
