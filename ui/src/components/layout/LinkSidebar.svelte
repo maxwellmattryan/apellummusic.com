@@ -19,10 +19,10 @@
 		{ url: 'https://facebook.com/apellummusic', icon: Facebook },
 		{
 			url: 'https://open.spotify.com/artist/2MOOYBdY5kjSsiTCugonnJ?si=GspHlrStQEiTmjuf3aIZqA',
-			icon: Spotify
+			icon: Spotify,
 		},
 		{ url: 'https://soundcloud.com/apellum', icon: SoundCloud },
-		{ url: 'https://music.apple.com/us/artist/apellum/1535711525', icon: AppleMusic }
+		{ url: 'https://music.apple.com/us/artist/apellum/1535711525', icon: AppleMusic },
 	]
 </script>
 
