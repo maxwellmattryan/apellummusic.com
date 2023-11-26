@@ -13,7 +13,6 @@
 	import Spotify from '$lib/assets/icons/spotify.svg?raw'
 
 	export let linkColor: string | undefined = undefined
-	console.log('link color: ', linkColor)
 
 	const LINKS: ILink[] = [
 		{ url: 'https://instagram.com/apellum', icon: Instagram },

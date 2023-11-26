@@ -1,16 +1,9 @@
 <script lang="ts">
-	import { onDestroy, onMount } from 'svelte'
-	import { AppRoute, getAppRoute, setAppRoute } from '@lib/app'
-
-	let previousAppRoute: AppRoute | undefined = undefined
+	import { onMount } from 'svelte'
+	import { AppRoute, setAppRoute } from '@lib/app'
 
 	onMount(() => {
-		previousAppRoute = getAppRoute()
 		setAppRoute(AppRoute.Error)
-	})
-
-	onDestroy(() => {
-		setAppRoute(previousAppRoute)
 	})
 </script>
 
