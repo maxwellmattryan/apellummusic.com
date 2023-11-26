@@ -1,6 +1,7 @@
 export interface IFeatures {
 	home: IFeatureFlag
 	about: IFeatureFlag
+	music: IFeatureFlag
 	photosAndVideos: IFeatureFlag
 	events: IFeatureFlag
 }
@@ -15,6 +16,9 @@ export const FEATURES: IFeatures = {
 		enabled: true
 	},
 	about: {
+		enabled: true
+	},
+	music: {
 		enabled: true
 	},
 	photosAndVideos: {

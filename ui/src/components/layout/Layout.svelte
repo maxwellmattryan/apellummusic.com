@@ -1,30 +1,29 @@
 <script lang="ts">
-	import { LinkSidebar, WebsiteNavbar } from '@components'
+	import { Footer, Header } from '@components'
 	import { AppRoute, appRoute } from '@lib/app'
 
-	$: linkColor = getLinkColor($appRoute)
-	function getLinkColor(route: AppRoute): string {
-		switch (route) {
-			case AppRoute.Error:
-			case AppRoute.About:
-			case AppRoute.PhotosAndVideos:
-				return '#eeeff9'
-			case AppRoute.Home:
-			default:
-				return 'slate-950'
-		}
-	}
+	$: isHomeRoute = $appRoute === AppRoute.Home
+	$: isErrorRoute = $appRoute === AppRoute.Error
 </script>
 
-<layout class="w-full h-screen flex flex-col justify-center items-center">
-	<WebsiteNavbar />
-	<LinkSidebar {linkColor} />
-	<slot />
+<layout class="w-full h-screen flex flex-col items-center">
+	<Header />
+	<div
+		class="w-full h-{isHomeRoute || isErrorRoute || $appRoute === AppRoute.Music
+			? 'full'
+			: 'auto'} {isHomeRoute ? '' : 'pt-[20vh] px-[15vw]'}"
+	>
+		<slot />
+	</div>
+	{#if !isHomeRoute}
+		<div class="mt-[20vh]">
+			<Footer />
+		</div>
+	{/if}
 </layout>
 
 <style lang="postcss">
 	layout {
-		@apply bg-slate-950;
 		@apply text-indigo-50;
 	}
 </style>

@@ -13,6 +13,8 @@
 				return ''
 			case AppRoute.About:
 				return 'about'
+			case AppRoute.Music:
+				return 'music'
 			case AppRoute.PhotosAndVideos:
 				return 'media'
 			case AppRoute.Events:
@@ -27,6 +29,8 @@
 				return 'Home'
 			case AppRoute.About:
 				return 'About'
+			case AppRoute.Music:
+				return 'Music'
 			case AppRoute.PhotosAndVideos:
 				return 'Photos & Videos'
 			case AppRoute.Events:
@@ -40,6 +44,7 @@
 				setAppRoute(route)
 				break
 			case AppRoute.About:
+			case AppRoute.Music:
 			case AppRoute.PhotosAndVideos:
 			case AppRoute.Events:
 			default:
@@ -48,7 +53,7 @@
 	}
 </script>
 
-<website-navbar class="absolute top-[8vh] left-4">
+<website-navbar class="w-full pl-4 absolute top-[8vh]">
 	<nav class="flex flex-col">
 		{#each getAppRoutes() as route}
 			{@const selected = route === $appRoute}
@@ -69,7 +74,7 @@
 
 <style lang="postcss">
 	website-navbar-link {
-		@apply text-[#eeeff9];
+		@apply text-indigo-50;
 		@apply opacity-60;
 		@apply transition-opacity;
 
@@ -77,7 +82,6 @@
 
 		&:hover,
 		&.selected {
-			@apply text-[#fafafd];
 			@apply opacity-100;
 		}
 
@@ -91,7 +95,7 @@
 			@apply border-slate-950;
 		}
 		& a {
-			@apply ml-2;
+			@apply ml-4;
 		}
 	}
 </style>
