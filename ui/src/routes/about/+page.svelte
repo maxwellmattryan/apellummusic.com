@@ -11,9 +11,9 @@
 <svelte:head>
 	<title>About | Apellum</title>
 </svelte:head>
-<about-page class="w-full h-full pt-[20vh] px-[15vw] flex flex-col items-center">
+<about-page class="w-full h-full flex flex-col items-center">
 	<div class="about-pair flex flex-row justify-center items-center">
-		<img class="h-[70vh] px-[4vw]" src="{base}/images/press_about-01.jpg" alt="Press 1" />
+		<img class="w-[35vw] px-[4vw]" src="{base}/images/press_about-01.jpg" alt="Press 1" />
 		<about-page-paragraph class="px-[1vw] leading-8 opacity-90">
 			<p>
 				In the ever-evolving landscape of electronic music, Apellum emerges as an up-and-coming
@@ -34,10 +34,10 @@
 				many others.
 			</p>
 		</about-page-paragraph>
-		<img class="h-[70vh] px-[4vw]" src="{base}/images/press_about-02.jpg" alt="Press 2" />
+		<img class="w-[35vw] px-[4vw]" src="{base}/images/press_about-02.jpg" alt="Press 2" />
 	</div>
 	<div class="about-pair flex flex-row justify-center items-center">
-		<img class="h-[70vh] px-[4vw]" src="{base}/images/press_about-03.jpg" alt="Press 3" />
+		<img class="w-[35vw] px-[4vw]" src="{base}/images/press_about-03.jpg" alt="Press 3" />
 		<about-page-paragraph class="px-[1vw] leading-8 opacity-90">
 			<p>
 				Apellum’s studio has been a realm of exploration and creativity, where new sounds and music

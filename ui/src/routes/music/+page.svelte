@@ -10,4 +10,6 @@
 <svelte:head>
 	<title>Music | Apellum</title>
 </svelte:head>
-<p>Coming soon ...</p>
+<music-page class="w-full h-full flex justify-center items-center">
+	<p>Coming soon ...</p>
+</music-page>

@@ -1,9 +1,3 @@
-<footer class="flex flex-row justify-around">
-	<footer-links>
-		<a href="/">Instagram</a>
-		<a href="/">Facebook</a>
-	</footer-links>
-	<footer-copyright>
-		<p>&copy; Apellum 2023</p>
-	</footer-copyright>
+<footer class="py-[1rem] opacity-80">
+	<p class="text-[0.5rem]">Copyright &copy; 2023 Apellum</p>
 </footer>
