@@ -1,8 +1,7 @@
 <script lang="ts">
-	import '../app.css'
 	import { Layout, WebsiteRoute } from '@components'
 </script>
 
-<Layout route={WebsiteRoute.Home}>
+<Layout route={WebsiteRoute.About}>
 	<slot />
 </Layout>
