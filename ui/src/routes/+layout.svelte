@@ -1,12 +1,12 @@
-<script>
+<script lang="ts">
 	import '../app.css'
-	import { Footer, Header } from '@components'
+	import { LinkSidebar, WebsiteNavbar, WebsiteRoute } from '@components'
 </script>
 
 <home-layout class="w-full h-screen flex flex-col justify-between">
-	<Header />
+	<WebsiteNavbar route={WebsiteRoute.Home} />
+	<LinkSidebar />
 	<slot />
-	<Footer />
 </home-layout>
 
 <style lang="postcss">
