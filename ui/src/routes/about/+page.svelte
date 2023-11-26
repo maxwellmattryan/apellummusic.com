@@ -8,7 +8,7 @@
 	})
 </script>
 
-<about-page class="w-full h-full px-[15vw] flex flex-col items-center">
+<about-page class="w-full h-full pt-[20vh] px-[15vw] flex flex-col items-center">
 	<div class="about-pair flex flex-row justify-center items-center">
 		<img class="h-[70vh] px-[4vw]" src="{base}/images/press_about-01.jpg" alt="Press 1" />
 		<about-page-paragraph class="px-[1vw] leading-8 opacity-90">
@@ -25,9 +25,9 @@
 		<about-page-paragraph class="px-[1vw] leading-8 opacity-90 text-right">
 			<p>
 				Within the techno scene, Apellum finds inspiration in many artists from multiple sub-genres,
-				like Yan Cook or Yanamaste for darker Berlin techno, Maōh for hardgroove, or Wata Igarashi
-				for hypnotic / dub techno. Beyond the confines of techno, Apellum’s creative canvas is
-				painted with shades of drum ‘n bass, trance, jazz, fusion, funk, classical, and rock, among
+				like Ketch or Yan Cook for darker Berlin techno, Maōh for hardgroove, or Wata Igarashi for
+				hypnotic / dub techno. Beyond the confines of techno, Apellum’s creative canvas is painted
+				with shades of drum ‘n bass, jungle, trance, jazz, fusion, funk, classical, and rock, among
 				many others.
 			</p>
 		</about-page-paragraph>
