@@ -3,6 +3,7 @@ export enum AppRoute {
 	Home = 'home',
 	About = 'about',
 	Music = 'music',
+	Epk = 'epk',
 	PhotosAndVideos = 'photosAndVideos',
-	Events = 'events'
+	Events = 'events',
 }

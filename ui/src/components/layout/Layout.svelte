@@ -9,7 +9,10 @@
 <layout class="w-full h-screen flex flex-col items-center">
 	<Header />
 	<div
-		class="w-full h-{isHomeRoute || isErrorRoute || $appRoute === AppRoute.Music
+		class="w-full h-{isHomeRoute ||
+		isErrorRoute ||
+		$appRoute === AppRoute.Music ||
+		$appRoute === AppRoute.Epk
 			? 'full'
 			: 'auto'} {isHomeRoute ? '' : 'pt-[20vh] px-[15vw]'}"
 	>
