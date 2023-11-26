@@ -7,6 +7,7 @@
 </script>
 
 <script lang="ts">
+	import { IconButton, IconName } from '@components'
 	import { LongBiography, ShortBiography, OneLineBiography } from './biographies'
 
 	let selectedBioType: BioType = BioType.Long
@@ -28,25 +29,32 @@
 			case BioType.Short:
 				return 'Short'
 			case BioType.OneLine:
-				return 'One line'
+				return 'One-line'
 		}
+	}
+
+	function onBioCopyClick(): void {
+		console.log('todo: copy bio')
 	}
 </script>
 
 <bios class="flex flex-col">
-	<bio-selector class="flex flex-row mb-4">
-		{#each Object.values(BioType) as bioType}
-			{@const selected = bioType === selectedBioType}
-			<bio-selector-item class:selected>
-				<button
-					on:click={() => onBioTypeClick(bioType)}
-					class="{selected ? 'border-b-2 border-solid border-[#4c5adb]' : ''} text-indigo-50"
-				>
-					{getBioTypeText(bioType)}
-				</button>
-			</bio-selector-item>
-		{/each}
-	</bio-selector>
+	<bio-selector-header class="flex flex-row justify-between items-start">
+		<bio-selector class="flex flex-row items-center mb-4">
+			{#each Object.values(BioType) as bioType}
+				{@const selected = bioType === selectedBioType}
+				<bio-selector-item class:selected>
+					<button
+						on:click={() => onBioTypeClick(bioType)}
+						class="{selected ? 'border-b-2 border-solid border-[#4c5adb]' : ''} text-indigo-50"
+					>
+						{getBioTypeText(bioType)}
+					</button>
+				</bio-selector-item>
+			{/each}
+		</bio-selector>
+		<IconButton icon={IconName.Copy} onClick={onBioCopyClick} />
+	</bio-selector-header>
 	<selected-bio>
 		<svelte:component this={BIO_TYPE_COMPONENT_MAP[selectedBioType]} />
 	</selected-bio>
