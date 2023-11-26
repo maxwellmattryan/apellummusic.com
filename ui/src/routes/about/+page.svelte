@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths'
 	import { onMount } from 'svelte'
-	import { AppRoute, setAppRoute } from '@lib/app'
+	import { AppRoute, getPageTitle, setAppRoute } from '@lib/app'
 
 	onMount(() => {
 		setAppRoute(AppRoute.About)
@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>About | Apellum</title>
+	<title>{getPageTitle(AppRoute.About)}</title>
 </svelte:head>
 <about-page class="w-full h-auto flex flex-col items-center">
 	<div class="about-pair flex flex-row justify-center items-center">

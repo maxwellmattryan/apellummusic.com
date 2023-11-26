@@ -8,6 +8,7 @@
 html,
 body {
 	background-color: #020617;
+	height: fit-content;
 	font-family:
 		Montserrat,
 		ui-sans-serif,

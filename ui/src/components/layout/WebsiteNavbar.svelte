@@ -53,7 +53,7 @@
 	}
 </script>
 
-<website-navbar class="absolute top-[8vh] left-4">
+<website-navbar class="w-full pl-4 absolute top-[8vh]">
 	<nav class="flex flex-col">
 		{#each getAppRoutes() as route}
 			{@const selected = route === $appRoute}
@@ -95,7 +95,7 @@
 			@apply border-slate-950;
 		}
 		& a {
-			@apply ml-2;
+			@apply ml-4;
 		}
 	}
 </style>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths'
 	import { onMount } from 'svelte'
-	import { AppRoute, setAppRoute } from '@lib/app'
+	import { AppRoute, getPageTitle, setAppRoute } from '@lib/app'
 
 	const backgroundImageUrl = `${base}/images/press_home.jpg`
 
@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-	<title>Home | Apellum</title>
+	<title>{getPageTitle(AppRoute.Home)}</title>
 </svelte:head>
 <home-page class="w-full h-full max-h-screen flex flex-row">
 	<home-page-left class="w-1/2 h-full flex flex-col justify-center items-center">
