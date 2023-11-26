@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { LinkSidebar, WebsiteNavbar, WebsiteRoute } from '@components'
+	import { LinkSidebar, WebsiteNavbar } from '@components'
 
-	export let route: WebsiteRoute | undefined = undefined
+	export let linkColor: string | undefined = undefined
 </script>
 
 <layout class="w-full h-screen flex flex-col justify-center items-center">
-	<WebsiteNavbar {route} />
-	<LinkSidebar />
+	<WebsiteNavbar />
+	<LinkSidebar {linkColor} />
 	<slot />
 </layout>
 

@@ -1,7 +1,10 @@
 <script lang="ts">
-	import { Layout, WebsiteRoute } from '@components'
+	import { onMount } from 'svelte'
+	import { AppRoute, setAppRoute } from '@lib/app'
+
+	onMount(() => {
+		setAppRoute(AppRoute.About)
+	})
 </script>
 
-<Layout route={WebsiteRoute.About}>
-	<slot />
-</Layout>
+<slot />

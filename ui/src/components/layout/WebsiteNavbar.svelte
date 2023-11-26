@@ -1,58 +1,63 @@
-<script lang="ts" context="module">
-	export enum WebsiteRoute {
-		Home = 'home',
-		About = 'about',
-		PhotosAndVideos = 'photosAndVideos',
-		Events = 'events'
-	}
-</script>
-
 <script lang="ts">
+	import { appRoute, AppRoute, setAppRoute } from '@lib/app'
 	import { FEATURES } from '@lib/features'
 
-	export let route: WebsiteRoute | undefined = undefined
-
-	function getWebsiteRoutes(): WebsiteRoute[] {
-		return Object.values(WebsiteRoute).filter((route) => FEATURES[route]?.enabled)
+	function getAppRoutes(): AppRoute[] {
+		return Object.values(AppRoute).filter((route) => FEATURES[route]?.enabled)
 	}
 
-	function getWebsiteRouteUrl(route: WebsiteRoute): string {
+	function getAppRouteUrl(route: AppRoute): string {
 		switch (route) {
 			default:
-			case WebsiteRoute.Home:
+			case AppRoute.Home:
 				return ''
-			case WebsiteRoute.About:
+			case AppRoute.About:
 				return 'about'
-			case WebsiteRoute.PhotosAndVideos:
+			case AppRoute.PhotosAndVideos:
 				return 'media'
-			case WebsiteRoute.Events:
+			case AppRoute.Events:
 				return 'events'
 		}
 	}
 
-	function getWebsiteRouteText(route: WebsiteRoute): string {
+	function getAppRouteText(route: AppRoute): string {
 		switch (route) {
 			default:
-			case WebsiteRoute.Home:
+			case AppRoute.Home:
 				return 'Home'
-			case WebsiteRoute.About:
+			case AppRoute.About:
 				return 'About'
-			case WebsiteRoute.PhotosAndVideos:
+			case AppRoute.PhotosAndVideos:
 				return 'Photos & Videos'
-			case WebsiteRoute.Events:
+			case AppRoute.Events:
 				return 'Events'
+		}
+	}
+
+	function onAppRouteClick(route: AppRoute): void {
+		switch (route) {
+			case AppRoute.Home:
+				setAppRoute(route)
+				break
+			case AppRoute.About:
+			case AppRoute.PhotosAndVideos:
+			case AppRoute.Events:
+			default:
+				break
 		}
 	}
 </script>
 
 <website-navbar class="absolute top-[8vw] left-4">
 	<nav class="flex flex-col">
-		{#each getWebsiteRoutes() as websiteRoute}
-			{@const selected = route === websiteRoute}
+		{#each getAppRoutes() as route}
+			{@const selected = route === $appRoute}
 			<website-navbar-link class:selected class="group h-[1.625rem]">
 				<website-navbar-link-highlight class="border-solid border-l-2"
 				></website-navbar-link-highlight>
-				<a href={'/' + getWebsiteRouteUrl(websiteRoute)}>{getWebsiteRouteText(websiteRoute)}</a>
+				<a href={'/' + getAppRouteUrl(route)} on:click={() => onAppRouteClick(route)}
+					>{getAppRouteText(route)}</a
+				>
 			</website-navbar-link>
 		{/each}
 	</nav>
@@ -61,17 +66,23 @@
 <style lang="postcss">
 	website-navbar-link {
 		@apply text-[#eeeff9];
-		@apply opacity-60 transition-opacity;
+		@apply opacity-60;
+		@apply transition-opacity;
+
+		animation-fill-mode: both;
+
 		&:hover,
 		&.selected {
 			@apply text-[#fafafd];
 			@apply opacity-100;
 		}
+
 		&.selected {
 			& website-navbar-link-highlight {
 				@apply border-[#ef2e5e];
 			}
 		}
+
 		& website-navbar-link-highlight {
 			@apply border-slate-950;
 		}

@@ -12,6 +12,9 @@
 	import SoundCloud from '$lib/assets/icons/soundcloud.svg?raw'
 	import Spotify from '$lib/assets/icons/spotify.svg?raw'
 
+	export let linkColor: string | undefined = undefined
+	console.log('link color: ', linkColor)
+
 	const LINKS: ILink[] = [
 		{ url: 'https://instagram.com/apellum', icon: Instagram },
 		{ url: 'https://facebook.com/apellummusic', icon: Facebook },
@@ -26,7 +29,7 @@
 
 <link-sidebar class="absolute top-[8vw] right-4 pr-2 border-solid border-r-2 border-[#4c5adb]">
 	{#each LINKS as { url, icon }}
-		<a class="mr-2" href={url} target="_blank">
+		<a class="mr-2" style="--link-color: {linkColor ?? 'slate-950'}" href={url} target="_blank">
 			<!-- eslint-disable svelte/no-at-html-tags -->
 			{@html icon}
 		</a>
@@ -35,12 +38,12 @@
 
 <style lang="postcss">
 	link-sidebar :global(a) {
-		@apply h-[1.625rem];
+		@apply h-[2rem];
 		@apply flex flex-row justify-center items-center;
 	}
 
 	link-sidebar :global(a svg) {
-		@apply h-[16px];
-		@apply fill-slate-950;
+		@apply h-[18px];
+		@apply fill-[var(--link-color)];
 	}
 </style>
