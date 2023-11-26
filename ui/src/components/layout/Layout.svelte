@@ -3,15 +3,22 @@
 	import { AppRoute, appRoute } from '@lib/app'
 
 	$: isHomeRoute = $appRoute === AppRoute.Home
+	$: isErrorRoute = $appRoute === AppRoute.Error
 </script>
 
 <layout class="w-full h-screen flex flex-col items-center">
 	<Header />
-	<div class="w-full h-full {isHomeRoute ? '' : 'pt-[20vh] px-[15vw]'}">
+	<div
+		class="w-full h-{isHomeRoute || isErrorRoute || $appRoute === AppRoute.Music
+			? 'full'
+			: 'auto'} {isHomeRoute ? '' : 'pt-[20vh] px-[15vw]'}"
+	>
 		<slot />
 	</div>
 	{#if !isHomeRoute}
-		<Footer />
+		<div class="mt-[20vh]">
+			<Footer />
+		</div>
 	{/if}
 </layout>
 
