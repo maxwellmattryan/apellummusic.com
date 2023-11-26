@@ -1,0 +1,71 @@
+<script lang="ts" context="module">
+	export enum BioType {
+		Long = 'long',
+		Short = 'short',
+		OneLine = 'oneLine',
+	}
+</script>
+
+<script lang="ts">
+	import { LongBiography, ShortBiography, OneLineBiography } from './biographies'
+
+	let selectedBioType: BioType = BioType.Long
+
+	const BIO_TYPE_COMPONENT_MAP: { [key in BioType]: unknown } = {
+		[BioType.Long]: LongBiography,
+		[BioType.Short]: ShortBiography,
+		[BioType.OneLine]: OneLineBiography,
+	}
+
+	function onBioTypeClick(bioType: BioType): void {
+		selectedBioType = bioType
+	}
+
+	function getBioTypeText(bioType: BioType): string {
+		switch (bioType) {
+			case BioType.Long:
+				return 'Long'
+			case BioType.Short:
+				return 'Short'
+			case BioType.OneLine:
+				return 'One line'
+		}
+	}
+</script>
+
+<bios class="flex flex-col">
+	<bio-selector class="flex flex-row mb-4">
+		{#each Object.values(BioType) as bioType}
+			{@const selected = bioType === selectedBioType}
+			<bio-selector-item class:selected>
+				<button
+					on:click={() => onBioTypeClick(bioType)}
+					class="{selected ? 'border-b-2 border-solid border-[#4c5adb]' : ''} text-indigo-50"
+				>
+					{getBioTypeText(bioType)}
+				</button>
+			</bio-selector-item>
+		{/each}
+	</bio-selector>
+	<selected-bio>
+		<svelte:component this={BIO_TYPE_COMPONENT_MAP[selectedBioType]} />
+	</selected-bio>
+</bios>
+
+<style lang="postcss">
+	bio-selector-item {
+		@apply opacity-60;
+		@apply transition-opacity;
+
+		animation-fill-mode: both;
+
+		&:hover,
+		&.selected {
+			@apply opacity-100;
+		}
+
+		&:not(:first-of-type) {
+			@apply ml-4;
+		}
+	}
+</style>
