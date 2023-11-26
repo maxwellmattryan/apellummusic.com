@@ -8,6 +8,9 @@
 	})
 </script>
 
+<svelte:head>
+	<title>About | Apellum</title>
+</svelte:head>
 <about-page class="w-full h-full pt-[20vh] px-[15vw] flex flex-col items-center">
 	<div class="about-pair flex flex-row justify-center items-center">
 		<img class="h-[70vh] px-[4vw]" src="{base}/images/press_about-01.jpg" alt="Press 1" />

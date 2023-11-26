@@ -10,6 +10,9 @@
 	})
 </script>
 
+<svelte:head>
+	<title>Home | Apellum</title>
+</svelte:head>
 <home-page class="w-full h-full max-h-screen flex flex-row">
 	<home-page-left class="w-1/2 h-full flex flex-col justify-center items-center">
 		<div
