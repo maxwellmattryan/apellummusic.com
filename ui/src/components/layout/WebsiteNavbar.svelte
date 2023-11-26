@@ -13,6 +13,8 @@
 				return ''
 			case AppRoute.About:
 				return 'about'
+			case AppRoute.Music:
+				return 'music'
 			case AppRoute.PhotosAndVideos:
 				return 'media'
 			case AppRoute.Events:
@@ -27,6 +29,8 @@
 				return 'Home'
 			case AppRoute.About:
 				return 'About'
+			case AppRoute.Music:
+				return 'Music'
 			case AppRoute.PhotosAndVideos:
 				return 'Photos & Videos'
 			case AppRoute.Events:
@@ -40,6 +44,7 @@
 				setAppRoute(route)
 				break
 			case AppRoute.About:
+			case AppRoute.Music:
 			case AppRoute.PhotosAndVideos:
 			case AppRoute.Events:
 			default:

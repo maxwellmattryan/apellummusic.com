@@ -9,6 +9,7 @@
 			default:
 			case AppRoute.Error:
 			case AppRoute.About:
+			case AppRoute.Music:
 			case AppRoute.PhotosAndVideos:
 				return true
 			case AppRoute.Home:
@@ -21,6 +22,7 @@
 		switch (route) {
 			case AppRoute.Error:
 			case AppRoute.About:
+			case AppRoute.Music:
 			case AppRoute.PhotosAndVideos:
 				return '#eef2ff'
 			case AppRoute.Home:
