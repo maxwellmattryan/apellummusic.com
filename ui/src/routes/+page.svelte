@@ -8,9 +8,15 @@
 </script>
 
 <home-page class="w-full h-full max-h-screen flex flex-row">
-	<home-page-left class="w-1/2 h-full px-[6rem] flex flex-col justify-center items-end">
-		<img src="./logos/white.svg" alt="Apellum logo" />
-		<p>Techno producer & DJ</p>
+	<home-page-left class="w-1/2 h-full flex flex-col justify-center items-center">
+		<div
+			class="w-full max-w-3xl h-full px-[6rem] flex flex-col justify-center items-end text-right"
+		>
+			<img src="./logos/white.svg" alt="Apellum logo" />
+			<!-- ghost header -->
+			<h1 class="invisible h-0">Apellum</h1>
+			<h2 class="mt-4 italic text-right text-[#eeeff9] opacity-90">Techno producer & DJ</h2>
+		</div>
 	</home-page-left>
 	<home-page-right class="w-1/2 h-full"> </home-page-right>
 </home-page>

@@ -48,11 +48,15 @@
 	}
 </script>
 
-<website-navbar class="absolute top-[8vw] left-4">
+<website-navbar class="absolute top-[8vh] left-4">
 	<nav class="flex flex-col">
 		{#each getAppRoutes() as route}
 			{@const selected = route === $appRoute}
-			<website-navbar-link class:selected class="group h-[1.625rem]">
+			<website-navbar-link
+				class:selected
+				class:invisible={FEATURES[route]?.hidden}
+				class="group h-[1.625rem]"
+			>
 				<website-navbar-link-highlight class="border-solid border-l-2"
 				></website-navbar-link-highlight>
 				<a href={'/' + getAppRouteUrl(route)} on:click={() => onAppRouteClick(route)}
