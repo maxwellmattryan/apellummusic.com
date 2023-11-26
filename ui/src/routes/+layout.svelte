@@ -15,6 +15,6 @@
 	})
 </script>
 
-<Layout linkColor={isOnErrorPage ? '#eeeff9' : 'slate-950'}>
+<Layout>
 	<slot />
 </Layout>
