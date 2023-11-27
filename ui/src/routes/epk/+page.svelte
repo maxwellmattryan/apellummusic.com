@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 	import { base } from '$app/paths'
-	import { MultiBiography } from '@components'
+	import { MultiBiography, MultiMusic } from '@components'
 	import { AppRoute, getPageTitle, setAppRoute } from '@lib/app'
 
 	function onDownloadClick(): void {
@@ -32,7 +32,7 @@
 			<h3>Music</h3>
 		</epk-music-section-header>
 		<epk-music-section-content class="flex flex-row items-start px-[4vw] gap-8">
-			<MultiBiography />
+			<MultiMusic />
 			<img class="w-1/2 object-contain" src="{base}/images/press_epk-02.jpg" alt="EPK 1" />
 		</epk-music-section-content>
 	</epk-music-section>
