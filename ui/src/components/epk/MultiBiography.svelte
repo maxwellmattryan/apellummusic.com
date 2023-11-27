@@ -33,8 +33,15 @@
 		}
 	}
 
+	let biography: HTMLElement | undefined
+
 	function onBioCopyClick(): void {
-		console.log('todo: copy bio')
+		if (biography) {
+			const text: string = biography.textContent
+			if (navigator) {
+				navigator.clipboard.writeText(text)
+			}
+		}
 	}
 </script>
 
@@ -53,9 +60,9 @@
 				</bio-selector-item>
 			{/each}
 		</bio-selector>
-		<IconButton icon={IconName.Copy} onClick={onBioCopyClick} />
+		<IconButton icon={IconName.Copy} tooltipText="Copied!" onClick={onBioCopyClick} />
 	</bio-selector-header>
-	<selected-bio>
+	<selected-bio bind:this={biography}>
 		<svelte:component this={BIO_TYPE_COMPONENT_MAP[selectedBioType]} />
 	</selected-bio>
 </bios>
