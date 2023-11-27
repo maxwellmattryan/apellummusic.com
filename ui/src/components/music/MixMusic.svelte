@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { IMusicItem, Music } from './Music.svelte'
-	const MIX_MUSIC_ITEMS: IMusicItem[] = [
+	import Music from './Music.svelte'
+
+	const MIX_MUSIC_ITEMS = [
 		{
 			image: 'music_mix_womm-090',
 			title: "What's On My Mind 090",

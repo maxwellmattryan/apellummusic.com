@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { IMusicItem, Music } from './Music.svelte'
-	const ORIGINAL_MUSIC_ITEMS: IMusicItem[] = [
+	import Music from './Music.svelte'
+
+	const ORIGINAL_MUSIC_ITEMS = [
 		{
 			image: 'music_original_eko',
 			title: 'Eko',

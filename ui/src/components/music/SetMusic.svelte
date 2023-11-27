@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { IMusicItem, Music } from './Music.svelte'
-	const SET_MUSIC_ITEMS: IMusicItem[] = [
+	import Music from './Music.svelte'
+
+	const SET_MUSIC_ITEMS = [
 		{
 			image: 'music_set_birds-of-a-feather_2023-09-16',
 			title: 'Birds of a Feather',
