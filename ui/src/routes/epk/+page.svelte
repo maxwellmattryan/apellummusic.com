@@ -33,7 +33,7 @@
 		</epk-music-section-header>
 		<epk-music-section-content class="flex flex-row items-start px-[4vw] gap-8">
 			<MultiMusic />
-			<img class="w-1/2 object-contain" src="{base}/images/press_epk-02.jpg" alt="EPK 1" />
+			<img class="w-1/2 object-contain" src="{base}/images/press_epk-02.jpg" alt="EPK 2" />
 		</epk-music-section-content>
 	</epk-music-section>
 	<epk-press-section class="epk-section mt-[10vh] w-full h-auto flex flex-col">
@@ -41,8 +41,9 @@
 			<h3>Press</h3>
 		</epk-press-section-header>
 		<epk-press-section-content class="flex flex-row items-start px-[4vw] gap-8">
-			<MultiMusic />
-			<img class="w-1/2 object-contain" src="{base}/images/press_epk-02.jpg" alt="EPK 1" />
+			<img class="w-1/3 object-contain" src="{base}/images/press_epk-03.jpg" alt="EPK 3" />
+			<img class="w-1/3 object-contain" src="{base}/images/press_epk-04.jpg" alt="EPK 4" />
+			<img class="w-1/3 object-contain" src="{base}/images/press_epk-05.jpg" alt="EPK 5" />
 		</epk-press-section-content>
 	</epk-press-section>
 </epk-page>
