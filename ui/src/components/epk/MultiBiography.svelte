@@ -53,7 +53,9 @@
 				<bio-selector-item class:selected>
 					<button
 						on:click={() => onBioTypeClick(bioType)}
-						class="{selected ? 'border-b-2 border-solid border-[#4c5adb]' : ''} text-indigo-50"
+						class="{selected
+							? 'border-b-2 border-solid border-[#4c5adb]'
+							: ''} text-indigo-50 font-medium"
 					>
 						{getBioTypeText(bioType)}
 					</button>

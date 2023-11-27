@@ -31,4 +31,8 @@
 	layout {
 		@apply text-indigo-50;
 	}
+
+	h2 {
+		@apply font-semibold;
+	}
 </style>

@@ -1,6 +1,7 @@
 <script lang="ts" context="module">
 	export enum IconName {
 		AppleMusic = 'apple-music',
+		Bandcamp = 'bandcamp',
 		Copy = 'copy',
 		Download = 'download',
 		Facebook = 'facebook',
@@ -12,6 +13,7 @@
 
 <script lang="ts">
 	import AppleMusic from '$lib/assets/icons/apple-music.svg?raw'
+	import Bandcamp from '$lib/assets/icons/bandcamp.svg?raw'
 	import Copy from '$lib/assets/icons/copy.svg?raw'
 	import Download from '$lib/assets/icons/download.svg?raw'
 	import Facebook from '$lib/assets/icons/facebook.svg?raw'
@@ -21,6 +23,7 @@
 
 	const ICON_NAME_COMPONENT_MAP: { [key in IconName]: unknown } = {
 		[IconName.AppleMusic]: AppleMusic,
+		[IconName.Bandcamp]: Bandcamp,
 		[IconName.Copy]: Copy,
 		[IconName.Download]: Download,
 		[IconName.Facebook]: Facebook,

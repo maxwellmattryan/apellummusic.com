@@ -29,7 +29,7 @@
 		</button>
 		{#if tooltipText}
 			<tooltip bind:this={buttonTooltip} class="absolute opacity-0 transition-opacity">
-				<p class="inline-block text-indigo-50 opacity-70">{tooltipText}</p>
+				<p class="inline-block text-indigo-50 opacity-60 font-medium">{tooltipText}</p>
 			</tooltip>
 		{/if}
 	{/if}

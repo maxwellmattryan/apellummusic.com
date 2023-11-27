@@ -82,6 +82,7 @@
 			@apply border-slate-950;
 		}
 		& a {
+			@apply font-medium;
 			@apply ml-4;
 		}
 	}

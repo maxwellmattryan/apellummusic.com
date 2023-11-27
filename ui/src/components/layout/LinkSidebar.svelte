@@ -18,6 +18,7 @@
 			icon: IconName.Spotify,
 		},
 		{ url: 'https://soundcloud.com/apellum', icon: IconName.SoundCloud },
+		{ url: 'https://apellum.bandcamp.com', icon: IconName.Bandcamp },
 		{ url: 'https://music.apple.com/us/artist/apellum/1535711525', icon: IconName.AppleMusic },
 	]
 </script>

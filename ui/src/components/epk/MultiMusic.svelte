@@ -1,22 +1,22 @@
 <script lang="ts" context="module">
 	export enum MusicType {
 		Originals = 'originals',
-		Remixes = 'remixes',
+		// Remixes = 'remixes',
 		Sets = 'sets',
 		Mixes = 'mixes',
 	}
 </script>
 
 <script lang="ts">
-	import { OriginalMusic } from './musics'
+	import { MixMusic, OriginalMusic, SetMusic } from './musics'
 
 	let selectedMusicType: MusicType = MusicType.Originals
 
 	const MUSIC_TYPE_COMPONENT_MAP: { [key in MusicType]: unknown } = {
 		[MusicType.Originals]: OriginalMusic,
-		[MusicType.Remixes]: OriginalMusic,
-		[MusicType.Sets]: OriginalMusic,
-		[MusicType.Mixes]: OriginalMusic,
+		// [MusicType.Remixes]: OriginalMusic,
+		[MusicType.Sets]: SetMusic,
+		[MusicType.Mixes]: MixMusic,
 	}
 
 	function onMusicTypeClick(musicType: MusicType): void {
@@ -27,8 +27,8 @@
 		switch (musicType) {
 			case MusicType.Originals:
 				return 'Originals'
-			case MusicType.Remixes:
-				return 'Remixes'
+			// case MusicType.Remixes:
+			// 	return 'Remixes'
 			case MusicType.Sets:
 				return 'DJ Sets'
 			case MusicType.Mixes:
@@ -37,7 +37,7 @@
 	}
 </script>
 
-<musics class="h-full flex flex-col">
+<musics class="w-full h-full flex flex-col">
 	<music-selector-header class="flex flex-row justify-between items-start">
 		<music-selector class="flex flex-row items-center mb-4">
 			{#each Object.values(MusicType) as musicType}
@@ -45,7 +45,9 @@
 				<music-selector-item class:selected>
 					<button
 						on:click={() => onMusicTypeClick(musicType)}
-						class="{selected ? 'border-b-2 border-solid border-[#4c5adb]' : ''} text-indigo-50"
+						class="{selected
+							? 'border-b-2 border-solid border-[#4c5adb]'
+							: ''} font-medium text-indigo-50"
 					>
 						{getMusicTypeText(musicType)}
 					</button>
