@@ -45,7 +45,7 @@
 	}
 </script>
 
-<bios class="flex flex-col">
+<bios class="h-full flex flex-col">
 	<bio-selector-header class="flex flex-row justify-between items-start">
 		<bio-selector class="flex flex-row items-center mb-4">
 			{#each Object.values(BioType) as bioType}
@@ -62,7 +62,7 @@
 		</bio-selector>
 		<IconButton icon={IconName.Copy} tooltipText="Copied!" onClick={onBioCopyClick} />
 	</bio-selector-header>
-	<selected-bio bind:this={biography}>
+	<selected-bio bind:this={biography} class="overflow-y-auto">
 		<svelte:component this={BIO_TYPE_COMPONENT_MAP[selectedBioType]} />
 	</selected-bio>
 </bios>

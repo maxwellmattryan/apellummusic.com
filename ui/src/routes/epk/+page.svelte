@@ -4,6 +4,10 @@
 	import { MultiBiography } from '@components'
 	import { AppRoute, getPageTitle, setAppRoute } from '@lib/app'
 
+	function onDownloadClick(): void {
+		console.log('TODO: download EPK')
+	}
+
 	onMount(() => {
 		setAppRoute(AppRoute.Epk)
 	})
@@ -13,12 +17,23 @@
 	<title>{getPageTitle(AppRoute.Epk)}</title>
 </svelte:head>
 <epk-page class="w-full h-auto flex flex-col items-center">
-	<div class="flex flex-row items-start">
-		<img
-			class="w-[35vw] px-[4vw] object-contain"
-			src="{base}/images/press_epk-01.jpg"
-			alt="EPK 1"
-		/>
-		<MultiBiography />
-	</div>
+	<button class="mt-2 mb-[5vh]" on:click={onDownloadClick}>Download here</button>
+	<epk-bio-section class="w-full flex flex-col">
+		<epk-bio-section-header class="mb-8">
+			<h3>Biographies</h3>
+		</epk-bio-section-header>
+		<epk-bio-section-content class="h-[70vh] flex flex-row items-start px-[4vw] gap-8">
+			<img class="w-1/2 object-contain" src="{base}/images/press_epk-01.jpg" alt="EPK 1" />
+			<MultiBiography />
+		</epk-bio-section-content>
+	</epk-bio-section>
+	<epk-music-section class="w-full flex flex-col mt-[15vh]">
+		<epk-music-section-header class="mb-8">
+			<h3>Music</h3>
+		</epk-music-section-header>
+		<epk-music-section-content class="flex flex-row items-start px-[4vw] gap-8">
+			<MultiBiography />
+			<img class="w-1/2 object-contain" src="{base}/images/press_epk-02.jpg" alt="EPK 1" />
+		</epk-music-section-content>
+	</epk-music-section>
 </epk-page>

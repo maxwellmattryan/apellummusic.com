@@ -14,7 +14,9 @@
 			: 'auto'} {isHomeRoute ? '' : 'pt-[20vh] px-[15vw]'}"
 	>
 		{#if !isHomeRoute && !isErrorRoute}
-			<h2 class="mb-[10vh] text-indigo-50">{getPageHeader($appRoute)}</h2>
+			<h2 class="border-b-2 border-solid border-[#ef2e5e] text-indigo-50">
+				{getPageHeader($appRoute)}
+			</h2>
 		{/if}
 		<slot />
 	</page-content>
