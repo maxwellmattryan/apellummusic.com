@@ -5,7 +5,7 @@
 	import { AppRoute, getPageTitle, setAppRoute } from '@lib/app'
 
 	function onDownloadClick(): void {
-		console.log('TODO: download EPK')
+		window.open('https://storage.googleapis.com/apellum-files/epks/apellum-epk.zip')
 	}
 
 	onMount(() => {
@@ -17,7 +17,7 @@
 	<title>{getPageTitle(AppRoute.Epk)}</title>
 </svelte:head>
 <epk-page class="w-full h-auto flex flex-col items-center">
-	<button class="mt-2 mb-[5vh]" on:click={onDownloadClick}>Download here</button>
+	<button class="download mt-2 mb-[5vh]" on:click={onDownloadClick}>Download (.zip)</button>
 	<epk-bio-section class="epk-section w-full h-auto flex flex-col">
 		<epk-bio-section-header class="mb-8">
 			<h3>Biographies</h3>
@@ -36,10 +36,28 @@
 			<img class="w-1/2 object-contain" src="{base}/images/press_epk-02.jpg" alt="EPK 1" />
 		</epk-music-section-content>
 	</epk-music-section>
+	<epk-press-section class="epk-section mt-[10vh] w-full h-auto flex flex-col">
+		<epk-press-section-header class="mb-8">
+			<h3>Press</h3>
+		</epk-press-section-header>
+		<epk-press-section-content class="flex flex-row items-start px-[4vw] gap-8">
+			<MultiMusic />
+			<img class="w-1/2 object-contain" src="{base}/images/press_epk-02.jpg" alt="EPK 1" />
+		</epk-press-section-content>
+	</epk-press-section>
 </epk-page>
 
 <style lang="postcss">
 	h3 {
 		@apply font-semibold;
+	}
+
+	button.download {
+		@apply opacity-60;
+		@apply transition-opacity;
+
+		&:hover {
+			@apply opacity-100;
+		}
 	}
 </style>
