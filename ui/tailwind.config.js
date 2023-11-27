@@ -6,8 +6,8 @@ export default {
 		screens: {
 			sm: '640px',
 			md: '1024px',
-			lg: '1280px'
-		}
+			lg: '1280px',
+		},
 	},
-	plugins: []
+	plugins: [],
 }

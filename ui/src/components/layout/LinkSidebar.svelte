@@ -6,31 +6,27 @@
 </script>
 
 <script lang="ts">
-	import AppleMusic from '$lib/assets/icons/apple-music.svg?raw'
-	import Facebook from '$lib/assets/icons/facebook.svg?raw'
-	import Instagram from '$lib/assets/icons/instagram.svg?raw'
-	import SoundCloud from '$lib/assets/icons/soundcloud.svg?raw'
-	import Spotify from '$lib/assets/icons/spotify.svg?raw'
+	import { Icon, IconName } from '@components'
 
 	export let linkColor: string | undefined = undefined
 
 	const LINKS: ILink[] = [
-		{ url: 'https://instagram.com/apellum', icon: Instagram },
-		{ url: 'https://facebook.com/apellummusic', icon: Facebook },
+		{ url: 'https://instagram.com/apellum', icon: IconName.Instagram },
+		{ url: 'https://facebook.com/apellummusic', icon: IconName.Facebook },
 		{
 			url: 'https://open.spotify.com/artist/2MOOYBdY5kjSsiTCugonnJ?si=GspHlrStQEiTmjuf3aIZqA',
-			icon: Spotify
+			icon: IconName.Spotify,
 		},
-		{ url: 'https://soundcloud.com/apellum', icon: SoundCloud },
-		{ url: 'https://music.apple.com/us/artist/apellum/1535711525', icon: AppleMusic }
+		{ url: 'https://soundcloud.com/apellum', icon: IconName.SoundCloud },
+		{ url: 'https://apellum.bandcamp.com', icon: IconName.Bandcamp },
+		{ url: 'https://music.apple.com/us/artist/apellum/1535711525', icon: IconName.AppleMusic },
 	]
 </script>
 
 <link-sidebar class="absolute top-[8vh] right-4 pr-2 border-solid border-r-2 border-[#4c5adb]">
 	{#each LINKS as { url, icon }}
 		<a class="mr-2" style="--link-color: {linkColor ?? 'slate-950'}" href={url} target="_blank">
-			<!-- eslint-disable svelte/no-at-html-tags -->
-			{@html icon}
+			<Icon {icon} iconColor={linkColor} />
 		</a>
 	{/each}
 </link-sidebar>

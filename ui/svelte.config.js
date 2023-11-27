@@ -16,9 +16,9 @@ const config = {
 			'@components': './src/components/index.ts',
 			'@components/*': './src/components/*',
 			'@lib': './src/lib/index.ts',
-			'@lib/*': './src/lib/*'
-		}
-	}
+			'@lib/*': './src/lib/*',
+		},
+	},
 }
 
 export default config

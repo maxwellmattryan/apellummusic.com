@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { appRoute, AppRoute, setAppRoute } from '@lib/app'
+	import { appRoute, AppRoute, getPageHeader, setAppRoute } from '@lib/app'
 	import { FEATURES } from '@lib/features'
 
 	function getAppRoutes(): AppRoute[] {
@@ -15,26 +15,12 @@
 				return 'about'
 			case AppRoute.Music:
 				return 'music'
+			case AppRoute.Epk:
+				return 'epk'
 			case AppRoute.PhotosAndVideos:
 				return 'media'
 			case AppRoute.Events:
 				return 'events'
-		}
-	}
-
-	function getAppRouteText(route: AppRoute): string {
-		switch (route) {
-			default:
-			case AppRoute.Home:
-				return 'Home'
-			case AppRoute.About:
-				return 'About'
-			case AppRoute.Music:
-				return 'Music'
-			case AppRoute.PhotosAndVideos:
-				return 'Photos & Videos'
-			case AppRoute.Events:
-				return 'Events'
 		}
 	}
 
@@ -45,6 +31,7 @@
 				break
 			case AppRoute.About:
 			case AppRoute.Music:
+			case AppRoute.Epk:
 			case AppRoute.PhotosAndVideos:
 			case AppRoute.Events:
 			default:
@@ -65,7 +52,7 @@
 				<website-navbar-link-highlight class="border-solid border-l-2"
 				></website-navbar-link-highlight>
 				<a href={'/' + getAppRouteUrl(route)} on:click={() => onAppRouteClick(route)}
-					>{getAppRouteText(route)}</a
+					>{getPageHeader(route)}</a
 				>
 			</website-navbar-link>
 		{/each}
@@ -95,6 +82,7 @@
 			@apply border-slate-950;
 		}
 		& a {
+			@apply font-medium;
 			@apply ml-4;
 		}
 	}
