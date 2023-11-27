@@ -8,7 +8,7 @@
 </script>
 
 <script lang="ts">
-	import { MixMusic, OriginalMusic, SetMusic } from './music'
+	import { MixMusic, OriginalMusic, SetMusic } from '@components/music'
 
 	let selectedMusicType: MusicType = MusicType.Originals
 

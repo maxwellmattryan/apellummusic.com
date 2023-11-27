@@ -10,26 +10,12 @@
 
 <script lang="ts">
 	import { base } from '$app/paths'
-	const SET_MUSIC_ITEMS: IMusicItem[] = [
-		{
-			image: 'music_set_birds-of-a-feather_2023-09-16',
-			title: 'Birds of a Feather',
-			date: '2023.09.16',
-			description: "Performance for Kai Castro's Birds of a Feather event.",
-			url: 'https://on.soundcloud.com/zN8rm',
-		},
-		{
-			image: 'music_set_the-oven_2023-08-11',
-			title: 'The Oven',
-			date: '2023.08.11',
-			description: 'Performance at The Oven, local after-hours spot.',
-			url: 'https://on.soundcloud.com/1hZWo',
-		},
-	]
+
+	export let musicItems: IMusicItem[] = []
 </script>
 
-<set-music class="space-y-4">
-	{#each SET_MUSIC_ITEMS as { image, title, date, description, url }}
+<music class="space-y-4">
+	{#each musicItems as { image, title, date, description, url }}
 		<a
 			href={url}
 			target="_blank"
@@ -40,16 +26,16 @@
 				<div>
 					<p class="title font-semibold">{title}</p>
 					{#if date}
-						<p class="date text-indigo-50 opacity-60 font-medium">{date}</p>
+						<p class="date text-indigo-50 opacity-60">{date}</p>
 					{/if}
 				</div>
 				{#if description}
-					<p class="description text-indigo-50 opacity-60 font-medium">{description}</p>
+					<p class="description font-medium text-indigo-50 opacity-60">{description}</p>
 				{/if}
 			</div>
 		</a>
 	{/each}
-</set-music>
+</music>
 
 <style lang="postcss">
 	a {
