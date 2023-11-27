@@ -11,7 +11,7 @@
 <svelte:head>
 	<title>{getPageTitle(AppRoute.About)}</title>
 </svelte:head>
-<about-page class="w-full h-auto flex flex-col items-center">
+<about-page class="w-full h-auto mt-[10vh] flex flex-col items-center">
 	<div class="about-pair flex flex-row justify-center items-center">
 		<img class="w-[35vw] px-[4vw]" src="{base}/images/press_about-01.jpg" alt="Press 1" />
 		<about-page-paragraph class="px-[1vw] leading-8 opacity-90">

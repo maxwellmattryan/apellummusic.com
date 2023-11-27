@@ -1,8 +1,8 @@
 <script lang="ts">
+	import { onMount } from 'svelte'
 	import { base } from '$app/paths'
 	import { AppRoute, appRoute } from '@lib/app'
 	import { LinkSidebar, WebsiteNavbar } from '@components'
-	import { onMount } from 'svelte'
 
 	$: linkColor = getLinkColor($appRoute)
 	function getLinkColor(route: AppRoute): string {
@@ -10,6 +10,7 @@
 			case AppRoute.Error:
 			case AppRoute.About:
 			case AppRoute.Music:
+			case AppRoute.Epk:
 			case AppRoute.PhotosAndVideos:
 				return '#eef2ff'
 			case AppRoute.Home:
@@ -35,6 +36,8 @@
 	<WebsiteNavbar />
 	{#if $appRoute !== AppRoute.Home}
 		<logo-header class:hide={!showLogoHeader} class="absolute top-8 w-[20vw]">
+			<!-- ghost header -->
+			<h1 class="invisible h-0">Apellum</h1>
 			<a href="/">
 				<img src="{base}/logos/white.svg" alt="Apellum logo" />
 			</a>

@@ -12,6 +12,8 @@ export function getPageTitle(route: AppRoute): string {
 			return `About | ${BASE_PAGE_TITLE}`
 		case AppRoute.Music:
 			return `Music | ${BASE_PAGE_TITLE}`
+		case AppRoute.Epk:
+			return `EPK | ${BASE_PAGE_TITLE}`
 		case AppRoute.PhotosAndVideos:
 			return `Photos & Videos | ${BASE_PAGE_TITLE}`
 		case AppRoute.Events:
