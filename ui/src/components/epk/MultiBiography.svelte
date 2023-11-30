@@ -1,8 +1,8 @@
 <script lang="ts" context="module">
 	export enum BioType {
-		OneLine = 'oneLine',
-		Short = 'short',
 		Long = 'long',
+		Short = 'short',
+		OneLine = 'oneLine',
 	}
 </script>
 
@@ -10,7 +10,7 @@
 	import { IconButton, IconName } from '@components'
 	import { LongBiography, ShortBiography, OneLineBiography } from './biographies'
 
-	let selectedBioType: BioType = BioType.OneLine
+	let selectedBioType: BioType = BioType.Long
 
 	const BIO_TYPE_COMPONENT_MAP: { [key in BioType]: unknown } = {
 		[BioType.Long]: LongBiography,
