@@ -21,9 +21,7 @@
 		<slot />
 	</page-content>
 	{#if !isHomeRoute}
-		<div class="mt-[20vh]">
-			<Footer />
-		</div>
+		<Footer />
 	{/if}
 </layout>
 

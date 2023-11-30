@@ -16,7 +16,7 @@
 <svelte:head>
 	<title>{getPageTitle(AppRoute.Epk)}</title>
 </svelte:head>
-<epk-page class="w-full h-auto flex flex-col items-center">
+<epk-page class="w-full h-auto mb-[15vh] flex flex-col items-center">
 	<download-button class="mt-2 mb-[10vh] flex flex-row justify-center items-center">
 		<button class="download" on:click={onDownloadClick}> Download (.zip) </button>
 		<Icon icon={IconName.Download} />
