@@ -1,5 +1,5 @@
 export enum EpkBiographyType {
-	OneLine = 'oneLine',
-	Short = 'short',
 	Long = 'long',
+	Short = 'short',
+	OneLine = 'oneLine',
 }

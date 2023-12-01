@@ -6,7 +6,6 @@
 	import { EPK_DATA } from '@lib/data/epk'
 
 	const { downloadUrl, biographyData, musicImage, pressImages } = EPK_DATA
-	const { image: biographyImage, biographies } = biographyData
 
 	function onDownloadClick(): void {
 		window.open(downloadUrl)
@@ -25,10 +24,7 @@
 		<button class="download" on:click={onDownloadClick}> Download (.zip) </button>
 		<Icon icon={IconName.Download} />
 	</download-button>
-	<EpkSection title="Biographies">
-		<img class="w-1/2 object-contain" src="{base}/images/{biographyImage}" alt="EPK 1" />
-		<EpkBiographySection {biographies} />
-	</EpkSection>
+	<EpkBiographySection {biographyData} />
 	<EpkSection title="Music">
 		<MultiMusic />
 		<img class="w-1/2 object-contain" src="{base}/images/{musicImage}" alt="EPK 2" />

@@ -1,30 +1,27 @@
-<script lang="ts" context="module">
-	export enum BioType {
-		Long = 'long',
-		Short = 'short',
-		OneLine = 'oneLine',
-	}
-</script>
-
 <script lang="ts">
+	import { base } from '$app/paths'
 	import { IconButton, IconName } from '@components'
-	import type { IEpkBiographies } from '../../routes/epk/epk-data.constant'
+	import EpkSection from './EpkSection.svelte'
+	import { EpkBiographyType } from '@lib/data/epk'
+	import type { IEpkBiographyData } from '@lib/data/epk'
 
-	export let biographies: IEpkBiographies
+	export let biographyData: IEpkBiographyData
 
-	let selectedBioType: BioType = BioType.Long
+	const { image, biographies } = biographyData ?? {}
 
-	function onBioTypeClick(bioType: BioType): void {
+	let selectedBioType: EpkBiographyType = EpkBiographyType.Long
+
+	function onBioTypeClick(bioType: EpkBiographyType): void {
 		selectedBioType = bioType
 	}
 
-	function getBioTypeText(bioType: BioType): string {
+	function getBioTypeText(bioType: EpkBiographyType): string {
 		switch (bioType) {
-			case BioType.Long:
+			case EpkBiographyType.Long:
 				return 'Long'
-			case BioType.Short:
+			case EpkBiographyType.Short:
 				return 'Short'
-			case BioType.OneLine:
+			case EpkBiographyType.OneLine:
 				return 'One-line'
 		}
 	}
@@ -41,31 +38,34 @@
 	}
 </script>
 
-<bios class="h-full flex flex-col">
-	<bio-selector-header class="flex flex-row justify-between items-start">
-		<bio-selector class="flex flex-row items-center mb-4">
-			{#each Object.values(BioType) as bioType}
-				{@const selected = bioType === selectedBioType}
-				<bio-selector-item class:selected>
-					<button
-						on:click={() => onBioTypeClick(bioType)}
-						class="{selected
-							? 'border-b-2 border-solid border-[#4c5adb]'
-							: ''} text-indigo-50 font-medium"
-					>
-						{getBioTypeText(bioType)}
-					</button>
-				</bio-selector-item>
+<EpkSection title="Biographies">
+	<img class="w-1/2 object-contain" src="{base}/images/{image}" alt="EPK 1" />
+	<epk-bios class="h-full flex flex-col">
+		<epk-bios-header class="flex flex-row justify-between items-start">
+			<epk-bio-selector class="flex flex-row items-center mb-4">
+				{#each Object.values(EpkBiographyType) as bioType}
+					{@const selected = bioType === selectedBioType}
+					<bio-selector-item class:selected>
+						<button
+							on:click={() => onBioTypeClick(bioType)}
+							class="{selected
+								? 'border-b-2 border-solid border-[#4c5adb]'
+								: ''} text-indigo-50 font-medium"
+						>
+							{getBioTypeText(bioType)}
+						</button>
+					</bio-selector-item>
+				{/each}
+			</epk-bio-selector>
+			<IconButton icon={IconName.Copy} tooltipText="Copied!" onClick={onBioCopyClick} />
+		</epk-bios-header>
+		<epk-selected-bio bind:this={biography} class="overflow-y-auto">
+			{#each biographies[selectedBioType].text as paragraph}
+				<p>{paragraph}</p>
 			{/each}
-		</bio-selector>
-		<IconButton icon={IconName.Copy} tooltipText="Copied!" onClick={onBioCopyClick} />
-	</bio-selector-header>
-	<selected-bio bind:this={biography} class="overflow-y-auto">
-		{#each biographies[selectedBioType].text as paragraph}
-			<p>{paragraph}</p>
-		{/each}
-	</selected-bio>
-</bios>
+		</epk-selected-bio>
+	</epk-bios>
+</EpkSection>
 
 <style lang="postcss">
 	bio-selector-item {
