@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { base } from '$app/paths'
-	import { IconButton, IconName } from '@components'
-	import EpkSection from './EpkSection.svelte'
+	import { IconButton } from '@components'
+	import { IconName } from '@lib/app'
 	import { EpkBiographyType } from '@lib/data/epk'
 	import type { IEpkBiographyData } from '@lib/data/epk'
+	import EpkSection from './EpkSection.svelte'
 
 	export let biographyData: IEpkBiographyData
 
