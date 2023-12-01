@@ -1,14 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
-	import {
-		Icon,
-		IconName,
-		EpkBiographySection,
-		EpkMusicSection,
-		EpkPressSection,
-	} from '@components'
+	import { Icon, IconName } from '@components'
 	import { AppRoute, getPageTitle, setAppRoute } from '@lib/app'
 	import { EPK_DATA } from '@lib/data/epk'
+	import { EpkBiographySection, EpkMusicSection, EpkPressSection } from './components'
 
 	const { downloadUrl, biographyData, musicData, pressData } = EPK_DATA
 
