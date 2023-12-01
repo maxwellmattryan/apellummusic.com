@@ -1,18 +1,17 @@
+<script lang="ts">
+	import { CONTACT_DATA, ContactType } from '@lib/data/contact'
+
+	const { contacts } = CONTACT_DATA
+</script>
+
 <contact class="contact-section text-left">
 	<h3 class="mb-[5vh]">Contact</h3>
-	<p>
-		Email: <a class="contact-link" href="mailto:apellummusic@gmail.com">apellummusic@gmail.com</a>
-	</p>
-	<p>
-		Instagram: <a class="contact-link" href="https://instagram.com/apellum" target="_blank"
-			>@apellum</a
-		>
-	</p>
-	<p>
-		Facebook: <a class="contact-link" href="https://facebook.com/apellummusic" target="_blank"
-			>@apellummusic</a
-		>
-	</p>
+	{#each contacts[ContactType.Email] as { name, url }}
+		<p>{name}: <a class="contact-link" href="mailto:{url}">{url}</a></p>
+	{/each}
+	{#each contacts[ContactType.Social] as { name, url, username }}
+		<p>{name}: <a class="contact-link" href={url} target="_blank">@{username}</a></p>
+	{/each}
 </contact>
 
 <style lang="postcss">

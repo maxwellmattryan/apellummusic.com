@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Icon, IconName } from '@components'
+	import { IconName } from '@lib/app'
+	import { Icon } from '@components'
 
 	export let icon: IconName | undefined = undefined
 	export let iconColor: string = ''

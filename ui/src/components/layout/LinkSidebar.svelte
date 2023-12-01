@@ -6,21 +6,16 @@
 </script>
 
 <script lang="ts">
-	import { Icon, IconName } from '@components'
+	import { Icon } from '@components'
+	import { CONTACT_DATA, ContactType } from '@lib/data/contact'
 
 	export let linkColor: string | undefined = undefined
 
-	const LINKS: ILink[] = [
-		{ url: 'https://instagram.com/apellum', icon: IconName.Instagram },
-		{ url: 'https://facebook.com/apellummusic', icon: IconName.Facebook },
-		{
-			url: 'https://open.spotify.com/artist/2MOOYBdY5kjSsiTCugonnJ?si=GspHlrStQEiTmjuf3aIZqA',
-			icon: IconName.Spotify,
-		},
-		{ url: 'https://soundcloud.com/apellum', icon: IconName.SoundCloud },
-		{ url: 'https://apellum.bandcamp.com', icon: IconName.Bandcamp },
-		{ url: 'https://music.apple.com/us/artist/apellum/1535711525', icon: IconName.AppleMusic },
-	]
+	const { contacts } = CONTACT_DATA
+
+	const socialLinks: ILink[] = contacts[ContactType.Social].map(({ url, icon }) => ({ url, icon }))
+	const musicLinks: ILink[] = contacts[ContactType.Music].map(({ url, icon }) => ({ url, icon }))
+	const LINKS: ILink[] = [...socialLinks, ...musicLinks]
 </script>
 
 <link-sidebar class="absolute top-[8vh] right-4 pr-2 border-solid border-r-2 border-[#4c5adb]">
