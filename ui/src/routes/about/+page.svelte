@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
+	import { Contact } from '@components'
 	import { AppRoute, getPageTitle, setAppRoute } from '@lib/app'
 	import { ABOUT_DATA } from '@lib/data/about'
 	import { AboutSection } from './components'
@@ -20,6 +21,9 @@
 			<AboutSection {section} {index} justifyLeft={index % 2 === 0} />
 		</div>
 	{/each}
+	<div class="about-section">
+		<Contact />
+	</div>
 </about-page>
 
 <style lang="postcss">

@@ -49,4 +49,8 @@
 	p {
 		@apply text-indigo-50;
 	}
+
+	p {
+		@apply font-medium;
+	}
 </style>

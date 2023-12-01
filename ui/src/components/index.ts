@@ -1,5 +1,7 @@
 export * from './layout'
 
+export { default as Contact } from './Contact.svelte'
+
 export { IconName } from './Icon.svelte'
 export { default as Icon } from './Icon.svelte'
 

@@ -15,4 +15,8 @@
 	h3 {
 		@apply font-semibold;
 	}
+
+	p {
+		@apply font-medium;
+	}
 </style>

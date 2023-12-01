@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
-	import { Icon, IconName } from '@components'
+	import { Contact, Icon, IconName } from '@components'
 	import { AppRoute, getPageTitle, setAppRoute } from '@lib/app'
 	import { EPK_DATA } from '@lib/data/epk'
 	import { EpkBiographySection, EpkMusicSection, EpkPressSection } from './components'
@@ -27,6 +27,9 @@
 	<EpkBiographySection {biographyData} />
 	<EpkMusicSection {musicData} />
 	<EpkPressSection {pressData} />
+	<epk-section>
+		<Contact />
+	</epk-section>
 </epk-page>
 
 <style lang="postcss">

@@ -9,7 +9,7 @@
 
 	const { image, biographies } = biographyData ?? {}
 
-	let selectedBioType: EpkBiographyType = EpkBiographyType.Long
+	let selectedBioType: EpkBiographyType = EpkBiographyType.Short
 
 	function onBioTypeClick(bioType: EpkBiographyType): void {
 		selectedBioType = bioType
@@ -40,7 +40,7 @@
 
 <EpkSection title="Biographies">
 	<img class="w-1/2 object-contain" src="{base}/images/{image}" alt="EPK biography" />
-	<epk-bios class="h-full flex flex-col">
+	<epk-bios class="flex flex-col justify-center">
 		<epk-bios-header class="flex flex-row justify-between items-start">
 			<epk-bio-selector class="flex flex-row items-center mb-4">
 				{#each Object.values(EpkBiographyType) as bioType}
