@@ -3,3 +3,10 @@ export enum EpkBiographyType {
 	Short = 'short',
 	OneLine = 'oneLine',
 }
+
+export enum EpkMusicCollectionType {
+	Original = 'original',
+	// Remix = 'remix',
+	Set = 'set',
+	Mix = 'mix',
+}

@@ -1,5 +1,5 @@
 import type { IEpkData } from './epk-data.interface'
-import { EpkBiographyType } from './epk-data.enum'
+import { EpkBiographyType, EpkMusicCollectionType } from './epk-data.enum'
 
 export const EPK_DATA: IEpkData = {
 	downloadUrl: 'https://storage.googleapis.com/apellum-files/epks/apellum-epk.zip',
@@ -54,6 +54,65 @@ export const EPK_DATA: IEpkData = {
 			},
 		},
 	},
-	musicImage: 'press_epk-02.jpg',
+	musicData: {
+		image: 'press_epk-02.jpg',
+		collections: {
+			[EpkMusicCollectionType.Original]: [
+				{
+					image: 'music_original_eko',
+					title: 'Eko',
+					description:
+						'Pulsating rhythm and ambient sounds into the vastness and intrigue of the subterranean.',
+					url: 'https://open.spotify.com/track/4crFX8q2LDFoO5yLDQu0yY?si=55a3c2cdcc804b07',
+				},
+				{
+					image: 'music_original_in-snowfield',
+					title: 'In Snowfield',
+					description:
+						'Relentless beats with icy synth textures, mirroring the cat-and-mouse chase with Sniper Wolf.',
+					url: 'https://open.spotify.com/track/1Oesrus6lIdvUiF1apvFRK?si=7e3a938c87434225',
+				},
+			],
+			[EpkMusicCollectionType.Set]: [
+				{
+					image: 'music_set_birds-of-a-feather_2023-09-16',
+					url: 'https://on.soundcloud.com/zN8rm',
+					title: 'Birds of a Feather',
+					description: "Performance for Kai Castro's Birds of a Feather event.",
+					date: new Date('September 16, 2023'),
+				},
+				{
+					image: 'music_set_the-oven_2023-08-11',
+					url: 'https://on.soundcloud.com/1hZWo',
+					title: 'The Oven',
+					description: 'Performance at The Oven, local after-hours spot.',
+					date: new Date('August 11, 2023'),
+				},
+			],
+			[EpkMusicCollectionType.Mix]: [
+				{
+					image: 'music_mix_womm-090',
+					url: 'https://on.soundcloud.com/M13G6',
+					title: "What's On My Mind 090",
+					description: "Techno episode for No Light Thing's radio show podcast.",
+				},
+				{
+					image: 'music_mix_dj-mixes',
+					url: 'https://on.soundcloud.com/huyJ8',
+					title: 'DJ Mixes',
+					description: 'Collection of my DJ mixes.',
+				},
+				{
+					image: 'music_mix_mixed-tape',
+					url: 'https://on.soundcloud.com/iJz4h',
+					title: 'Mixed Tape',
+					description:
+						'Collection of my Mixed Tape series, i.e. mini-mixes that featuring specific artists.',
+				},
+			],
+		},
+	},
 	pressImages: ['press_epk-03.jpg', 'press_epk-04.jpg', 'press_epk-05.jpg'],
 }
+
+console.log('EPK DATA: ', EPK_DATA)

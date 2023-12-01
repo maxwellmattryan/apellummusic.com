@@ -45,7 +45,7 @@
 			<epk-bio-selector class="flex flex-row items-center mb-4">
 				{#each Object.values(EpkBiographyType) as bioType}
 					{@const selected = bioType === selectedBioType}
-					<bio-selector-item class:selected>
+					<epk-bio-selector-item class:selected>
 						<button
 							on:click={() => onBioTypeClick(bioType)}
 							class="{selected
@@ -54,7 +54,7 @@
 						>
 							{getBioTypeText(bioType)}
 						</button>
-					</bio-selector-item>
+					</epk-bio-selector-item>
 				{/each}
 			</epk-bio-selector>
 			<IconButton icon={IconName.Copy} tooltipText="Copied!" onClick={onBioCopyClick} />
