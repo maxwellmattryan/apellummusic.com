@@ -1,17 +1,6 @@
-<script lang="ts" context="module">
-	export enum IconName {
-		AppleMusic = 'apple-music',
-		Bandcamp = 'bandcamp',
-		Copy = 'copy',
-		Download = 'download',
-		Facebook = 'facebook',
-		Instagram = 'instagram',
-		SoundCloud = 'Soundcloud',
-		Spotify = 'spotify',
-	}
-</script>
-
 <script lang="ts">
+	import { IconName } from '@lib/app'
+
 	import AppleMusic from '$lib/assets/icons/apple-music.svg?raw'
 	import Bandcamp from '$lib/assets/icons/bandcamp.svg?raw'
 	import Copy from '$lib/assets/icons/copy.svg?raw'
