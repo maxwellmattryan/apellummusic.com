@@ -4,7 +4,7 @@ export interface IEpkData {
 	downloadUrl: string
 	biographyData: IEpkBiographyData
 	musicData: IEpkMusicData
-	pressImages: string[]
+	pressData: IEpkPressData
 }
 
 // BIOGRAPHY
@@ -45,4 +45,10 @@ export interface IEpkMusicItem {
 	title: string
 	description: string
 	date?: Date
+}
+
+// PRESS
+
+export interface IEpkPressData {
+	images: string[]
 }

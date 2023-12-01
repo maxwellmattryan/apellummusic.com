@@ -112,7 +112,7 @@ export const EPK_DATA: IEpkData = {
 			],
 		},
 	},
-	pressImages: ['press_epk-03.jpg', 'press_epk-04.jpg', 'press_epk-05.jpg'],
+	pressData: {
+		images: ['press_epk-03.jpg', 'press_epk-04.jpg', 'press_epk-05.jpg'],
+	},
 }
-
-console.log('EPK DATA: ', EPK_DATA)

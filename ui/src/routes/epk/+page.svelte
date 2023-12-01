@@ -1,11 +1,16 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
-	import { base } from '$app/paths'
-	import { EpkSection, Icon, IconName, EpkBiographySection, EpkMusicSection } from '@components'
+	import {
+		Icon,
+		IconName,
+		EpkBiographySection,
+		EpkMusicSection,
+		EpkPressSection,
+	} from '@components'
 	import { AppRoute, getPageTitle, setAppRoute } from '@lib/app'
 	import { EPK_DATA } from '@lib/data/epk'
 
-	const { downloadUrl, biographyData, musicData, pressImages } = EPK_DATA
+	const { downloadUrl, biographyData, musicData, pressData } = EPK_DATA
 
 	function onDownloadClick(): void {
 		window.open(downloadUrl)
@@ -26,11 +31,7 @@
 	</download-button>
 	<EpkBiographySection {biographyData} />
 	<EpkMusicSection {musicData} />
-	<EpkSection title="Press">
-		{#each pressImages as pressImage, index}
-			<img class="w-1/3 object-contain" src="{base}/images/{pressImage}" alt="EPK {index + 3}" />
-		{/each}
-	</EpkSection>
+	<EpkPressSection {pressData} />
 </epk-page>
 
 <style lang="postcss">

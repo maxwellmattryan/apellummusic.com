@@ -58,7 +58,7 @@
 			{/key}
 		</epk-selected-music-collection>
 	</epk-music>
-	<img class="w-1/2 object-contain" src="{base}/images/{image}" alt="EPK 2" />
+	<img class="w-1/2 object-contain" src="{base}/images/{image}" alt="EPK music" />
 </EpkSection>
 
 <style lang="postcss">

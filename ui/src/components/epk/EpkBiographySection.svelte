@@ -39,7 +39,7 @@
 </script>
 
 <EpkSection title="Biographies">
-	<img class="w-1/2 object-contain" src="{base}/images/{image}" alt="EPK 1" />
+	<img class="w-1/2 object-contain" src="{base}/images/{image}" alt="EPK biography" />
 	<epk-bios class="h-full flex flex-col">
 		<epk-bios-header class="flex flex-row justify-between items-start">
 			<epk-bio-selector class="flex flex-row items-center mb-4">
@@ -68,7 +68,7 @@
 </EpkSection>
 
 <style lang="postcss">
-	bio-selector-item {
+	epk-bio-selector-item {
 		@apply opacity-60;
 		@apply transition-opacity;
 
