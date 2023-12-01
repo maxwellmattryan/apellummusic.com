@@ -2,6 +2,9 @@
 	import { base } from '$app/paths'
 	import { onMount } from 'svelte'
 	import { AppRoute, getPageTitle, setAppRoute } from '@lib/app'
+	import { ABOUT_DATA } from '@lib/data/about'
+
+	const { sections } = ABOUT_DATA
 
 	onMount(() => {
 		setAppRoute(AppRoute.About)
@@ -12,64 +15,31 @@
 	<title>{getPageTitle(AppRoute.About)}</title>
 </svelte:head>
 <about-page class="w-full h-auto mt-[5vh] mb-[15vh] flex flex-col items-center">
-	<div class="about-pair flex flex-row justify-center items-center">
-		<img class="w-[35vw] px-[4vw]" src="{base}/images/press_about-01.jpg" alt="Press 1" />
-		<about-page-paragraph
-			class="px-[1vw] flex flex-col justify-between items-start leading-8 opacity-90"
-		>
-			<about-page-paragraph-header
-				class="w-full mb-[8vh] pb-4 border-b-2 border-solid border-[#4c5adb]"
+	{#each sections as { image, header, paragraph }, index}
+		{@const isLeft = index % 2 === 0}
+		<div class="about-pair flex flex-row justify-center items-center">
+			{#if isLeft}
+				<img class="w-[35vw] px-[4vw]" src="{base}/images/{image}" alt="Press {index + 1}" />
+			{/if}
+			<about-page-paragraph
+				class="px-[1vw] flex flex-col justify-between items-start leading-8 opacity-90"
 			>
-				<h3 class="text-left">Introducing Apellum</h3>
-			</about-page-paragraph-header>
-			<p>
-				In the ever-evolving landscape of electronic music, Apellum emerges as an up-and-coming
-				techno DJ and producer deeply rooted in the vibrant Austin scene. With a diverse background
-				as a percussionist, audio engineer, and sound designer, Apellum artfully weaves together
-				influences from a vast spectrum of musical genres, crafting a sonic tapestry that resonates
-				closely with the hypnotic and groovy essence of Berlin techno.
-			</p>
-		</about-page-paragraph>
-	</div>
-	<div class="about-pair flex flex-row justify-center items-center">
-		<about-page-paragraph
-			class="px-[1vw] flex flex-col justify-between items-end leading-8 opacity-90"
-		>
-			<about-page-paragraph-header
-				class="w-full mb-[8vh] pb-4 border-b-2 border-solid border-[#ef2e5e]"
-			>
-				<h3 class="text-right">Influences across genres</h3>
-			</about-page-paragraph-header>
-			<p class="text-right">
-				Within the techno scene, Apellum finds inspiration in many artists from multiple sub-genres,
-				like Ketch or Yan Cook for darker Berlin techno, Maōh for hardgroove, or Wata Igarashi for
-				hypnotic / dub techno. Beyond the confines of techno, Apellum’s creative canvas is painted
-				with shades of drum ‘n bass, jungle, trance, jazz, fusion, funk, classical, and rock, among
-				many others.
-			</p>
-		</about-page-paragraph>
-		<img class="w-[35vw] px-[4vw]" src="{base}/images/press_about-02.jpg" alt="Press 2" />
-	</div>
-	<div class="about-pair flex flex-row justify-center items-center">
-		<img class="w-[35vw] px-[4vw]" src="{base}/images/press_about-03.jpg" alt="Press 3" />
-		<about-page-paragraph
-			class="px-[1vw] flex flex-col justify-between items-start leading-8 opacity-90"
-		>
-			<about-page-paragraph-header
-				class="w-full mb-[8vh] pb-4 border-b-2 border-solid border-[#4c5adb]"
-			>
-				<h3 class="text-left">Exploration in the studio</h3>
-			</about-page-paragraph-header>
-			<p>
-				Apellum’s studio has been a realm of exploration and creativity, where new sounds and music
-				are discovered and crafted. His upcoming EP, Protocol, embodies a culmination of recent
-				artistic influences that have shaped and defined his signature sound. Join Apellum on a
-				transformative journey, where the rhythms and sounds transcend boundaries and transport
-				listeners to new emotional realms, an invitation to experience the power of techno in its
-				purest form.
-			</p>
-		</about-page-paragraph>
-	</div>
+				<about-section-header
+					class="w-full mb-[8vh] pb-4 border-b-2 border-solid border-[{isLeft
+						? '#4c5adb'
+						: '#ef2e5e'}]"
+				>
+					<h3 class="text-{isLeft ? 'left' : 'right'}">{header}</h3>
+				</about-section-header>
+				<about-section-paragraph>
+					<p class="text-{isLeft ? 'left' : 'right'}">{paragraph}</p>
+				</about-section-paragraph>
+			</about-page-paragraph>
+			{#if !isLeft}
+				<img class="w-[35vw] px-[4vw]" src="{base}/images/{image}" alt="Press {index + 1}" />
+			{/if}
+		</div>
+	{/each}
 </about-page>
 
 <style lang="postcss">

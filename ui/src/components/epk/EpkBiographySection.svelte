@@ -8,15 +8,11 @@
 
 <script lang="ts">
 	import { IconButton, IconName } from '@components'
-	import { LongBiography, ShortBiography, OneLineBiography } from './biographies'
+	import type { IEpkBiographies } from '../../routes/epk/epk-data.constant'
+
+	export let biographies: IEpkBiographies
 
 	let selectedBioType: BioType = BioType.Long
-
-	const BIO_TYPE_COMPONENT_MAP: { [key in BioType]: unknown } = {
-		[BioType.Long]: LongBiography,
-		[BioType.Short]: ShortBiography,
-		[BioType.OneLine]: OneLineBiography,
-	}
 
 	function onBioTypeClick(bioType: BioType): void {
 		selectedBioType = bioType
@@ -65,7 +61,9 @@
 		<IconButton icon={IconName.Copy} tooltipText="Copied!" onClick={onBioCopyClick} />
 	</bio-selector-header>
 	<selected-bio bind:this={biography} class="overflow-y-auto">
-		<svelte:component this={BIO_TYPE_COMPONENT_MAP[selectedBioType]} />
+		{#each biographies[selectedBioType].text as paragraph}
+			<p>{paragraph}</p>
+		{/each}
 	</selected-bio>
 </bios>
 
@@ -84,5 +82,13 @@
 		&:not(:first-of-type) {
 			@apply ml-4;
 		}
+	}
+
+	p {
+		@apply leading-7;
+	}
+
+	p:not(:first-of-type) {
+		@apply mt-4;
 	}
 </style>

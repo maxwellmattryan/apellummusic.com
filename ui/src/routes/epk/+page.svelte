@@ -1,11 +1,15 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 	import { base } from '$app/paths'
-	import { EpkSection, Icon, IconName, MultiBiography, MultiMusic } from '@components'
+	import { EpkSection, Icon, IconName, EpkBiographySection, MultiMusic } from '@components'
 	import { AppRoute, getPageTitle, setAppRoute } from '@lib/app'
+	import { EPK_DATA } from '@lib/data/epk'
+
+	const { downloadUrl, biographyData, musicImage, pressImages } = EPK_DATA
+	const { image: biographyImage, biographies } = biographyData
 
 	function onDownloadClick(): void {
-		window.open('https://storage.googleapis.com/apellum-files/epks/apellum-epk.zip')
+		window.open(downloadUrl)
 	}
 
 	onMount(() => {
@@ -22,17 +26,17 @@
 		<Icon icon={IconName.Download} />
 	</download-button>
 	<EpkSection title="Biographies">
-		<img class="w-1/2 object-contain" src="{base}/images/press_epk-01.jpg" alt="EPK 1" />
-		<MultiBiography />
+		<img class="w-1/2 object-contain" src="{base}/images/{biographyImage}" alt="EPK 1" />
+		<EpkBiographySection {biographies} />
 	</EpkSection>
 	<EpkSection title="Music">
 		<MultiMusic />
-		<img class="w-1/2 object-contain" src="{base}/images/press_epk-02.jpg" alt="EPK 2" />
+		<img class="w-1/2 object-contain" src="{base}/images/{musicImage}" alt="EPK 2" />
 	</EpkSection>
 	<EpkSection title="Press">
-		<img class="w-1/3 object-contain" src="{base}/images/press_epk-03.jpg" alt="EPK 3" />
-		<img class="w-1/3 object-contain" src="{base}/images/press_epk-04.jpg" alt="EPK 4" />
-		<img class="w-1/3 object-contain" src="{base}/images/press_epk-05.jpg" alt="EPK 5" />
+		{#each pressImages as pressImage, index}
+			<img class="w-1/3 object-contain" src="{base}/images/{pressImage}" alt="EPK {index + 3}" />
+		{/each}
 	</EpkSection>
 </epk-page>
 
