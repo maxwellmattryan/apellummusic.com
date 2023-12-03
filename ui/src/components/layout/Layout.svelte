@@ -11,7 +11,7 @@
 	<page-content
 		class="w-full h-{isHomeRoute || isErrorRoute || $appRoute === AppRoute.Music
 			? 'full'
-			: 'auto'} {isHomeRoute ? '' : 'pt-[20vh] px-[15vw]'}"
+			: 'auto'} {isHomeRoute ? '' : 'pt-[20vh] px-[10vw] md:px-[15vw]'}"
 	>
 		{#if !isHomeRoute && !isErrorRoute}
 			<h2 class="text-indigo-50">
@@ -30,7 +30,17 @@
 		@apply text-indigo-50;
 	}
 
-	h2 {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		@apply font-semibold;
+	}
+
+	p,
+	a {
+		@apply font-medium;
 	}
 </style>

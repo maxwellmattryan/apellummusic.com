@@ -18,7 +18,7 @@
 <about-page class="w-full h-auto mt-[10vh] mb-[15vh] flex flex-col items-center">
 	{#each sections as section, index}
 		<div class="about-section">
-			<AboutSection {section} {index} justifyLeft={index % 2 === 0} />
+			<AboutSection {section} {index} justifyLeft={index % 2 !== 0} />
 		</div>
 	{/each}
 	<div class="about-section">

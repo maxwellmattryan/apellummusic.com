@@ -35,7 +35,7 @@
 
 	.contact-section p {
 		&:not(:first-of-type) {
-			@apply mt-[2.5vh];
+			@apply mt-[1vh] md:mt-[2.5vh];
 		}
 	}
 </style>
