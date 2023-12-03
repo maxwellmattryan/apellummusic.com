@@ -12,7 +12,7 @@
 		target="_blank"
 		class="w-full h-[15vh] p-4 flex flex-row bg-indigo-950 bg-opacity-90 rounded-lg"
 	>
-		<img src="{base}/images/{image}.jpg" alt={image} class="rounded-lg" />
+		<img src="{base}/images/{image}.jpg" alt={image} class="rounded-lg aspect-square" />
 		<div class="flex flex-col justify-around ml-4">
 			<div>
 				<p class="title font-semibold">{title}</p>
