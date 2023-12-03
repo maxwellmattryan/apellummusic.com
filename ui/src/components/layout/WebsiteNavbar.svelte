@@ -61,7 +61,6 @@
 
 <style lang="postcss">
 	website-navbar-link {
-		@apply text-indigo-50;
 		@apply opacity-60;
 		@apply transition-opacity;
 
@@ -82,7 +81,6 @@
 			@apply border-slate-950;
 		}
 		& a {
-			@apply font-medium;
 			@apply ml-4;
 		}
 	}

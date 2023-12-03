@@ -15,13 +15,3 @@
 		<slot />
 	</epk-bio-section-content>
 </epk-section>
-
-<style lang="postcss">
-	h3 {
-		@apply font-semibold;
-	}
-
-	p {
-		@apply font-medium;
-	}
-</style>

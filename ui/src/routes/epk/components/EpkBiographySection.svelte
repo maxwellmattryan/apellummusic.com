@@ -85,10 +85,6 @@
 		}
 	}
 
-	p {
-		@apply leading-7;
-	}
-
 	p:not(:first-of-type) {
 		@apply mt-4;
 	}

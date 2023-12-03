@@ -15,10 +15,6 @@
 </contact>
 
 <style lang="postcss">
-	h3 {
-		@apply font-semibold text-indigo-50;
-	}
-
 	.contact-link {
 		@apply ml-2;
 		@apply opacity-60;
@@ -29,13 +25,9 @@
 		}
 	}
 
-	p {
-		@apply font-medium;
-	}
-
 	.contact-section p {
 		&:not(:first-of-type) {
-			@apply mt-[1vh] md:mt-[2.5vh];
+			@apply mt-[1vh] md:mt-[2vh];
 		}
 	}
 </style>

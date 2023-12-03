@@ -14,9 +14,7 @@
 		? 'md:flex-row'
 		: 'md:flex-row-reverse'} items-center"
 >
-	<about-section-paragraph
-		class="px-[1vw] pb-[4vh] flex flex-col justify-between leading-8 opacity-90"
-	>
+	<about-section-paragraph class="px-[1vw] pb-[4vh] flex flex-col justify-between opacity-90">
 		<about-section-paragraph-header
 			class="w-full mb-[2vh] md:mb-[8vh] pb-4 border-b-2 border-solid border-[{justifyLeft
 				? '#4c5adb'
@@ -42,18 +40,5 @@
 
 	.is-right {
 		@apply text-left md:text-right;
-	}
-
-	h3 {
-		@apply font-semibold;
-	}
-
-	h3,
-	p {
-		@apply text-indigo-50;
-	}
-
-	p {
-		@apply font-medium;
 	}
 </style>

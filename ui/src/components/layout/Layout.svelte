@@ -30,17 +30,16 @@
 		@apply text-indigo-50;
 	}
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
+	:global(h1, h2, h3, h4, h5, h6, p, a, button) {
+		@apply text-indigo-50;
+	}
+
+	:global(h1, h2, h3, h4, h5, h6) {
 		@apply font-semibold;
 	}
 
-	p,
-	a {
+	:global(p, a, button) {
 		@apply font-medium;
+		@apply text-xs leading-6 md:text-lg md:leading-8 !important;
 	}
 </style>
