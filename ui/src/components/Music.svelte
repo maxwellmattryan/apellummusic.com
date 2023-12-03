@@ -36,7 +36,7 @@
 	}
 
 	.title {
-		@apply text-lg !important;
+		@apply md:text-lg !important;
 	}
 
 	.date {
@@ -45,6 +45,6 @@
 	}
 
 	.description {
-		@apply text-sm !important;
+		@apply text-xs md:text-sm !important;
 	}
 </style>

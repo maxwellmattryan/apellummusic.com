@@ -28,7 +28,11 @@
 			<p class={justifyLeft ? 'is-left' : 'is-right'}>{paragraph}</p>
 		</about-section-paragraph-text>
 	</about-section-paragraph>
-	<img class="md:w-[35vw] md:px-[4vw]" src="{base}/images/{image}" alt="Press {index + 1}" />
+	<img
+		class="md:w-[35vw] md:max-h-[70vh] md:px-[4vw]"
+		src="{base}/images/{image}"
+		alt="Press {index + 1}"
+	/>
 </about-section>
 
 <style lang="postcss">

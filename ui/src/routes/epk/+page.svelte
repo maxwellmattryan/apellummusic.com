@@ -20,7 +20,9 @@
 	<title>{getPageTitle(AppRoute.Epk)}</title>
 </svelte:head>
 <epk-page class="w-full h-auto mb-[15vh] flex flex-col items-center">
-	<download-button class="mt-2 mb-[10vh] flex flex-row justify-center items-center">
+	<download-button
+		class="invisible md:visible mt-2 md:mb-[10vh] flex flex-row justify-center items-center"
+	>
 		<button class="download" on:click={onDownloadClick}> Download (.zip) </button>
 		<Icon icon={IconName.Download} />
 	</download-button>
@@ -34,7 +36,7 @@
 
 <style lang="postcss">
 	:global(epk-section:not(:first-of-type)) {
-		@apply mt-[15vh];
+		@apply mt-[10vh];
 	}
 
 	download-button {

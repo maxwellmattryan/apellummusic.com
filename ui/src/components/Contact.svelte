@@ -5,7 +5,7 @@
 </script>
 
 <contact class="contact-section text-left">
-	<h3 class="mb-[5vh]">Contact</h3>
+	<h3 class="mb-[4vh]">Contact</h3>
 	{#each contacts[ContactType.Email] as { name, url }}
 		<p>{name}: <a class="contact-link" href="mailto:{url}">{url}</a></p>
 	{/each}

@@ -40,8 +40,8 @@
 </script>
 
 <EpkSection title="Biographies">
-	<img class="w-1/2 object-contain" src="{base}/images/{image}" alt="EPK biography" />
-	<epk-bios class="flex flex-col justify-center">
+	<img class="w-full md:w-1/2 object-contain" src="{base}/images/{image}" alt="EPK biography" />
+	<epk-bios class="w-full flex flex-col justify-center">
 		<epk-bios-header class="flex flex-row justify-between items-start">
 			<epk-bio-selector class="flex flex-row items-center mb-4">
 				{#each Object.values(EpkBiographyType) as bioType}
@@ -60,7 +60,7 @@
 			</epk-bio-selector>
 			<IconButton icon={IconName.Copy} tooltipText="Copied!" onClick={onBioCopyClick} />
 		</epk-bios-header>
-		<epk-selected-bio bind:this={biography} class="overflow-y-auto">
+		<epk-selected-bio bind:this={biography} class="max-h-[50vh] md:max-h-full overflow-y-auto">
 			{#each biographies[selectedBioType].text as paragraph}
 				<p>{paragraph}</p>
 			{/each}
