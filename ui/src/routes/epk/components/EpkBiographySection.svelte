@@ -48,6 +48,7 @@
 					{@const selected = bioType === selectedBioType}
 					<epk-bio-selector-item class:selected>
 						<button
+							type="button"
 							on:click={() => onBioTypeClick(bioType)}
 							class="{selected
 								? 'border-b-2 border-solid border-[#4c5adb]'

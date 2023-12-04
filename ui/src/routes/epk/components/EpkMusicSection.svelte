@@ -38,6 +38,7 @@
 					{@const selected = musicCollectionType === selectedMusicCollectionType}
 					<epk-music-collection-selector-item class:selected>
 						<button
+							type="button"
 							on:click={() => onMusicTypeClick(musicCollectionType)}
 							class="{selected
 								? 'border-b-2 border-solid border-[#4c5adb]'

@@ -19,6 +19,12 @@
 		}
 	}
 
+	let showSidebar: boolean = false
+
+	function toggleSidebar(): void {
+		showSidebar = !showSidebar
+	}
+
 	let showLogoHeader: boolean = true
 
 	onMount(() => {
@@ -32,18 +38,31 @@
 	})
 </script>
 
-<header class="w-full sticky top-0 flex flex-row justify-center items-center">
-	<WebsiteNavbar />
-	{#if $appRoute !== AppRoute.Home}
-		<logo-header class:hide={!showLogoHeader} class="absolute top-8 w-[20vw]">
-			<!-- ghost header -->
-			<h1 class="invisible h-0">Apellum</h1>
-			<a href="/">
-				<img src="{base}/logos/white.svg" alt="Apellum logo" />
-			</a>
-		</logo-header>
-	{/if}
-	<LinkSidebar {linkColor} />
+<header class="w-full sticky top-0 z-10">
+	<mobile-layout
+		class="absolute top-0 w-full pt-6 px-6 visible md:invisible flex flex-row justify-between items-center"
+	>
+		<a href="/">
+			<!--			<img src="{base}/logos/white.svg" alt="Apellum logo" />-->
+			A
+		</a>
+		<button type="button" on:click={toggleSidebar}> Sidebar </button>
+	</mobile-layout>
+	<desktop-layout
+		class="absolute top-0 w-full invisible md:visible flex flex-row justify-center items-center"
+	>
+		<WebsiteNavbar />
+		{#if $appRoute !== AppRoute.Home}
+			<logo-header class:hide={!showLogoHeader} class="absolute top-8 w-[20vw]">
+				<!-- ghost header -->
+				<h1 class="invisible h-0">Apellum</h1>
+				<a href="/">
+					<img src="{base}/logos/white.svg" alt="Apellum logo" />
+				</a>
+			</logo-header>
+		{/if}
+		<LinkSidebar {linkColor} />
+	</desktop-layout>
 </header>
 
 <style lang="postcss">

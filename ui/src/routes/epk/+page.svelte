@@ -23,7 +23,7 @@
 	<download-button
 		class="invisible md:visible mt-2 md:mb-[10vh] flex flex-row justify-center items-center"
 	>
-		<button class="download" on:click={onDownloadClick}> Download (.zip) </button>
+		<button type="button" class="download" on:click={onDownloadClick}> Download (.zip) </button>
 		<Icon icon={IconName.Download} />
 	</download-button>
 	<EpkBiographySection {biographyData} />
