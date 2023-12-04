@@ -13,7 +13,7 @@
 <svelte:head>
 	<title>{getPageTitle(AppRoute.Home)}</title>
 </svelte:head>
-<home-page class="w-full h-full max-h-screen flex flex-row">
+<home-page class="w-full h-screen max-h-screen flex flex-row">
 	<home-page-left
 		class="w-full md:w-1/2 h-full absolute md:static flex flex-col justify-center items-center"
 	>

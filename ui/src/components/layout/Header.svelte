@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 	import { base } from '$app/paths'
-	import { AppRoute, appRoute } from '@lib/app'
+	import { AppRoute, appRoute, openSideDrawer } from '@lib/app'
 	import { LinkSidebar, WebsiteNavbar } from '@components'
 
 	$: linkColor = getLinkColor($appRoute)
@@ -17,12 +17,6 @@
 			default:
 				return 'slate-950'
 		}
-	}
-
-	let showSidebar: boolean = false
-
-	function toggleSidebar(): void {
-		showSidebar = !showSidebar
 	}
 
 	let showLogoHeader: boolean = true
@@ -46,7 +40,7 @@
 			<!--			<img src="{base}/logos/white.svg" alt="Apellum logo" />-->
 			A
 		</a>
-		<button type="button" on:click={toggleSidebar}> Sidebar </button>
+		<button type="button" on:click={openSideDrawer}> Sidebar </button>
 	</mobile-layout>
 	<desktop-layout
 		class="absolute top-0 w-full invisible md:visible flex flex-row justify-center items-center"
