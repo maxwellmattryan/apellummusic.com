@@ -7,10 +7,6 @@
 
 	const { downloadUrl, biographyData, musicData, pressData } = EPK_DATA
 
-	function onDownloadClick(): void {
-		window.open(downloadUrl)
-	}
-
 	onMount(() => {
 		setAppRoute(AppRoute.Epk)
 	})
@@ -20,12 +16,14 @@
 	<title>{getPageTitle(AppRoute.Epk)}</title>
 </svelte:head>
 <epk-page class="w-full h-auto mb-[15vh] flex flex-col items-center">
-	<download-button
-		class="invisible md:visible mt-2 md:mb-[10vh] flex flex-row justify-center items-center"
+	<a
+		href={downloadUrl}
+		target="_blank"
+		class="download-link invisible md:visible mt-2 md:mb-[10vh] flex flex-row justify-center items-center"
 	>
-		<button type="button" class="download" on:click={onDownloadClick}> Download (.zip) </button>
+		<p type="button" class="download">Download (.zip)</p>
 		<Icon icon={IconName.Download} />
-	</download-button>
+	</a>
 	<EpkBiographySection {biographyData} />
 	<EpkMusicSection {musicData} />
 	<EpkPressSection {pressData} />
@@ -39,7 +37,7 @@
 		@apply mt-[10vh];
 	}
 
-	download-button {
+	.download-link {
 		@apply opacity-60;
 		@apply transition-opacity;
 
