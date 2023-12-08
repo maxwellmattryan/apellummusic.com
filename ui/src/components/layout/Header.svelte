@@ -63,11 +63,17 @@
 			? ''
 			: 'bg-slate-950'} pointer-events-auto opacity-100"
 	>
-		<a href="/">
+		<a href="/" class={isHome ? 'text-slate-950' : 'text-indigo-50'}>
 			<!--			<img src="{base}/logos/white.svg" alt="Apellum logo" />-->
 			A
 		</a>
-		<button type="button" on:click={openSideDrawer}> Sidebar </button>
+		<button
+			type="button"
+			class={isHome ? 'text-slate-950' : 'text-indigo-50'}
+			on:click={openSideDrawer}
+		>
+			Sidebar
+		</button>
 	</mobile-layout>
 	<desktop-layout
 		class="absolute top-0 w-full invisible md:visible flex flex-row justify-center items-center"
