@@ -47,7 +47,7 @@
 	}
 
 	onMount(() => {
-		const isMobile = navigator.maxTouchPoints > 0
+		const isMobile = navigator.maxTouchPoints > 0 && window.screen.width < 1024
 		if (isMobile) {
 			window.onwheel = onMobileScroll
 		} else {
