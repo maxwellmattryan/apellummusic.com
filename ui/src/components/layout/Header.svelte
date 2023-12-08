@@ -63,13 +63,14 @@
 			? ''
 			: 'bg-slate-950'} pointer-events-auto opacity-100"
 	>
-		<a href="/" class={isHome ? 'text-slate-800' : 'text-indigo-50'}>
+		<a href="/" class={isHome ? 'text-slate-800' : 'text-indigo-50'} aria-label="Home">
 			<Logo color={isHome ? 'black' : 'white'} />
 		</a>
 		<button
 			type="button"
 			style="--menu-icon-color: {isHome ? '#020617' : '#eef2ff'}"
 			on:click={openSideDrawer}
+			aria-label="Open menu"
 		>
 			<Icon icon={IconName.Menu} />
 		</button>

@@ -7,10 +7,12 @@
 <contact class="contact-section text-left">
 	<h3 class="mb-[4vh]">Contact</h3>
 	{#each contacts[ContactType.Email] as { name, url }}
-		<p>{name}: <a class="contact-link" href="mailto:{url}">{url}</a></p>
+		<p>{name}: <a class="contact-link" href="mailto:{url}" aria-label={name}>{url}</a></p>
 	{/each}
 	{#each contacts[ContactType.Social] as { name, url, username }}
-		<p>{name}: <a class="contact-link" href={url} target="_blank">@{username}</a></p>
+		<p>
+			{name}: <a class="contact-link" href={url} target="_blank" aria-label={name}>@{username}</a>
+		</p>
 	{/each}
 </contact>
 

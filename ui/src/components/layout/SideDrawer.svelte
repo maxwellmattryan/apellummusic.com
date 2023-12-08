@@ -8,7 +8,7 @@
 		? 'w-0'
 		: 'w-screen'} h-screen md:invisible z-20 overflow-x-hidden flex flex-col items-end gap-[5vh]"
 >
-	<button type="button" on:click={closeSideDrawer} class="mt-5 mr-5">
+	<button type="button" on:click={closeSideDrawer} class="mt-5 mr-5" aria-label="Close menu">
 		<Icon icon={IconName.Close} />
 	</button>
 	<WebsiteNavbar context="drawer" direction="right" />
