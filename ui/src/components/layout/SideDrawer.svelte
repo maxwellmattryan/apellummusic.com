@@ -4,7 +4,7 @@
 </script>
 
 <side-drawer
-	class="absolute top-0 right-0 {$sideDrawerState.hidden
+	class="fixed top-0 right-0 {$sideDrawerState.hidden
 		? 'w-0'
 		: 'w-screen'} h-screen md:invisible z-20 overflow-x-hidden flex flex-col items-end gap-[5vh]"
 >

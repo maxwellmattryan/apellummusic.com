@@ -77,7 +77,7 @@
 <style lang="postcss">
 	website-navbar {
 		&.page {
-			@apply absolute top-[8vh];
+			@apply absolute top-[8vh] left-4;
 		}
 
 		&.drawer {

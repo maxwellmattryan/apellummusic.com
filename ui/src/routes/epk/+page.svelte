@@ -45,4 +45,9 @@
 			@apply opacity-100;
 		}
 	}
+
+	.download-link :global(svg) {
+		@apply w-[20px] h-[20px];
+		@apply ml-2;
+	}
 </style>

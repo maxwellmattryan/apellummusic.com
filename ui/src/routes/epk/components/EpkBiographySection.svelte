@@ -35,7 +35,6 @@
 		biographyImage && biographyHeader
 			? `${biographyImage.offsetHeight - biographyHeader.offsetHeight}px`
 			: 'auto'
-	$: console.log(biographyTextHeight)
 
 	function onBioCopyClick(): void {
 		if (biographyText) {
