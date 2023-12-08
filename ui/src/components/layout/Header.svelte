@@ -103,6 +103,7 @@
 
 	mobile-layout :global(svg) {
 		@apply h-[28px] w-[28px];
+		@apply opacity-100;
 	}
 
 	mobile-layout :global(button svg) {
