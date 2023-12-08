@@ -21,7 +21,7 @@
 	<page-content
 		class="w-full h-{isHomeRoute || isErrorRoute || $appRoute === AppRoute.Music
 			? 'full'
-			: 'auto'} {isHomeRoute ? '' : 'pt-[20vh] px-[10vw] md:px-[15vw]'}"
+			: 'auto'} {isHomeRoute ? '' : 'pt-[12vh] md:pt-[20vh] px-[10vw] md:px-[15vw]'}"
 	>
 		{#if !isHomeRoute && !isErrorRoute}
 			<h2 class="text-indigo-50">
@@ -50,7 +50,7 @@
 	}
 
 	:global(h1, h2, h3, h4, h5, h6, p, a, button) {
-		@apply text-indigo-50 !important;
+		@apply text-indigo-50;
 	}
 
 	:global(h1, h2, h3, h4, h5, h6) {
