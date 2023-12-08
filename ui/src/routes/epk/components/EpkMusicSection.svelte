@@ -29,7 +29,8 @@
 	}
 </script>
 
-<EpkSection title="Music">
+<EpkSection title="Music" justifyLeft={false}>
+	<img class="w-full md:w-1/2 object-contain" src="{base}/images/{image}" alt="EPK music" />
 	<epk-music class="w-full h-full flex flex-col">
 		<epk-music-header class="flex flex-row justify-between items-start">
 			<epk-music-collection-selector class="flex flex-row items-center mb-4">
@@ -37,6 +38,7 @@
 					{@const selected = musicCollectionType === selectedMusicCollectionType}
 					<epk-music-collection-selector-item class:selected>
 						<button
+							type="button"
 							on:click={() => onMusicTypeClick(musicCollectionType)}
 							class="{selected
 								? 'border-b-2 border-solid border-[#4c5adb]'
@@ -58,7 +60,6 @@
 			{/key}
 		</epk-selected-music-collection>
 	</epk-music>
-	<img class="w-1/2 object-contain" src="{base}/images/{image}" alt="EPK music" />
 </EpkSection>
 
 <style lang="postcss">

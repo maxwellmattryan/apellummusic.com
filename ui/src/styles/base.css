@@ -8,6 +8,8 @@
 html,
 body {
 	background-color: #020617;
+	width: 100%;
+	max-width: 100vw;
 	height: fit-content;
 	font-family:
 		Montserrat,
@@ -26,3 +28,13 @@ body {
 		'Segoe UI Symbol',
 		'Noto Color Emoji';
 }
+
+body {
+	min-height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+/** {*/
+/*	outline: 1px solid #f00 !important;*/
+/*}*/

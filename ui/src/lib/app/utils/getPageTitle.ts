@@ -7,7 +7,7 @@ export function getPageTitle(route: AppRoute): string {
 		case AppRoute.Error:
 			return `Page not found | ${BASE_PAGE_TITLE}`
 		case AppRoute.Home:
-			return `Home | ${BASE_PAGE_TITLE}`
+			return `${BASE_PAGE_TITLE}`
 		case AppRoute.About:
 			return `About | ${BASE_PAGE_TITLE}`
 		case AppRoute.Music:

@@ -27,7 +27,7 @@ export const FEATURES: IFeatures = {
 		hidden: true,
 	},
 	photosAndVideos: {
-		enabled: true,
+		enabled: false,
 		hidden: true,
 	},
 	events: {
