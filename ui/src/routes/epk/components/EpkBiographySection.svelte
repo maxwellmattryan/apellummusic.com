@@ -10,7 +10,7 @@
 
 	const { image, biographies } = biographyData ?? {}
 
-	let selectedBioType: EpkBiographyType = EpkBiographyType.Long
+	let selectedBioType: EpkBiographyType = EpkBiographyType.Short
 
 	function onBioTypeClick(bioType: EpkBiographyType): void {
 		selectedBioType = bioType
