@@ -64,7 +64,6 @@
 			: 'bg-slate-950'} pointer-events-auto opacity-100"
 	>
 		<a href="/" class={isHome ? 'text-slate-800' : 'text-indigo-50'}>
-			<!--			<img src="{base}/logos/white.svg" alt="Apellum logo" />-->
 			<Logo color={isHome ? 'black' : 'white'} />
 		</a>
 		<button
@@ -102,8 +101,11 @@
 		@apply duration-150;
 	}
 
+	mobile-layout :global(svg) {
+		@apply h-[28px] w-[28px];
+	}
+
 	mobile-layout :global(button svg) {
-		@apply h-[24px] w-[24px];
 		@apply fill-[var(--menu-icon-color)];
 	}
 
