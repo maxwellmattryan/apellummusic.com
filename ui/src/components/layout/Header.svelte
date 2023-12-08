@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 	import { base } from '$app/paths'
-	import { AppRoute, appRoute, isMobile, openSideDrawer } from '@lib/app'
-	import { LinkSidebar, WebsiteNavbar } from '@components'
+	import { Icon, LinkSidebar, WebsiteNavbar } from '@components'
+	import { AppRoute, appRoute, IconName, isMobile, openSideDrawer } from '@lib/app'
 
 	let isHome: boolean = true
 	$: isHome = $appRoute === AppRoute.Home
@@ -63,16 +63,16 @@
 			? ''
 			: 'bg-slate-950'} pointer-events-auto opacity-100"
 	>
-		<a href="/" class={isHome ? 'text-slate-950' : 'text-indigo-50'}>
+		<a href="/" class={isHome ? 'text-slate-800' : 'text-indigo-50'}>
 			<!--			<img src="{base}/logos/white.svg" alt="Apellum logo" />-->
 			A
 		</a>
 		<button
 			type="button"
-			class={isHome ? 'text-slate-950' : 'text-indigo-50'}
+			style="--menu-icon-color: {isHome ? '#020617' : '#eef2ff'}"
 			on:click={openSideDrawer}
 		>
-			Sidebar
+			<Icon icon={IconName.Menu} />
 		</button>
 	</mobile-layout>
 	<desktop-layout
@@ -100,6 +100,11 @@
 
 	mobile-layout {
 		@apply duration-150;
+	}
+
+	mobile-layout :global(button svg) {
+		@apply h-[24px] w-[24px];
+		@apply fill-[var(--menu-icon-color)];
 	}
 
 	.hide {

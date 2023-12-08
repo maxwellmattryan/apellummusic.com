@@ -33,7 +33,6 @@
 	}
 
 	link-sidebar :global(a svg) {
-		@apply h-[18px];
 		@apply fill-[var(--link-color)];
 		@apply opacity-75;
 		@apply transition-opacity;
