@@ -18,7 +18,7 @@
 	const LINKS: ILink[] = [...socialLinks, ...musicLinks]
 </script>
 
-<link-sidebar class="absolute top-[8vh] right-4 pr-2 border-solid border-r-2 border-[#4c5adb]">
+<link-sidebar class="absolute top-[8vh] right-4 border-solid border-r-2 border-[#4c5adb]">
 	{#each LINKS as { url, icon }}
 		<a class="mr-2" style="--link-color: {linkColor ?? 'slate-950'}" href={url} target="_blank">
 			<Icon {icon} iconColor={linkColor} />

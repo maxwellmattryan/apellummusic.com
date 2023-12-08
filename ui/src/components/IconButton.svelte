@@ -55,4 +55,8 @@
 			@apply opacity-100;
 		}
 	}
+
+	p {
+		@apply text-xs md:text-sm !important;
+	}
 </style>

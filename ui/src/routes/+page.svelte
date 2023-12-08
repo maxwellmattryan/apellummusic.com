@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { base } from '$app/paths'
 	import { onMount } from 'svelte'
+	import { base } from '$app/paths'
 	import { AppRoute, getPageTitle, setAppRoute } from '@lib/app'
 
 	const backgroundImageUrl = `${base}/images/press_home.jpg`
@@ -15,12 +15,16 @@
 </svelte:head>
 <home-page class="w-full h-screen max-h-screen flex flex-row">
 	<home-page-left
-		class="w-full md:w-1/2 h-full absolute md:static flex flex-col justify-center items-center"
+		class="w-full md:w-1/2 absolute md:static flex flex-col justify-center items-center"
 	>
 		<div
 			class="w-full max-w-3xl h-full md:px-[6rem] flex flex-col justify-center items-center md:items-end text-right"
 		>
-			<img src="{base}/logos/white.svg" alt="Apellum logo" class="invisible md:visible" />
+			<img
+				src="{base}/logos/white.svg"
+				alt="Apellum logo"
+				class="invisible md:visible object-contain"
+			/>
 			<!-- ghost header -->
 			<h1 class="invisible h-0">Apellum</h1>
 			<h2 class="mt-4 italic">Techno producer & DJ</h2>

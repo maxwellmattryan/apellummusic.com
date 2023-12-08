@@ -47,7 +47,7 @@
 	>
 		<WebsiteNavbar />
 		{#if $appRoute !== AppRoute.Home}
-			<logo-header class:hide={!showLogoHeader} class="absolute top-8 w-[20vw]">
+			<logo-header id="logo-header" class:hide={!showLogoHeader} class="absolute top-8 w-[20vw]">
 				<!-- ghost header -->
 				<h1 class="invisible h-0">Apellum</h1>
 				<a href="/">

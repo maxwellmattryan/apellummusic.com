@@ -40,7 +40,7 @@
 	}
 </script>
 
-<website-navbar class="pl-4 absolute top-[8vh] left-0">
+<website-navbar class="absolute top-[8vh] left-4">
 	<nav class="flex flex-col">
 		{#each getAppRoutes() as route}
 			{@const selected = route === $appRoute}

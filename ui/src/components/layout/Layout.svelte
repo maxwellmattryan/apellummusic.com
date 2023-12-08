@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Footer, Header, WebsiteNavbar } from '@components'
-	import { AppRoute, appRoute, closeSideDrawer, getPageHeader, sideDrawerState } from '@lib/app'
+	import { Footer, Header } from '@components'
+	import { AppRoute, appRoute, getPageHeader, sideDrawerState } from '@lib/app'
 
 	$: console.log('side drawer hidden: ', $sideDrawerState.hidden)
 
@@ -8,15 +8,15 @@
 	$: isErrorRoute = $appRoute === AppRoute.Error
 </script>
 
-<side-drawer
-	class="absolute top-0 right-0 {$sideDrawerState.hidden
-		? 'w-0'
-		: 'w-screen'} h-screen transition-width md:invisible z-20"
->
-	<button type="button" on:click={closeSideDrawer}>SIDEBARSIBDEARSIDEBAR</button>
-	<WebsiteNavbar />
-</side-drawer>
-<layout class="w-full h-screen flex flex-col items-center">
+<!--<side-drawer-->
+<!--	class="absolute top-0 right-0 {$sideDrawerState.hidden-->
+<!--		? 'w-0'-->
+<!--		: 'w-screen'} h-screen md:invisible z-20"-->
+<!--&gt;-->
+<!--	<button type="button" on:click={closeSideDrawer}>SIDEBARSIBDEARSIDEBAR</button>-->
+<!--	<WebsiteNavbar />-->
+<!--</side-drawer>-->
+<layout class="w-full flex flex-col items-center">
 	<Header />
 	<page-content
 		class="w-full h-{isHomeRoute || isErrorRoute || $appRoute === AppRoute.Music
@@ -31,7 +31,9 @@
 		<slot />
 	</page-content>
 	{#if !isHomeRoute}
-		<Footer />
+		<div class={$appRoute === AppRoute.Music ? 'absolute bottom-0' : ''}>
+			<Footer />
+		</div>
 	{/if}
 </layout>
 
@@ -48,15 +50,15 @@
 	}
 
 	:global(h1, h2, h3, h4, h5, h6, p, a, button) {
-		@apply text-indigo-50;
+		@apply text-indigo-50 !important;
 	}
 
 	:global(h1, h2, h3, h4, h5, h6) {
-		@apply font-semibold;
+		@apply font-semibold !important;
 	}
 
 	:global(p, a, button) {
-		@apply font-medium;
+		@apply font-medium !important;
 		@apply text-xs leading-6 md:text-lg md:leading-8 !important;
 	}
 </style>
