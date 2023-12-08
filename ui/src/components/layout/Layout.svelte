@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { Footer, Header, SideDrawer } from '@components'
-	import { AppRoute, appRoute, getPageHeader, sideDrawerState } from '@lib/app'
-
-	$: console.log('side drawer hidden: ', $sideDrawerState.hidden)
+	import { AppRoute, appRoute, getPageHeader } from '@lib/app'
 
 	$: isHomeRoute = $appRoute === AppRoute.Home
 	$: isErrorRoute = $appRoute === AppRoute.Error
