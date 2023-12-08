@@ -26,6 +26,7 @@
 			style="--link-color: {linkColor ?? 'slate-950'}"
 			href={url}
 			target="_blank"
+			aria-label={icon}
 		>
 			<Icon {icon} />
 		</a>

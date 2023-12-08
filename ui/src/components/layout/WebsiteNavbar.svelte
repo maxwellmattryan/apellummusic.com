@@ -63,7 +63,8 @@
 				<a
 					href={'/' + getAppRouteUrl(route)}
 					on:click={() => onAppRouteClick(route)}
-					class={direction === 'left' ? 'ml-4' : 'mr-4'}>{getPageHeader(route)}</a
+					class={direction === 'left' ? 'ml-4' : 'mr-4'}
+					aria-label={route}>{getPageHeader(route)}</a
 				>
 				{#if direction === 'right'}
 					<website-navbar-link-highlight class="border-solid border-r-2"
