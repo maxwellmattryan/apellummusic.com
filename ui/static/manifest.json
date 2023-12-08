@@ -1,0 +1,29 @@
+{
+	"name": "apellum-ui",
+	"short_name": "ui",
+	"theme_color": "#EEF2FF",
+	"background_color": "#020617",
+	"display": "standalone",
+	"scope": "/",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "assets/icons/icon-72x72.png",
+			"sizes": "72x72",
+			"type": "image/png",
+			"purpose": "maskable any"
+		},
+		{
+			"src": "assets/icons/icon-96x96.png",
+			"sizes": "96x96",
+			"type": "image/png",
+			"purpose": "maskable any"
+		},
+		{
+			"src": "assets/icons/icon-128x128.png",
+			"sizes": "128x128",
+			"type": "image/png",
+			"purpose": "maskable any"
+		}
+	]
+}
