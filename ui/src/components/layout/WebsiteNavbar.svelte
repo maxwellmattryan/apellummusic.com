@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { appRoute, AppRoute, getPageHeader, setAppRoute } from '@lib/app'
+	import { appRoute, AppRoute, closeSideDrawer, getPageHeader, setAppRoute } from '@lib/app'
 	import { FEATURES } from '@lib/features'
 
 	function getAppRoutes(): AppRoute[] {
@@ -37,6 +37,8 @@
 			default:
 				break
 		}
+
+		closeSideDrawer()
 	}
 </script>
 

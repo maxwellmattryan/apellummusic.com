@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 	import { base } from '$app/paths'
-	import { AppRoute, appRoute, openSideDrawer } from '@lib/app'
+	import { AppRoute, appRoute, isMobile, openSideDrawer } from '@lib/app'
 	import { LinkSidebar, WebsiteNavbar } from '@components'
 
 	let isHome: boolean = true
@@ -47,8 +47,8 @@
 	}
 
 	onMount(() => {
-		const isMobile = navigator.maxTouchPoints > 0 && window.screen.width < 1024
-		if (isMobile) {
+		$isMobile = navigator.maxTouchPoints > 0 && window.screen.width < 1024
+		if ($isMobile) {
 			window.onwheel = onMobileScroll
 		} else {
 			window.onscroll = onDesktopScroll

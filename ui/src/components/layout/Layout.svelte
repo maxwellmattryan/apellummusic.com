@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Footer, Header, WebsiteNavbar } from '@components'
-	import { AppRoute, appRoute, closeSideDrawer, getPageHeader, sideDrawerState } from '@lib/app'
+	import { Footer, Header, SideDrawer } from '@components'
+	import { AppRoute, appRoute, getPageHeader, sideDrawerState } from '@lib/app'
 
 	$: console.log('side drawer hidden: ', $sideDrawerState.hidden)
 
@@ -8,14 +8,7 @@
 	$: isErrorRoute = $appRoute === AppRoute.Error
 </script>
 
-<side-drawer
-	class="absolute top-0 right-0 {$sideDrawerState.hidden
-		? 'w-0'
-		: 'w-screen'} h-screen md:invisible z-20 overflow-x-hidden"
->
-	<button type="button" on:click={closeSideDrawer}>SIDEBARSIBDEARSIDEBAR</button>
-	<WebsiteNavbar />
-</side-drawer>
+<SideDrawer />
 <layout class="w-full flex flex-col items-center">
 	<Header />
 	<page-content
@@ -38,13 +31,6 @@
 </layout>
 
 <style lang="postcss">
-	side-drawer {
-		@apply bg-slate-950;
-
-		transition: width 500ms ease-in-out;
-		animation-fill-mode: both;
-	}
-
 	layout {
 		@apply text-indigo-50;
 	}
