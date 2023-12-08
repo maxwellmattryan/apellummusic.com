@@ -10,6 +10,7 @@
 	import { CONTACT_DATA, ContactType } from '@lib/data/contact'
 
 	export let linkColor: string | undefined = undefined
+	export let context: 'page' | 'drawer' = 'page'
 
 	const { contacts } = CONTACT_DATA
 
@@ -18,18 +19,40 @@
 	const LINKS: ILink[] = [...socialLinks, ...musicLinks]
 </script>
 
-<link-sidebar class="absolute top-[8vh] right-4 border-solid border-r-2 border-[#4c5adb]">
+<link-sidebar class="{context} right-4 border-solid border-r-2 border-[#4c5adb]">
 	{#each LINKS as { url, icon }}
-		<a class="mr-4" style="--link-color: {linkColor ?? 'slate-950'}" href={url} target="_blank">
+		<a
+			class="mr-4 {context}"
+			style="--link-color: {linkColor ?? 'slate-950'}"
+			href={url}
+			target="_blank"
+		>
 			<Icon {icon} iconColor={linkColor} />
 		</a>
 	{/each}
 </link-sidebar>
 
 <style lang="postcss">
+	link-sidebar {
+		&.page {
+			@apply absolute top-[8vh];
+		}
+
+		&.drawer {
+			@apply mr-8;
+		}
+	}
+
 	link-sidebar :global(a) {
-		@apply h-[2.125rem];
 		@apply flex flex-row justify-center items-center;
+
+		&.page {
+			@apply h-[2.125rem];
+		}
+
+		&.drawer {
+			@apply h-[3rem];
+		}
 	}
 
 	link-sidebar :global(a svg) {

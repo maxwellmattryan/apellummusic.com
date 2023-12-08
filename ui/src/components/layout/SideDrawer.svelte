@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Icon, WebsiteNavbar } from '@components'
+	import { Icon, LinkSidebar, WebsiteNavbar } from '@components'
 	import { closeSideDrawer, IconName, sideDrawerState } from '@lib/app'
 </script>
 
@@ -12,7 +12,7 @@
 		<Icon icon={IconName.Close} />
 	</button>
 	<WebsiteNavbar context="drawer" direction="right" />
-	<!--	<LinkSidebar />-->
+	<LinkSidebar context="drawer" linkColor="#eef2ff" />
 </side-drawer>
 
 <style lang="postcss">
