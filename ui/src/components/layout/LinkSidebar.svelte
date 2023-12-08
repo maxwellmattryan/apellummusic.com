@@ -20,7 +20,7 @@
 
 <link-sidebar class="absolute top-[8vh] right-4 border-solid border-r-2 border-[#4c5adb]">
 	{#each LINKS as { url, icon }}
-		<a class="mr-2" style="--link-color: {linkColor ?? 'slate-950'}" href={url} target="_blank">
+		<a class="mr-4" style="--link-color: {linkColor ?? 'slate-950'}" href={url} target="_blank">
 			<Icon {icon} iconColor={linkColor} />
 		</a>
 	{/each}
@@ -28,11 +28,12 @@
 
 <style lang="postcss">
 	link-sidebar :global(a) {
-		@apply h-[2rem];
+		@apply h-[2.125rem];
 		@apply flex flex-row justify-center items-center;
 	}
 
 	link-sidebar :global(a svg) {
+		@apply w-[20px] h-[20px];
 		@apply fill-[var(--link-color)];
 		@apply opacity-75;
 		@apply transition-opacity;

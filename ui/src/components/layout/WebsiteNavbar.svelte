@@ -49,7 +49,7 @@
 			<website-navbar-link
 				class:selected
 				class:invisible={FEATURES[route]?.hidden}
-				class="group h-[1.625rem]"
+				class="group h-[1.8125rem]"
 			>
 				<website-navbar-link-highlight class="border-solid border-l-2"
 				></website-navbar-link-highlight>

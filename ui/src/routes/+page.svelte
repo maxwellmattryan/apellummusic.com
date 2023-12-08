@@ -43,9 +43,8 @@
 	h2 {
 		@apply text-2xl md:text-4xl !important;
 		@apply text-left md:text-right;
-		@apply text-slate-950 md:text-indigo-50;
+		@apply text-slate-700 md:text-indigo-50;
 		@apply absolute md:static;
 		@apply top-[10vh];
-		@apply opacity-50 md:opacity-100;
 	}
 </style>

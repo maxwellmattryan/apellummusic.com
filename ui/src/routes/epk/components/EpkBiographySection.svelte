@@ -89,4 +89,8 @@
 	p:not(:first-of-type) {
 		@apply mt-4;
 	}
+
+	epk-bios-header :global(svg) {
+		@apply w-[20px] h-[20px];
+	}
 </style>

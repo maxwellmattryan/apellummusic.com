@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 	import { base } from '$app/paths'
-	import { Icon, LinkSidebar, WebsiteNavbar } from '@components'
+	import { Icon, LinkSidebar, Logo, WebsiteNavbar } from '@components'
 	import { AppRoute, appRoute, IconName, isMobile, openSideDrawer } from '@lib/app'
 
 	let isHome: boolean = true
@@ -65,7 +65,7 @@
 	>
 		<a href="/" class={isHome ? 'text-slate-800' : 'text-indigo-50'}>
 			<!--			<img src="{base}/logos/white.svg" alt="Apellum logo" />-->
-			A
+			<Logo color={isHome ? 'black' : 'white'} />
 		</a>
 		<button
 			type="button"

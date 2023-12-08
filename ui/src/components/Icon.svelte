@@ -35,7 +35,7 @@
 
 <style lang="postcss">
 	:global(svg) {
-		@apply h-[18px];
+		@apply w-[18px] h-[18px];
 		@apply opacity-75;
 		@apply fill-indigo-50;
 	}
