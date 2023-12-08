@@ -8,7 +8,7 @@
 		? 'w-0'
 		: 'w-screen'} h-screen md:invisible z-20 overflow-x-hidden flex flex-col items-end gap-[5vh]"
 >
-	<button type="button" on:click={closeSideDrawer} class="mt-6 mr-6">
+	<button type="button" on:click={closeSideDrawer} class="mt-5 mr-5">
 		<Icon icon={IconName.Close} />
 	</button>
 	<WebsiteNavbar context="drawer" direction="right" />
@@ -25,5 +25,9 @@
 
 	:global(a) {
 		@apply text-lg !important;
+	}
+
+	:global(button svg) {
+		@apply w-[32px] h-[32px] !important;
 	}
 </style>
