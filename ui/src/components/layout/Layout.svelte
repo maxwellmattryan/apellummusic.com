@@ -24,7 +24,11 @@
 		<slot />
 	</page-content>
 	{#if !isHomeRoute}
-		<div class={$appRoute === AppRoute.Music ? 'absolute bottom-0' : ''}>
+		<div
+			class={$appRoute === AppRoute.Music || $appRoute === AppRoute.Error
+				? 'absolute bottom-0'
+				: ''}
+		>
 			<Footer />
 		</div>
 	{/if}
