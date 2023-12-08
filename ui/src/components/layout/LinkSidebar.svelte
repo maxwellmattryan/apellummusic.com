@@ -27,7 +27,7 @@
 			href={url}
 			target="_blank"
 		>
-			<Icon {icon} iconColor={linkColor} />
+			<Icon {icon} />
 		</a>
 	{/each}
 </link-sidebar>

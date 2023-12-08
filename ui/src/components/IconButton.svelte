@@ -3,7 +3,6 @@
 	import { Icon } from '@components'
 
 	export let icon: IconName | undefined = undefined
-	export let iconColor: string = ''
 	export let tooltipText: string = ''
 	export let onClick: () => void = () => {}
 
@@ -26,7 +25,7 @@
 <icon-button class="flex flex-row-reverse md:flex-row items-center">
 	{#if icon}
 		<button type="button" on:click={_onClick} alt={icon}>
-			<Icon {icon} {iconColor} />
+			<Icon {icon} />
 		</button>
 		{#if tooltipText}
 			<tooltip bind:this={buttonTooltip} class="absolute opacity-0 transition-opacity">
