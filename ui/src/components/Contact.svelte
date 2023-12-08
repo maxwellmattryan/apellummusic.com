@@ -19,6 +19,7 @@
 		@apply ml-2;
 		@apply opacity-60;
 		@apply transition-opacity;
+		@apply text-sm md:text-base !important;
 
 		&:hover {
 			@apply opacity-100;

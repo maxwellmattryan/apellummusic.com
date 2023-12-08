@@ -47,6 +47,6 @@
 
 	:global(p, a, button) {
 		@apply font-medium !important;
-		@apply text-xs leading-6 md:text-lg md:leading-8 !important;
+		@apply text-sm leading-6 md:text-base md:leading-8 !important;
 	}
 </style>
