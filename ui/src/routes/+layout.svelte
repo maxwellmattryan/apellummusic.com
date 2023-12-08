@@ -1,8 +1,21 @@
 <script lang="ts">
+	import { onMount } from 'svelte'
+	import { Layout, Loader } from '@components'
 	import '../app.css'
-	import { Layout } from '@components'
+
+	let isLoading = true
+
+	onMount(() => {
+		setTimeout(() => {
+			isLoading = false
+		}, 500)
+	})
 </script>
 
-<Layout>
-	<slot />
-</Layout>
+{#if isLoading}
+	<Loader />
+{:else}
+	<Layout>
+		<slot />
+	</Layout>
+{/if}
