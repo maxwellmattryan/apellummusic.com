@@ -1,17 +1,18 @@
 <script lang="ts">
-	import { Footer, Header } from '@components'
+	import { Footer, Header, SideDrawer } from '@components'
 	import { AppRoute, appRoute, getPageHeader } from '@lib/app'
 
 	$: isHomeRoute = $appRoute === AppRoute.Home
 	$: isErrorRoute = $appRoute === AppRoute.Error
 </script>
 
-<layout class="w-full h-screen flex flex-col items-center">
+<SideDrawer />
+<layout class="w-full flex flex-col items-center">
 	<Header />
 	<page-content
 		class="w-full h-{isHomeRoute || isErrorRoute || $appRoute === AppRoute.Music
 			? 'full'
-			: 'auto'} {isHomeRoute ? '' : 'pt-[20vh] px-[15vw]'}"
+			: 'auto'} {isHomeRoute ? '' : 'pt-[12vh] md:pt-[20vh] px-[10vw] md:px-[15vw]'}"
 	>
 		{#if !isHomeRoute && !isErrorRoute}
 			<h2 class="text-indigo-50">
@@ -21,7 +22,13 @@
 		<slot />
 	</page-content>
 	{#if !isHomeRoute}
-		<Footer />
+		<div
+			class={$appRoute === AppRoute.Music || $appRoute === AppRoute.Error
+				? 'absolute bottom-0'
+				: ''}
+		>
+			<Footer />
+		</div>
 	{/if}
 </layout>
 
@@ -30,7 +37,16 @@
 		@apply text-indigo-50;
 	}
 
-	h2 {
-		@apply font-semibold;
+	:global(h1, h2, h3, h4, h5, h6, p, a, button) {
+		@apply text-indigo-50;
+	}
+
+	:global(h1, h2, h3, h4, h5, h6) {
+		@apply font-semibold !important;
+	}
+
+	:global(p, a, button) {
+		@apply font-medium !important;
+		@apply text-sm leading-6 md:text-base md:leading-8 !important;
 	}
 </style>

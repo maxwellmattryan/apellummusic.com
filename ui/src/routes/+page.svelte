@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { base } from '$app/paths'
 	import { onMount } from 'svelte'
+	import { base } from '$app/paths'
 	import { AppRoute, getPageTitle, setAppRoute } from '@lib/app'
 
 	const backgroundImageUrl = `${base}/images/press_home.jpg`
@@ -13,25 +13,38 @@
 <svelte:head>
 	<title>{getPageTitle(AppRoute.Home)}</title>
 </svelte:head>
-<home-page class="w-full h-full max-h-screen flex flex-row">
-	<home-page-left class="w-1/2 h-full flex flex-col justify-center items-center">
+<home-page class="w-full h-screen max-h-screen flex flex-row">
+	<home-page-left
+		class="w-full md:w-1/2 absolute md:static flex flex-col justify-center items-center"
+	>
 		<div
-			class="w-full max-w-3xl h-full px-[6rem] flex flex-col justify-center items-end text-right"
+			class="w-full max-w-3xl h-full md:px-[6rem] flex flex-col justify-center items-center md:items-end text-right"
 		>
-			<img src="{base}/logos/white.svg" alt="Apellum logo" />
+			<img
+				src="{base}/logos/white.svg"
+				alt="Apellum logo"
+				class="invisible md:visible object-contain"
+			/>
 			<!-- ghost header -->
 			<h1 class="invisible h-0">Apellum</h1>
-			<h2 class="mt-4 italic text-right">Techno producer & DJ</h2>
+			<h2 class="mt-4 italic">Techno producer & DJ</h2>
 		</div>
 	</home-page-left>
-	<home-page-right class="w-1/2 h-full" style="--bg-image-url: url({backgroundImageUrl})">
+	<home-page-right class="w-full md:w-1/2 h-full" style="--bg-image-url: url({backgroundImageUrl})">
 	</home-page-right>
 </home-page>
 
 <style lang="postcss">
 	home-page-right {
-		@apply text-indigo-50;
 		background-image: var(--bg-image-url);
 		@apply bg-cover bg-center;
+	}
+
+	h2 {
+		@apply text-2xl md:text-4xl !important;
+		@apply text-left md:text-right;
+		@apply text-slate-950 opacity-75 md:text-indigo-100 md:opacity-80;
+		@apply absolute md:static;
+		@apply top-[10vh];
 	}
 </style>

@@ -9,15 +9,14 @@
 	const { image, header, paragraph } = section ?? {}
 </script>
 
-<about-section class="about-pair flex flex-row justify-center items-center">
-	{#if justifyLeft}
-		<img class="w-[35vw] px-[4vw]" src="{base}/images/{image}" alt="Press {index + 1}" />
-	{/if}
-	<about-section-paragraph
-		class="px-[1vw] flex flex-col justify-between items-start leading-8 opacity-90"
-	>
+<about-section
+	class="about-pair flex flex-col md:flex-row {justifyLeft
+		? 'md:flex-row'
+		: 'md:flex-row-reverse'} items-center"
+>
+	<about-section-paragraph class="px-[1vw] pb-[4vh] flex flex-col justify-between opacity-90">
 		<about-section-paragraph-header
-			class="w-full mb-[8vh] pb-4 border-b-2 border-solid border-[{justifyLeft
+			class="w-full mb-[2vh] md:mb-[8vh] pb-4 border-b-2 border-solid border-[{justifyLeft
 				? '#4c5adb'
 				: '#ef2e5e'}]"
 		>
@@ -27,30 +26,19 @@
 			<p class={justifyLeft ? 'is-left' : 'is-right'}>{paragraph}</p>
 		</about-section-paragraph-text>
 	</about-section-paragraph>
-	{#if !justifyLeft}
-		<img class="w-[35vw] px-[4vw]" src="{base}/images/{image}" alt="Press {index + 1}" />
-	{/if}
+	<img
+		class="md:w-[35vw] md:max-h-[70vh] md:px-[4vw]"
+		src="{base}/images/{image}"
+		alt="Press {index + 1}"
+	/>
 </about-section>
 
 <style lang="postcss">
 	.is-left {
-		@apply text-left;
+		@apply text-left md:text-left;
 	}
 
 	.is-right {
-		@apply text-right;
-	}
-
-	h3 {
-		@apply font-semibold;
-	}
-
-	h3,
-	p {
-		@apply text-indigo-50;
-	}
-
-	p {
-		@apply font-medium;
+		@apply text-left md:text-right;
 	}
 </style>

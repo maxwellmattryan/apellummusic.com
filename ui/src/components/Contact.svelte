@@ -5,7 +5,7 @@
 </script>
 
 <contact class="contact-section text-left">
-	<h3 class="mb-[5vh]">Contact</h3>
+	<h3 class="mb-[4vh]">Contact</h3>
 	{#each contacts[ContactType.Email] as { name, url }}
 		<p>{name}: <a class="contact-link" href="mailto:{url}">{url}</a></p>
 	{/each}
@@ -15,27 +15,20 @@
 </contact>
 
 <style lang="postcss">
-	h3 {
-		@apply font-semibold text-indigo-50;
-	}
-
 	.contact-link {
 		@apply ml-2;
 		@apply opacity-60;
 		@apply transition-opacity;
+		@apply text-sm md:text-base !important;
 
 		&:hover {
 			@apply opacity-100;
 		}
 	}
 
-	p {
-		@apply font-medium;
-	}
-
 	.contact-section p {
 		&:not(:first-of-type) {
-			@apply mt-[2.5vh];
+			@apply mt-[1vh] md:mt-[2vh];
 		}
 	}
 </style>

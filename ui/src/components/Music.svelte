@@ -7,12 +7,8 @@
 </script>
 
 <music>
-	<a
-		href={url}
-		target="_blank"
-		class="w-full h-[15vh] p-4 flex flex-row bg-indigo-950 bg-opacity-90 rounded-lg"
-	>
-		<img src="{base}/images/{image}.jpg" alt={image} class="rounded-lg" />
+	<a href={url} target="_blank" class="w-full h-[15vh] p-4 flex flex-row bg-indigo-950 rounded-lg">
+		<img src="{base}/images/{image}.jpg" alt={image} class="rounded-lg aspect-square" />
 		<div class="flex flex-col justify-around ml-4">
 			<div>
 				<p class="title font-semibold">{title}</p>
@@ -29,14 +25,15 @@
 <style lang="postcss">
 	a {
 		@apply cursor-pointer;
+		@apply transition-colors;
 
 		&:hover {
-			@apply bg-opacity-100;
+			@apply bg-indigo-900;
 		}
 	}
 
 	.title {
-		@apply text-lg !important;
+		@apply md:text-lg !important;
 	}
 
 	.date {
@@ -45,6 +42,6 @@
 	}
 
 	.description {
-		@apply text-sm !important;
+		@apply text-xs md:text-sm !important;
 	}
 </style>

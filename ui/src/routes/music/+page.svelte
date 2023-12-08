@@ -10,6 +10,6 @@
 <svelte:head>
 	<title>{getPageTitle(AppRoute.Music)}</title>
 </svelte:head>
-<music-page class="w-full h-full flex justify-center items-center">
+<music-page class="w-full h-[50vh] flex justify-center items-center">
 	<p>Coming soon ...</p>
 </music-page>

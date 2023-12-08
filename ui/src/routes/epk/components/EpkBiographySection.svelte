@@ -27,11 +27,18 @@
 		}
 	}
 
-	let biography: HTMLElement | undefined
+	let biographyImage: HTMLElement | undefined
+	let biographyHeader: HTMLElement | undefined
+	let biographyText: HTMLElement | undefined
+
+	$: biographyTextHeight =
+		biographyImage && biographyHeader
+			? `${biographyImage.offsetHeight - biographyHeader.offsetHeight}px`
+			: 'auto'
 
 	function onBioCopyClick(): void {
-		if (biography) {
-			const text: string = biography.textContent
+		if (biographyText) {
+			const text: string = biographyText.textContent
 			if (navigator) {
 				navigator.clipboard.writeText(text)
 			}
@@ -40,14 +47,20 @@
 </script>
 
 <EpkSection title="Biographies">
-	<img class="w-1/2 object-contain" src="{base}/images/{image}" alt="EPK biography" />
-	<epk-bios class="flex flex-col justify-center">
-		<epk-bios-header class="flex flex-row justify-between items-start">
+	<img
+		bind:this={biographyImage}
+		class="w-full md:w-1/2 object-contain"
+		src="{base}/images/{image}"
+		alt="EPK biography"
+	/>
+	<epk-bios class="w-full flex flex-col justify-center">
+		<epk-bios-header bind:this={biographyHeader} class="flex flex-row justify-between items-start">
 			<epk-bio-selector class="flex flex-row items-center mb-4">
 				{#each Object.values(EpkBiographyType) as bioType}
 					{@const selected = bioType === selectedBioType}
 					<epk-bio-selector-item class:selected>
 						<button
+							type="button"
 							on:click={() => onBioTypeClick(bioType)}
 							class="{selected
 								? 'border-b-2 border-solid border-[#4c5adb]'
@@ -60,7 +73,11 @@
 			</epk-bio-selector>
 			<IconButton icon={IconName.Copy} tooltipText="Copied!" onClick={onBioCopyClick} />
 		</epk-bios-header>
-		<epk-selected-bio bind:this={biography} class="overflow-y-auto">
+		<epk-selected-bio
+			bind:this={biographyText}
+			style="--bio-height: {biographyTextHeight}"
+			class="overflow-y-auto"
+		>
 			{#each biographies[selectedBioType].text as paragraph}
 				<p>{paragraph}</p>
 			{/each}
@@ -85,11 +102,16 @@
 		}
 	}
 
-	p {
-		@apply leading-7;
-	}
-
 	p:not(:first-of-type) {
 		@apply mt-4;
+	}
+
+	epk-bios-header :global(svg) {
+		@apply w-[20px] h-[20px];
+	}
+
+	epk-selected-bio {
+		@apply h-auto md:h-[var(--bio-height)];
+		@apply max-h-[50vh];
 	}
 </style>

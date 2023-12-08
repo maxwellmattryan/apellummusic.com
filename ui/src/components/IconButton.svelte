@@ -23,9 +23,9 @@
 	}
 </script>
 
-<icon-button class="flex flex-row items-center">
+<icon-button class="flex flex-row-reverse md:flex-row items-center">
 	{#if icon}
-		<button on:click={_onClick} alt={icon}>
+		<button type="button" on:click={_onClick} alt={icon}>
 			<Icon {icon} {iconColor} />
 		</button>
 		{#if tooltipText}
@@ -42,7 +42,7 @@
 	}
 
 	tooltip {
-		@apply ml-[32px];
+		@apply mr-[32px] md:ml-[32px];
 		@apply pointer-events-none;
 
 		font-size: 10px;
@@ -54,5 +54,9 @@
 		&:hover {
 			@apply opacity-100;
 		}
+	}
+
+	p {
+		@apply text-xs md:text-sm !important;
 	}
 </style>
