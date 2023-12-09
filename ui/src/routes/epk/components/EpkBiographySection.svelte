@@ -107,7 +107,7 @@
 	}
 
 	epk-bios-header :global(svg) {
-		@apply w-[20px] h-[20px];
+		@apply w-[22px] h-[22px] !important;
 	}
 
 	epk-selected-bio {
