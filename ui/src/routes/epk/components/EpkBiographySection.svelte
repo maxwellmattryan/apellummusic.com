@@ -63,7 +63,7 @@
 							type="button"
 							on:click={() => onBioTypeClick(bioType)}
 							class="{selected
-								? 'border-b-2 border-solid border-[#4c5adb]'
+								? 'border-b-2 border-solid border-[#ef2e5e]'
 								: ''} text-indigo-50 font-medium"
 						>
 							{getBioTypeText(bioType)}
