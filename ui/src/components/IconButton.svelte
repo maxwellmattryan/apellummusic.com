@@ -24,7 +24,7 @@
 
 <icon-button class="flex flex-row-reverse md:flex-row items-center">
 	{#if icon}
-		<button type="button" on:click={_onClick} alt={icon}>
+		<button type="button" on:click={_onClick} alt={icon} aria-label={icon}>
 			<Icon {icon} />
 		</button>
 		{#if tooltipText}
