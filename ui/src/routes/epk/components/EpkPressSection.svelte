@@ -12,7 +12,7 @@
 	<div class="flex flex-col md:flex-row items-center md:justify-center gap-8">
 		{#each images as image, index}
 			<img
-				class="w-full md:w-1/3 object-contain"
+				class="w-full md:w-1/3 max-h-[640px] object-contain"
 				src="{base}/images/{image}"
 				alt="EPK press {index + 1}"
 			/>

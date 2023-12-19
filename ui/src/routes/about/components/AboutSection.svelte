@@ -27,7 +27,7 @@
 		</about-section-paragraph-text>
 	</about-section-paragraph>
 	<img
-		class="md:w-[35vw] md:max-h-[70vh] md:px-[4vw]"
+		class="md:w-[35vw] md:max-h-[640px] md:px-[4vw]"
 		src="{base}/images/{image}"
 		alt="Press {index + 1}"
 	/>

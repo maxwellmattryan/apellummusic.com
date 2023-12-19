@@ -49,7 +49,7 @@
 <EpkSection title="Biographies">
 	<img
 		bind:this={biographyImage}
-		class="w-full md:w-1/2 object-contain"
+		class="w-full md:w-1/2 max-h-[640px] object-contain"
 		src="{base}/images/{image}"
 		alt="EPK biography"
 	/>

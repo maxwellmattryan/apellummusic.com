@@ -66,13 +66,15 @@ export const EPK_DATA: IEpkData = {
 					description:
 						'Pulsating rhythm and ambient sounds into the vastness and intrigue of the subterranean.',
 					url: 'https://open.spotify.com/track/4crFX8q2LDFoO5yLDQu0yY?si=55a3c2cdcc804b07',
+					date: new Date('January 18, 2019'),
 				},
 				{
 					image: 'music_original_in-snowfield',
 					title: 'In Snowfield',
 					description:
-						'Relentless beats with icy synth textures, mirroring the cat-and-mouse chase with Sniper Wolf.',
+						'Relentless percussion with icy synth textures, mirroring the cat-and-mouse chase with Sniper Wolf.',
 					url: 'https://open.spotify.com/track/1Oesrus6lIdvUiF1apvFRK?si=7e3a938c87434225',
+					date: new Date('December 12, 2018'),
 				},
 			],
 			[EpkMusicCollectionType.Set]: [
