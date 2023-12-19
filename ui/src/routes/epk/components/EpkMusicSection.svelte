@@ -30,7 +30,11 @@
 </script>
 
 <EpkSection title="Music" justifyLeft={false}>
-	<img class="w-full md:w-1/2 object-contain" src="{base}/images/{image}" alt="EPK music" />
+	<img
+		class="w-full md:w-1/2 max-h-[640px] object-contain"
+		src="{base}/images/{image}"
+		alt="EPK music"
+	/>
 	<epk-music class="w-full h-full flex flex-col">
 		<epk-music-header class="flex flex-row justify-between items-start">
 			<epk-music-collection-selector class="flex flex-row items-center mb-4">
