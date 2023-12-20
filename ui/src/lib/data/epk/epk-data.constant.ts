@@ -96,7 +96,7 @@ export const EPK_DATA: IEpkData = {
 			[EpkMusicCollectionType.Mix]: [
 				{
 					image: 'music_mix_womm-090',
-					url: 'https://on.soundcloud.com/M13G6',
+					url: 'https://on.soundcloud.com/xfcv7',
 					title: "What's On My Mind 090",
 					description: "Techno episode for No Light Thing's radio show podcast.",
 				},
