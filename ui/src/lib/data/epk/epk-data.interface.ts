@@ -34,7 +34,7 @@ export interface IEpkMusicData {
 
 export interface IEpkMusicCollections {
 	[EpkMusicCollectionType.Original]: IEpkMusicItem[]
-	// [EpkMusicCollectionType.Remix]: IEpkMusicItem[]
+	[EpkMusicCollectionType.Remix]: IEpkMusicItem[]
 	[EpkMusicCollectionType.Set]: IEpkMusicItem[]
 	[EpkMusicCollectionType.Mix]: IEpkMusicItem[]
 }

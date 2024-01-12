@@ -6,7 +6,7 @@ export enum EpkBiographyType {
 
 export enum EpkMusicCollectionType {
 	Original = 'original',
-	// Remix = 'remix',
+	Remix = 'remix',
 	Set = 'set',
 	Mix = 'mix',
 }

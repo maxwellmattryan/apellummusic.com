@@ -59,7 +59,24 @@ export const EPK_DATA: IEpkData = {
 					date: new Date('December 12, 2018'),
 				},
 			],
+			[EpkMusicCollectionType.Remix]: [
+				{
+					image: 'music_remix_exhibit-1',
+					title: 'Slam - Exhibit 1 (Apellum Bootleg)',
+					description: "My submission for Slam's remix competition held in December 2023.",
+					url: 'https://on.soundcloud.com/wd6bw',
+					date: new Date('January 5, 2024'),
+				},
+			],
 			[EpkMusicCollectionType.Set]: [
+				{
+					image: 'music_set_kitchen-techno-house-party_2023-12-16',
+					url: 'https://on.soundcloud.com/8LRgH',
+					title: 'Kitchen Techno House Party',
+					description:
+						"Raw and groovy techno set for Kitchen Techno's first house party in Austin.",
+					date: new Date('December 16, 2023'),
+				},
 				{
 					image: 'music_set_birds-of-a-feather_2023-09-16',
 					url: 'https://on.soundcloud.com/zN8rm',
@@ -76,6 +93,12 @@ export const EPK_DATA: IEpkData = {
 				},
 			],
 			[EpkMusicCollectionType.Mix]: [
+				{
+					image: 'music_mix_rn-060',
+					url: 'https://on.soundcloud.com/Ny3Ee',
+					title: 'Required Noise 060',
+					description: "Techno episode for the Required Noise label's podcast.",
+				},
 				{
 					image: 'music_mix_womm-090',
 					url: 'https://on.soundcloud.com/xfcv7',

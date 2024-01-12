@@ -19,8 +19,8 @@
 		switch (musicCollectionType) {
 			case EpkMusicCollectionType.Original:
 				return 'Originals'
-			// case MusicType.Remixes:
-			// 	return 'Remixes'
+			case EpkMusicCollectionType.Remix:
+				return 'Remixes'
 			case EpkMusicCollectionType.Set:
 				return 'DJ Sets'
 			case EpkMusicCollectionType.Mix:
