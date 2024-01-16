@@ -64,7 +64,7 @@ export const EPK_DATA: IEpkData = {
 					image: 'music_remix_exhibit-1',
 					title: 'Slam - Exhibit 1 (Apellum Bootleg)',
 					description: "My submission for Slam's remix competition held in December 2023.",
-					url: 'https://on.soundcloud.com/wd6bw',
+					url: 'https://on.soundcloud.com/VMZB2',
 					date: new Date('January 5, 2024'),
 				},
 			],
