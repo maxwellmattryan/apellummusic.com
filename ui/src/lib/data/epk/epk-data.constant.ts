@@ -10,30 +10,30 @@ export const EPK_DATA: IEpkData = {
 				type: EpkBiographyType.OneLine,
 				text: [
 					`
-                    Apellum is a visionary techno artist from Austin, weaving a sonic tapestry from threads of groovy, hypnotic, and raw techno to create a transcendental dancefloor experience.
-                `,
+					Apellum is a techno artist based in Austin, weaving a sonic tapestry from threads of groovy, hypnotic, and raw techno to create a transcendental dancefloor experience.
+				`,
 				],
 			},
 			[EpkBiographyType.Short]: {
 				type: EpkBiographyType.Short,
 				text: [
 					`
-                    In the ever-evolving landscape of electronic music, Apellum emerges as a techno producer and DJ deeply rooted in the vibrant Austin scene. With a diverse background as a percussionist, audio engineer, and sound designer, Apellum artfully weaves together influences from a vast spectrum of musical genres, crafting a sonic tapestry that resonates closely with the groovy, hypnotic, and raw essence of Berlin techno.
-                `,
+					In the dynamic landscape of electronic music, Apellum emerges as a techno producer and DJ deeply rooted in the vibrant Austin scene. With a diverse background as a percussionist, audio engineer, and sound designer, Apellum artfully weaves together influences from a vast spectrum of musical genres, crafting a sonic tapestry that resonates closely with the groovy, hypnotic, and raw essence of Berlin techno.
+				`,
 				],
 			},
 			[EpkBiographyType.Long]: {
 				type: EpkBiographyType.Long,
 				text: [
 					`
-                    	In the ever-evolving landscape of electronic music, Apellum emerges as a techno producer and DJ deeply rooted in the vibrant Austin scene. With a diverse background as a percussionist, audio engineer, and sound designer, Apellum artfully weaves together influences from a vast spectrum of musical genres, crafting a sonic tapestry that resonates closely with the groovy, hypnotic, and raw essence of Berlin techno.
-                    `,
+					In the dynamic landscape of electronic music, Apellum emerges as a techno producer and DJ deeply rooted in the vibrant Austin scene. With a diverse background as a percussionist, audio engineer, and sound designer, Apellum artfully weaves together influences from a vast spectrum of musical genres, crafting a sonic tapestry that resonates closely with the groovy, hypnotic, and raw essence of Berlin techno.
+				`,
 					`
-						Within the techno scene, Apellum finds inspiration in many artists from multiple sub-genres, like Ketch or Marcal for raw Berlin techno, Chlär for powerful and groovy techno, or Wata Igarashi for hypnotic dub techno. Beyond the confines of techno, Apellum’s creative canvas is painted with shades of jungle, trance, jazz, fusion, funk, and classical, among many others.
-                    `,
+					Within the techno scene, Apellum finds inspiration in many artists from multiple sub-genres, such as Ketch or Marcal for raw Berlin techno, Chlär for powerful and groovy techno, or Wata Igarashi for hypnotic dub techno. Beyond the confines of techno, Apellum’s creative canvas is painted with shades of jungle, trance, jazz, fusion, funk, and classical, among many others.
+				`,
 					`
-                        Apellum’s studio has been a realm of exploration and creativity, where new sounds and music are discovered and crafted. His upcoming release, Protocol EP, embodies a culmination of recent artistic influences that have shaped and defined his signature sound. Join Apellum on a transformative journey, where the rhythms and textures transcend boundaries and transport listeners to new emotional realms, an invitation to experience the power of techno in its purest form.
-                    `,
+					Apellum’s studio has been a realm of exploration and creativity, where new sounds and music are discovered and crafted. His new debut EP, Protocol EP, is a testament to this journey, culminating recent artistic influences that have shaped and defined his signature sound. Join Apellum on a transformative journey, where the rhythms and sounds transcend boundaries and transport listeners to new emotional realms.
+				`,
 				],
 			},
 		},
@@ -60,6 +60,13 @@ export const EPK_DATA: IEpkData = {
 				},
 			],
 			[EpkMusicCollectionType.Remix]: [
+				{
+					image: 'music_remix_so-seductive',
+					title: 'EMSKI & Remedy - So Seductive (Apellum Bootleg)',
+					description: 'A fun club mix of a recent release by EMSKI and Remedy.',
+					url: 'https://on.soundcloud.com/Qjt2u',
+					// date: new Date('TBD'),
+				},
 				{
 					image: 'music_remix_exhibit-1',
 					title: 'Slam - Exhibit 1 (Apellum Bootleg)',
