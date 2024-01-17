@@ -6,7 +6,7 @@
 	const { image, urls, title, description, date } = musicItem ?? {}
 </script>
 
-<music>
+<epk-music-card>
 	<a
 		href={urls[0].url ?? ''}
 		target="_blank"
@@ -25,7 +25,7 @@
 			<p class="description font-medium text-indigo-50 opacity-60">{description}</p>
 		</div>
 	</a>
-</music>
+</epk-music-card>
 
 <style lang="postcss">
 	a {

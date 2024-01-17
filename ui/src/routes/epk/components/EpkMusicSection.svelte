@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths'
-	import { Music } from '@components'
+	import EpkMusicCard from './EpkMusicCard.svelte'
 	import EpkSection from './EpkSection.svelte'
 	import {
 		filterHiddenMusicItemsForCollections,
@@ -50,7 +50,7 @@
 			{#key selectedMusicCollectionType}
 				{#each filteredCollections[selectedMusicCollectionType] as musicItem}
 					<div class="epk-music-collection-item">
-						<Music {musicItem} />
+						<EpkMusicCard {musicItem} />
 					</div>
 				{/each}
 			{/key}
