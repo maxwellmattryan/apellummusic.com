@@ -2,30 +2,18 @@
 	import { base } from '$app/paths'
 	import { Music } from '@components'
 	import EpkSection from './EpkSection.svelte'
+	import { getTextFromMusicCollectionType } from '@lib/app/utils'
 	import type { IEpkMusicData } from '@lib/data/epk'
-	import { EpkMusicCollectionType } from '@lib/data/epk'
+	import { MusicCollectionType } from '@lib/data/music'
 
 	export let musicData: IEpkMusicData
 
 	const { image, collections } = musicData
 
-	let selectedMusicCollectionType: EpkMusicCollectionType = EpkMusicCollectionType.Original
+	let selectedMusicCollectionType: MusicCollectionType = MusicCollectionType.Original
 
-	function onMusicTypeClick(musicCollectionType: EpkMusicCollectionType): void {
+	function onMusicTypeClick(musicCollectionType: MusicCollectionType): void {
 		selectedMusicCollectionType = musicCollectionType
-	}
-
-	function getMusicTypeText(musicCollectionType: EpkMusicCollectionType): string {
-		switch (musicCollectionType) {
-			case EpkMusicCollectionType.Original:
-				return 'Originals'
-			case EpkMusicCollectionType.Remix:
-				return 'Remixes'
-			case EpkMusicCollectionType.Set:
-				return 'DJ Sets'
-			case EpkMusicCollectionType.Mix:
-				return 'DJ Mixes'
-		}
 	}
 </script>
 
@@ -38,7 +26,7 @@
 	<epk-music class="w-full h-full flex flex-col">
 		<epk-music-header class="flex flex-row justify-between items-start">
 			<epk-music-collection-selector class="flex flex-row items-center mb-4">
-				{#each Object.values(EpkMusicCollectionType) as musicCollectionType}
+				{#each Object.values(MusicCollectionType) as musicCollectionType}
 					{@const selected = musicCollectionType === selectedMusicCollectionType}
 					<epk-music-collection-selector-item class:selected>
 						<button
@@ -48,7 +36,7 @@
 								? 'border-b-2 border-solid border-[#4c5adb]'
 								: ''} font-medium text-indigo-50"
 						>
-							{getMusicTypeText(musicCollectionType)}
+							{getTextFromMusicCollectionType(musicCollectionType)}
 						</button>
 					</epk-music-collection-selector-item>
 				{/each}
