@@ -19,6 +19,12 @@ export const CONTACT_DATA: IContactData = {
 				icon: IconName.Spotify,
 			},
 			{
+				name: 'Apple Music',
+				url: 'https://music.apple.com/us/artist/apellum/1535711525',
+				username: 'Apellum',
+				icon: IconName.AppleMusic,
+			},
+			{
 				name: 'SoundCloud',
 				url: 'https://soundcloud.com/apellum',
 				username: 'apellum',
@@ -29,12 +35,6 @@ export const CONTACT_DATA: IContactData = {
 				url: 'https://apellum.bandcamp.com',
 				username: 'Apellum',
 				icon: IconName.Bandcamp,
-			},
-			{
-				name: 'Apple Music',
-				url: 'https://music.apple.com/us/artist/apellum/1535711525',
-				username: 'Apellum',
-				icon: IconName.AppleMusic,
 			},
 		],
 		[ContactType.Social]: [
