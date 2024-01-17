@@ -2,13 +2,17 @@
 	import { base } from '$app/paths'
 	import { Music } from '@components'
 	import EpkSection from './EpkSection.svelte'
-	import { getTextFromMusicCollectionType } from '@lib/app/utils'
+	import {
+		filterHiddenMusicItemsForCollections,
+		getTextFromMusicCollectionType,
+	} from '@lib/app/utils'
 	import type { IEpkMusicData } from '@lib/data/epk'
 	import { MusicCollectionType } from '@lib/data/music'
 
 	export let musicData: IEpkMusicData
 
 	const { image, collections } = musicData
+	const filteredCollections = filterHiddenMusicItemsForCollections(collections)
 
 	let selectedMusicCollectionType: MusicCollectionType = MusicCollectionType.Original
 
@@ -44,7 +48,7 @@
 		</epk-music-header>
 		<epk-selected-music-collection class="space-y-4">
 			{#key selectedMusicCollectionType}
-				{#each collections[selectedMusicCollectionType] as musicItem}
+				{#each filteredCollections[selectedMusicCollectionType] as musicItem}
 					<div class="epk-music-collection-item">
 						<Music {musicItem} />
 					</div>

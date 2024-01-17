@@ -17,4 +17,5 @@ export interface IMusicItem {
 	title: string
 	description: string
 	date?: Date
+	hidden?: boolean
 }

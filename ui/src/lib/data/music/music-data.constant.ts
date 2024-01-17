@@ -11,6 +11,7 @@ export const MUSIC_DATA: IMusicData = {
 					'Sonic textures from interference-laden chaos to the dense and powerful layers of a messaging protocol.',
 				url: 'https://open.spotify.com/album/6jzHkIy9vlppA9FzLOeyWq',
 				date: new Date('January 19, 2024'),
+				hidden: false,
 			},
 			{
 				image: 'music_original_eko',
@@ -35,7 +36,8 @@ export const MUSIC_DATA: IMusicData = {
 				title: 'EMSKI & Remedy - So Seductive (Apellum Bootleg)',
 				description: 'A fun club mix of a recent release by EMSKI and Remedy.',
 				url: 'https://on.soundcloud.com/Qjt2u',
-				// date: new Date('TBD'),
+				date: new Date('January 31, 2024'),
+				hidden: false,
 			},
 			{
 				image: 'music_remix_exhibit-1',
