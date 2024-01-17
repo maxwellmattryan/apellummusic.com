@@ -1,4 +1,4 @@
-import type { MusicCollectionType } from './music-data.enum'
+import type { MusicCollectionType, MusicUrlType } from './music-data.enum'
 
 export interface IMusicData {
 	collections: IMusicCollections
@@ -13,9 +13,14 @@ export interface IMusicCollections {
 
 export interface IMusicItem {
 	image: string
-	url: string
+	urls: IMusicUrl[]
 	title: string
 	description: string
 	date?: Date
 	hidden?: boolean
+}
+
+export interface IMusicUrl {
+	type: MusicUrlType
+	url: string
 }
