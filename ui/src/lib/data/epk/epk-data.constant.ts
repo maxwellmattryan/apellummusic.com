@@ -43,6 +43,14 @@ export const EPK_DATA: IEpkData = {
 		collections: {
 			[EpkMusicCollectionType.Original]: [
 				{
+					image: 'music_original_protocol-ep',
+					title: 'Protocol EP',
+					description:
+						'Interference-laden chaos to the dense and powerful layers of a messaging protocol.',
+					url: 'https://open.spotify.com/album/6jzHkIy9vlppA9FzLOeyWq',
+					date: new Date('January 19, 2024'),
+				},
+				{
 					image: 'music_original_eko',
 					title: 'Eko',
 					description:
