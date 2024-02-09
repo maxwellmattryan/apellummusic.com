@@ -1,5 +1,12 @@
 <script lang="ts">
-	import { appRoute, AppRoute, closeSideDrawer, getPageHeader, setAppRoute } from '@lib/app'
+	import {
+		appRoute,
+		AppRoute,
+		closeSideDrawer,
+		getPageHeader,
+		hasSeenEpk,
+		setAppRoute,
+	} from '@lib/app'
 	import { FEATURES } from '@lib/features'
 
 	export let context: 'page' | 'drawer' = 'page'
@@ -51,7 +58,7 @@
 			{@const selected = route === $appRoute}
 			<website-navbar-link
 				class:selected
-				class:invisible={FEATURES[route]?.hidden}
+				class:invisible={FEATURES[route]?.hidden || (route === AppRoute.Epk && !$hasSeenEpk)}
 				class="group h-[{context === 'page' ? '1.8125' : '3'}rem] {direction === 'right'
 					? 'text-right'
 					: ''}"

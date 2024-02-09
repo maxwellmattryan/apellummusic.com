@@ -24,7 +24,6 @@ export const FEATURES: IFeatures = {
 	},
 	epk: {
 		enabled: true,
-		hidden: true,
 	},
 	photosAndVideos: {
 		enabled: false,
