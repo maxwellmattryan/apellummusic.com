@@ -10,11 +10,15 @@
 	<a
 		href={urls[0].url ?? ''}
 		target="_blank"
-		class="w-full h-[15vh] p-4 flex flex-row bg-indigo-950 rounded-lg"
+		class="w-full h-auto p-4 flex flex-row items-center bg-indigo-950 rounded-lg"
 		aria-label={title}
 	>
-		<img src="{base}/images/{image}.jpg" alt={image} class="rounded-lg aspect-square" />
-		<div class="flex flex-col justify-around ml-4">
+		<img
+			src="{base}/images/{image}.jpg"
+			alt={image}
+			class="rounded-lg aspect-square max-w-[108px] max-h-[108px] md:max-w-[128px] md:max-h-[128px]"
+		/>
+		<div class="flex flex-col justify-around mx-4">
 			<div>
 				<p class="title font-semibold">{title}</p>
 				{#if date}
