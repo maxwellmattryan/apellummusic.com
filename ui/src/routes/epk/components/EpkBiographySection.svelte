@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths'
 	import { IconButton } from '@components'
-	import { IconName } from '@lib/app'
+	import { IconName, getTextFromEpkBiographyType } from '@lib/app'
 	import { EpkBiographyType } from '@lib/data/epk'
 	import type { IEpkBiographyData } from '@lib/data/epk'
 	import EpkSection from './EpkSection.svelte'
@@ -16,17 +16,6 @@
 		selectedBioType = bioType
 	}
 
-	function getBioTypeText(bioType: EpkBiographyType): string {
-		switch (bioType) {
-			case EpkBiographyType.Long:
-				return 'Long'
-			case EpkBiographyType.Short:
-				return 'Short'
-			case EpkBiographyType.OneLine:
-				return 'One-line'
-		}
-	}
-
 	let biographyImage: HTMLElement | undefined
 	let biographyHeader: HTMLElement | undefined
 	let biographyText: HTMLElement | undefined
@@ -38,7 +27,7 @@
 
 	function onBioCopyClick(): void {
 		if (biographyText) {
-			const text: string = biographyText.textContent
+			const text: string = biographyText.textContent ?? ''
 			if (navigator) {
 				navigator.clipboard.writeText(text)
 			}
@@ -66,7 +55,7 @@
 								? 'border-b-2 border-solid border-[#ef2e5e]'
 								: ''} text-indigo-50 font-medium"
 						>
-							{getBioTypeText(bioType)}
+							{getTextFromEpkBiographyType(bioType)}
 						</button>
 					</epk-bio-selector-item>
 				{/each}
