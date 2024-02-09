@@ -1,4 +1,4 @@
-import { IconName } from '@lib/app'
+import type { IconName } from '@lib/app'
 
 import { ContactType } from './contact-data.enum'
 

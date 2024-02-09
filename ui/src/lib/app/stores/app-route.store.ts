@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store'
-import { AppRoute } from '../enums'
+import type { AppRoute } from '../enums'
 
 export const appRoute = writable<AppRoute>()
 

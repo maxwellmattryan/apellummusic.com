@@ -1,14 +1,14 @@
 <script lang="ts">
 	import { base } from '$app/paths'
-	import type { IEpkMusicItem } from '@lib/data/epk'
+	import type { IMusicItem } from '@lib/data/music'
 
-	export let musicItem: IEpkMusicItem
-	const { image, url, title, description, date } = musicItem ?? {}
+	export let musicItem: IMusicItem
+	const { image, urls, title, description, date } = musicItem ?? {}
 </script>
 
-<music>
+<epk-music-card>
 	<a
-		href={url}
+		href={urls[0].url ?? ''}
 		target="_blank"
 		class="w-full h-[15vh] p-4 flex flex-row bg-indigo-950 rounded-lg"
 		aria-label={title}
@@ -25,7 +25,7 @@
 			<p class="description font-medium text-indigo-50 opacity-60">{description}</p>
 		</div>
 	</a>
-</music>
+</epk-music-card>
 
 <style lang="postcss">
 	a {

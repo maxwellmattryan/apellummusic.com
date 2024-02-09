@@ -10,9 +10,9 @@
 <layout class="w-full flex flex-col items-center">
 	<Header />
 	<page-content
-		class="w-full h-{isHomeRoute || isErrorRoute || $appRoute === AppRoute.Music
-			? 'full'
-			: 'auto'} {isHomeRoute ? '' : 'pt-[12vh] md:pt-[20vh] px-[10vw] md:px-[15vw]'}"
+		class="w-full h-{isHomeRoute || isErrorRoute ? 'full' : 'auto'} {isHomeRoute
+			? ''
+			: 'pt-[12vh] md:pt-[20vh] px-[10vw] md:px-[15vw]'}"
 	>
 		{#if !isHomeRoute && !isErrorRoute}
 			<h2 class="text-indigo-50">
@@ -22,11 +22,7 @@
 		<slot />
 	</page-content>
 	{#if !isHomeRoute}
-		<div
-			class={$appRoute === AppRoute.Music || $appRoute === AppRoute.Error
-				? 'absolute bottom-0'
-				: ''}
-		>
+		<div class={$appRoute === AppRoute.Error ? 'absolute bottom-0' : ''}>
 			<Footer />
 		</div>
 	{/if}

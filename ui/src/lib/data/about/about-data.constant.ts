@@ -1,27 +1,24 @@
+import { EPK_DATA, EpkBiographyType } from '@lib/data/epk'
 import type { IAboutData } from './about-data.interface'
+
+const BIOGRAPHY_PARAGRAPHS = EPK_DATA.biographyData.biographies[EpkBiographyType.Long].text ?? []
 
 export const ABOUT_DATA: IAboutData = {
 	sections: [
 		{
 			image: 'press_about-01.jpg',
 			header: 'Introducing Apellum',
-			paragraph: `
-				In the dynamic landscape of electronic music, Apellum emerges as a techno producer and DJ deeply rooted in the vibrant Austin scene. With a diverse background as a percussionist, audio engineer, and sound designer, Apellum artfully weaves together influences from a vast spectrum of musical genres, crafting a sonic tapestry that resonates closely with the groovy, hypnotic, and raw essence of Berlin techno.
-			`,
+			paragraph: BIOGRAPHY_PARAGRAPHS[0],
 		},
 		{
 			image: 'press_about-02.jpg',
 			header: 'Influences across genres',
-			paragraph: `
-				Within the techno scene, Apellum finds inspiration in many artists from multiple sub-genres, such as Ketch or Marcal for raw Berlin techno, Chlär for powerful and groovy techno, or Wata Igarashi for hypnotic dub techno. Beyond the confines of techno, Apellum’s creative canvas is painted with shades of jungle, trance, jazz, fusion, funk, and classical, among many others.
-			`,
+			paragraph: BIOGRAPHY_PARAGRAPHS[1],
 		},
 		{
 			image: 'press_about-03.jpg',
 			header: 'Exploration in the studio',
-			paragraph: `
-				Apellum’s studio has been a realm of exploration and creativity, where new sounds and music are discovered and crafted. His new debut EP, Protocol EP, is a testament to this journey, culminating recent artistic influences that have shaped and defined his signature sound. Join Apellum on a transformative journey, where the rhythms and sounds transcend boundaries and transport listeners to new emotional realms.
-			`,
+			paragraph: BIOGRAPHY_PARAGRAPHS[2],
 		},
 	],
 }

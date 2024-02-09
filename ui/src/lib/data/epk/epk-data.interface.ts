@@ -1,4 +1,5 @@
-import type { EpkBiographyType, EpkMusicCollectionType } from './epk-data.enum'
+import type { IMusicCollections } from '@lib/data/music'
+import type { EpkBiographyType } from './epk-data.enum'
 
 export interface IEpkData {
 	downloadUrl: string
@@ -29,22 +30,7 @@ export interface IEpkBiography {
 
 export interface IEpkMusicData {
 	image: string
-	collections: IEpkMusicCollections
-}
-
-export interface IEpkMusicCollections {
-	[EpkMusicCollectionType.Original]: IEpkMusicItem[]
-	[EpkMusicCollectionType.Remix]: IEpkMusicItem[]
-	[EpkMusicCollectionType.Set]: IEpkMusicItem[]
-	[EpkMusicCollectionType.Mix]: IEpkMusicItem[]
-}
-
-export interface IEpkMusicItem {
-	image: string
-	url: string
-	title: string
-	description: string
-	date?: Date
+	collections: IMusicCollections
 }
 
 // PRESS
