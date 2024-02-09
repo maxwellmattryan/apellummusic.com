@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 	import { Contact, Icon } from '@components'
-	import { AppRoute, IconName, getPageTitle, setAppRoute } from '@lib/app'
+	import { AppRoute, IconName, getPageTitle, hasSeenEpk, setAppRoute } from '@lib/app'
 	import { EPK_DATA } from '@lib/data/epk'
 	import { EpkBiographySection, EpkMusicSection, EpkPressSection } from './components'
 
@@ -9,6 +9,7 @@
 
 	onMount(() => {
 		setAppRoute(AppRoute.Epk)
+		hasSeenEpk.set(true)
 	})
 </script>
 
