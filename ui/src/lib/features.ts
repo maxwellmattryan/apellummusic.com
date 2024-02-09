@@ -20,7 +20,7 @@ export const FEATURES: IFeatures = {
 		enabled: true,
 	},
 	music: {
-		enabled: true,
+		enabled: false,
 	},
 	epk: {
 		enabled: true,
