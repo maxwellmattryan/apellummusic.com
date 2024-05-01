@@ -74,14 +74,26 @@ export const MUSIC_DATA: IMusicData = {
 		],
 		[MusicCollectionType.Set]: [
 			{
-				image: 'music_set_kitchen-techno-house-party_2023-12-16',
+				image: 'music_set_kitchen-techno_2024-03-23',
+				urls: [
+					{
+						type: MusicUrlType.SoundCloud,
+						url: 'https://on.soundcloud.com/UZ1L76EFpDdpTgaU9',
+					},
+				],
+				title: 'Kitchen Techno',
+				description: 'Hypnotic and groovy techno set for another Kitchen Techno party.',
+				date: new Date('March 23, 2024'),
+			},
+			{
+				image: 'music_set_kitchen-techno_2023-12-16',
 				urls: [
 					{
 						type: MusicUrlType.SoundCloud,
 						url: 'https://on.soundcloud.com/8LRgH',
 					},
 				],
-				title: 'Kitchen Techno House Party',
+				title: 'Kitchen Techno',
 				description: "Raw and groovy techno set for Kitchen Techno's first house party in Austin.",
 				date: new Date('December 16, 2023'),
 			},
@@ -111,6 +123,17 @@ export const MUSIC_DATA: IMusicData = {
 			},
 		],
 		[MusicCollectionType.Mix]: [
+			{
+				image: 'music_mix_audiophiles-002',
+				urls: [
+					{
+						type: MusicUrlType.SoundCloud,
+						url: 'https://on.soundcloud.com/UpsFfyKGuCySktxU6',
+					},
+				],
+				title: 'Audiophiles 002',
+				description: 'Kicking off a podcast series with raw and energetic techno.',
+			},
 			{
 				image: 'music_mix_rn-060',
 				urls: [
