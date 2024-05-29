@@ -19,7 +19,7 @@ export const EPK_DATA: IEpkData = {
 				type: EpkBiographyType.Short,
 				text: [
 					`
-					In the dynamic landscape of electronic music, Apellum emerges as a techno producer and DJ deeply rooted in the vibrant Austin scene. With a diverse background as a percussionist, audio engineer, and sound designer, Apellum artfully weaves together influences from a vast spectrum of musical genres, crafting a sonic tapestry that resonates closely with the groovy, hypnotic, and raw essence of Berlin techno.
+					In the dynamic landscape of electronic music, Apellum stands as a techno producer and DJ deeply rooted in the vibrant Austin scene. With a diverse background as a percussionist, audio engineer, and sound designer, Apellum artfully weaves together influences from a vast spectrum of musical genres, crafting a sonic tapestry that resonates closely with the groovy, hypnotic, and raw essence of Berlin techno. Fans can look forward to his new EP, "Scenes of Water", which is an experience exploring the natural world as it features water, represented by the dub sounds in the music. 
 				`,
 				],
 			},
@@ -27,13 +27,13 @@ export const EPK_DATA: IEpkData = {
 				type: EpkBiographyType.Long,
 				text: [
 					`
-					In the dynamic landscape of electronic music, Apellum emerges as a techno producer and DJ deeply rooted in the vibrant Austin scene. With a diverse background as a percussionist, audio engineer, and sound designer, Apellum artfully weaves together influences from a vast spectrum of musical genres, crafting a sonic tapestry that resonates closely with the groovy, hypnotic, and raw essence of Berlin techno.
+					In the dynamic landscape of electronic music, Apellum stands as a techno producer and DJ deeply rooted in the vibrant Austin scene. With a diverse background as a percussionist, audio engineer, and sound designer, Apellum artfully weaves together influences from a vast spectrum of musical genres, crafting a sonic tapestry that resonates closely with the groovy, hypnotic, and raw essence of Berlin techno.
 				`,
 					`
 					Within the techno scene, Apellum finds inspiration in many artists from multiple sub-genres, such as Ketch or Marcal for raw Berlin techno, Chlär for powerful and groovy techno, or Wata Igarashi for hypnotic dub techno. Beyond the confines of techno, Apellum’s creative canvas is painted with shades of jungle, trance, jazz, fusion, funk, and classical, among many others.
 				`,
 					`
-					Apellum’s studio has been a realm of exploration and creativity, where new sounds and music are discovered and crafted. His new debut EP, Protocol EP, is a testament to this journey, culminating recent artistic influences that have shaped and defined his signature sound. Join Apellum on a transformative journey, where the rhythms and sounds transcend boundaries and transport listeners to new emotional realms.
+					Apellum’s studio has been a realm of exploration and creativity, where new sounds and music are discovered and crafted. Fans can look forward to his new EP, "Scenes of Water", which is an experience exploring the natural world as it features water, represented by the dub sounds in the music.
 				`,
 				],
 			},
