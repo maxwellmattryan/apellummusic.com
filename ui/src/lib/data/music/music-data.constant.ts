@@ -5,6 +5,20 @@ export const MUSIC_DATA: IMusicData = {
 	collections: {
 		[MusicCollectionType.Original]: [
 			{
+				image: 'music_original_scenes-of-water',
+				title: 'Scenes of Water',
+				description:
+					'An exploration of beautiful, naturally occuring phenomena that involve water.',
+				urls: [
+					{
+						type: MusicUrlType.Spotify,
+						url: 'https://open.spotify.com/album/7q4QpV8ABx5eh1QrjupGKG',
+					},
+				],
+				date: new Date('June 27, 2024'),
+				hidden: false,
+			},
+			{
 				image: 'music_original_protocol-ep',
 				title: 'Protocol EP',
 				description:
@@ -30,6 +44,7 @@ export const MUSIC_DATA: IMusicData = {
 					},
 				],
 				date: new Date('January 18, 2019'),
+				hidden: true,
 			},
 			{
 				image: 'music_original_in-snowfield',
@@ -43,6 +58,7 @@ export const MUSIC_DATA: IMusicData = {
 					},
 				],
 				date: new Date('December 12, 2018'),
+				hidden: true,
 			},
 		],
 		[MusicCollectionType.Remix]: [
@@ -120,6 +136,7 @@ export const MUSIC_DATA: IMusicData = {
 				title: 'The Oven',
 				description: 'Performance at The Oven, local after-hours spot.',
 				date: new Date('August 11, 2023'),
+				hidden: true,
 			},
 		],
 		[MusicCollectionType.Mix]: [
@@ -155,6 +172,7 @@ export const MUSIC_DATA: IMusicData = {
 				],
 				title: "What's On My Mind 090",
 				description: "Techno episode for No Light Thing's radio show podcast.",
+				hidden: true,
 			},
 			{
 				image: 'music_mix_dj-mixes',
@@ -178,6 +196,7 @@ export const MUSIC_DATA: IMusicData = {
 				title: 'Mixed Tape',
 				description:
 					'Collection of my Mixed Tape series, i.e. mini-mixes that featuring specific artists.',
+				hidden: true,
 			},
 		],
 	},
