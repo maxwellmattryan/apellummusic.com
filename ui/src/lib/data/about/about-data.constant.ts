@@ -7,18 +7,13 @@ export const ABOUT_DATA: IAboutData = {
 	sections: [
 		{
 			image: 'press_about-01.jpg',
-			header: 'Introducing Apellum',
+			header: 'Influences across genres',
 			paragraph: BIOGRAPHY_PARAGRAPHS[0],
 		},
 		{
 			image: 'press_about-02.jpg',
-			header: 'Influences across genres',
-			paragraph: BIOGRAPHY_PARAGRAPHS[1],
-		},
-		{
-			image: 'press_about-03.jpg',
 			header: 'Exploration in the studio',
-			paragraph: BIOGRAPHY_PARAGRAPHS[2],
+			paragraph: BIOGRAPHY_PARAGRAPHS[1],
 		},
 	],
 }

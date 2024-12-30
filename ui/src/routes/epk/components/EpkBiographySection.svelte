@@ -45,7 +45,7 @@
 	<epk-bios class="w-full flex flex-col justify-center">
 		<epk-bios-header bind:this={biographyHeader} class="flex flex-row justify-between items-start">
 			<epk-bio-selector class="flex flex-row items-center mb-4">
-				{#each Object.values(EpkBiographyType) as bioType}
+				{#each Object.values(EpkBiographyType).filter((bioType) => bioType in biographies) as bioType}
 					{@const selected = bioType === selectedBioType}
 					<epk-bio-selector-item class:selected>
 						<button

@@ -17,19 +17,19 @@ export const EPK_DATA: IEpkData = {
 		 * - Website (source of truth)
 		 */
 		biographies: {
-			[EpkBiographyType.OneLine]: {
-				type: EpkBiographyType.OneLine,
-				text: [
-					`
-					Apellum is a techno artist based in Austin, weaving a sonic tapestry from threads of groovy, hypnotic, and raw techno to create a transcendental dancefloor experience.
-				`,
-				],
-			},
+			// [EpkBiographyType.OneLine]: {
+			// 	type: EpkBiographyType.OneLine,
+			// 	text: [
+			// 		`
+			// 		In the heart of Austin’s electronic music scene, Apellum crafts a sound that is immersive, hypnotic, and deeply attuned to the dancefloor. As a producer and DJ, Apellum channels an intricate interplay of rhythm and texture, creating music that traverses the cerebral and physical, inviting listeners to lose themselves in the groove.
+			// 	`,
+			// 	],
+			// },
 			[EpkBiographyType.Short]: {
 				type: EpkBiographyType.Short,
 				text: [
 					`
-					In the dynamic landscape of electronic music, Apellum stands as a techno producer and DJ deeply rooted in the vibrant Austin scene. With a diverse background as a percussionist, audio engineer, and sound designer, Apellum artfully weaves together influences from a vast spectrum of musical genres, crafting a sonic tapestry that resonates closely with the groovy, hypnotic, and raw essence of Berlin techno. Fans can look forward to his new EP, "Voyager", which is an experience exploring the vastness and hostility of space travel in a futuristic world. 
+					Rooted in Austin’s thriving electronic music scene, Apellum is a producer and DJ crafting hypnotic and groove-driven soundscapes that captivate both mind and body. Drawing on his background as a percussionist, sound designer, and audio engineer, his music weaves intricate rhythms with evolving textures, creating an immersive sonic journey. With multiple EPs and a VA compilation on the horizon, Apellum continues to push his artistic boundaries, delivering transformative experiences both in the studio and on the dancefloor. 
 				`,
 				],
 			},
@@ -37,13 +37,10 @@ export const EPK_DATA: IEpkData = {
 				type: EpkBiographyType.Long,
 				text: [
 					`
-					In the dynamic landscape of electronic music, Apellum stands as a techno producer and DJ deeply rooted in the vibrant Austin scene. With a diverse background as a percussionist, audio engineer, and sound designer, Apellum artfully weaves together influences from a vast spectrum of musical genres, crafting a sonic tapestry that resonates closely with the groovy, hypnotic, and raw essence of Berlin techno.
+					In the heart of Austin’s electronic music scene, Apellum crafts a sound that is immersive, hypnotic, and deeply attuned to the dancefloor. As a producer and DJ, Apellum channels an intricate interplay of rhythm and texture, creating music that traverses the cerebral and physical, inviting listeners to lose themselves in the groove.
 				`,
 					`
-					Within the techno scene, Apellum finds inspiration in many artists from multiple sub-genres, such as Rene Wise for raw and groovy techno, Ketch for dark and cerebral techno, and Wata Igarashi for hypnotic dub techno. Beyond the confines of techno, Apellum's creative canvas is painted with shades of jungle, trance, jazz, fusion, funk, and classical, among many others.
-				`,
-					`
-					Apellum's studio has been a realm of exploration and creativity, where new sounds and music are discovered and crafted. Fans can look forward to his new EP, "Voyager", which is an experience exploring the vastness and hostility of space travel in a futuristic world.
+					With a foundation in percussion, sound design, and audio engineering, Apellum’s studio work thrives on exploration. His forthcoming releases include multiple EPs and a contribution to a VA compilation, marking a pivotal moment in his artistic trajectory. Each project delves into distinct narratives, offering an evolving glimpse into his creative vision.
 				`,
 				],
 			},

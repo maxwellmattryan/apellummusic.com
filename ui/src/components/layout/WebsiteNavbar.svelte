@@ -6,6 +6,7 @@
 		getPageHeader,
 		hasSeenEpk,
 		setAppRoute,
+		isMobile,
 	} from '@lib/app'
 	import { FEATURES } from '@lib/features'
 
@@ -70,7 +71,9 @@
 				<a
 					href={'/' + getAppRouteUrl(route)}
 					on:click={() => onAppRouteClick(route)}
-					class={direction === 'left' ? 'ml-4' : 'mr-4'}
+					class="{$isMobile ? 'text-indigo-100' : 'slate-950'} {direction === 'left'
+						? 'ml-4'
+						: 'mr-4'}"
 					aria-label={route}>{getPageHeader(route)}</a
 				>
 				{#if direction === 'right'}

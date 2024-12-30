@@ -18,7 +18,7 @@ export interface IEpkBiographyData {
 export interface IEpkBiographies {
 	[EpkBiographyType.Long]: IEpkBiography
 	[EpkBiographyType.Short]: IEpkBiography
-	[EpkBiographyType.OneLine]: IEpkBiography
+	// [EpkBiographyType.OneLine]: IEpkBiography
 }
 
 export interface IEpkBiography {

@@ -16,7 +16,6 @@ export const MUSIC_DATA: IMusicData = {
 					},
 				],
 				date: new Date('June 27, 2024'),
-				hidden: false,
 			},
 			{
 				image: 'music_original_protocol-ep',
@@ -30,35 +29,6 @@ export const MUSIC_DATA: IMusicData = {
 					},
 				],
 				date: new Date('January 19, 2024'),
-				hidden: false,
-			},
-			{
-				image: 'music_original_eko',
-				title: 'Eko',
-				description:
-					'Pulsating rhythm and ambient sounds into the vastness and intrigue of the subterranean.',
-				urls: [
-					{
-						type: MusicUrlType.Spotify,
-						url: 'https://open.spotify.com/track/4crFX8q2LDFoO5yLDQu0yY?si=55a3c2cdcc804b07',
-					},
-				],
-				date: new Date('January 18, 2019'),
-				hidden: true,
-			},
-			{
-				image: 'music_original_in-snowfield',
-				title: 'In Snowfield',
-				description:
-					'Relentless percussion with icy synth textures, mirroring the cat-and-mouse chase with Sniper Wolf.',
-				urls: [
-					{
-						type: MusicUrlType.Spotify,
-						url: 'https://open.spotify.com/track/1Oesrus6lIdvUiF1apvFRK?si=7e3a938c87434225',
-					},
-				],
-				date: new Date('December 12, 2018'),
-				hidden: true,
 			},
 		],
 		[MusicCollectionType.Remix]: [
@@ -90,53 +60,28 @@ export const MUSIC_DATA: IMusicData = {
 		],
 		[MusicCollectionType.Set]: [
 			{
-				image: 'music_set_kitchen-techno_2024-03-23',
+				image: 'music_set_immediate-rush_2024-11-09',
+				urls: [
+					{
+						type: MusicUrlType.SoundCloud,
+						url: 'https://on.soundcloud.com/aYmoqckGLPX7TYiZ9',
+					},
+				],
+				title: 'Immediate Rush @ Kingdom Nightclub',
+				description: 'Raw and hypnotic techno set at Kingdom Nightclub.',
+				date: new Date('November 11, 2024'),
+			},
+			{
+				image: 'music_set_kitchen-techno_2024-07-12',
 				urls: [
 					{
 						type: MusicUrlType.SoundCloud,
 						url: 'https://on.soundcloud.com/UZ1L76EFpDdpTgaU9',
 					},
 				],
-				title: 'Kitchen Techno',
-				description: 'Hypnotic and groovy techno set for another Kitchen Techno party.',
-				date: new Date('March 23, 2024'),
-			},
-			{
-				image: 'music_set_kitchen-techno_2023-12-16',
-				urls: [
-					{
-						type: MusicUrlType.SoundCloud,
-						url: 'https://on.soundcloud.com/8LRgH',
-					},
-				],
-				title: 'Kitchen Techno',
-				description: "Raw and groovy techno set for Kitchen Techno's first house party in Austin.",
-				date: new Date('December 16, 2023'),
-			},
-			{
-				image: 'music_set_birds-of-a-feather_2023-09-16',
-				urls: [
-					{
-						type: MusicUrlType.SoundCloud,
-						url: 'https://on.soundcloud.com/Kpy16',
-					},
-				],
-				title: 'Birds of a Feather',
-				description: "Performance for Kai Castro's Birds of a Feather event.",
-				date: new Date('September 16, 2023'),
-			},
-			{
-				image: 'music_set_the-oven_2023-08-11',
-				urls: [
-					{
-						type: MusicUrlType.SoundCloud,
-						url: 'https://on.soundcloud.com/qEmyB',
-					},
-				],
-				title: 'The Oven',
-				description: 'Performance at The Oven, local after-hours spot.',
-				date: new Date('August 11, 2023'),
-				hidden: true,
+				title: 'Kitchen Techno @ Club Eternal',
+				description: 'Hypnotic and groovy techno set at a Kitchen Techno party.',
+				date: new Date('July 12, 2024'),
 			},
 		],
 		[MusicCollectionType.Mix]: [

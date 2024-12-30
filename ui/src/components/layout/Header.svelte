@@ -18,7 +18,7 @@
 				return '#eef2ff'
 			case AppRoute.Home:
 			default:
-				return 'slate-950'
+				return '#eef2ff'
 		}
 	}
 
@@ -63,12 +63,12 @@
 			? ''
 			: 'bg-slate-950'} pointer-events-auto opacity-100"
 	>
-		<a href="/" class={isHome ? 'text-slate-800' : 'text-indigo-50'} aria-label="Home">
-			<Logo color={isHome ? 'black' : 'white'} />
+		<a href="/" class={isHome ? 'text-indigo-50' : 'text-indigo-50'} aria-label="Home">
+			<Logo color={isHome ? 'white' : 'white'} />
 		</a>
 		<button
 			type="button"
-			style="--menu-icon-color: {isHome ? '#020617' : '#eef2ff'}"
+			style="--menu-icon-color: {isHome ? '#eef2ff' : '#eef2ff'}"
 			on:click={openSideDrawer}
 			aria-label="Open menu"
 		>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 	import { base } from '$app/paths'
-	import { AppRoute, getPageTitle, setAppRoute } from '@lib/app'
+	import { AppRoute, getPageTitle, setAppRoute, isMobile } from '@lib/app'
 
 	const backgroundImageUrl = `${base}/images/press_home.jpg`
 
@@ -27,7 +27,7 @@
 			/>
 			<!-- ghost header -->
 			<h1 class="invisible h-0">Apellum</h1>
-			<h2 class="mt-4 italic">Techno producer & DJ</h2>
+			<h2 class="{$isMobile ? 'mt-[38vh]' : 'mt-4'} italic">Techno producer & DJ</h2>
 		</div>
 	</home-page-left>
 	<home-page-right class="w-full md:w-1/2 h-full" style="--bg-image-url: url({backgroundImageUrl})">
@@ -43,7 +43,7 @@
 	h2 {
 		@apply text-2xl md:text-4xl !important;
 		@apply text-left md:text-right;
-		@apply text-slate-950 opacity-75 md:text-indigo-100 md:opacity-80;
+		@apply opacity-95 text-indigo-100 md:opacity-80;
 		@apply absolute md:static;
 		@apply top-[10vh];
 	}
