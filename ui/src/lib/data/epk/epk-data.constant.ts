@@ -29,7 +29,7 @@ export const EPK_DATA: IEpkData = {
 				type: EpkBiographyType.Short,
 				text: [
 					`
-					Rooted in Austin’s thriving electronic music scene, Apellum is a producer and DJ crafting hypnotic and groove-driven soundscapes that captivate both mind and body. Drawing on his background as a percussionist, sound designer, and audio engineer, his music weaves intricate rhythms with evolving textures, creating an immersive sonic journey. With multiple EPs and a VA compilation on the horizon, Apellum continues to push his artistic boundaries, delivering transformative experiences both in the studio and on the dancefloor. 
+					Rooted in Austin’s vibrant electronic music scene, Apellum is a producer and DJ crafting hypnotic, and groove-driven soundscapes. Drawing from his background as a percussionist, sound designer, and audio engineer, he emphasizes intricate rhythms with evolving textures to create sonically immersive experiences. With multiple EPs and a VA compilation on the horizon, Apellum continues to push his artistic boundaries both in the studio and on the dancefloor.
 				`,
 				],
 			},
@@ -37,10 +37,10 @@ export const EPK_DATA: IEpkData = {
 				type: EpkBiographyType.Long,
 				text: [
 					`
-					In the heart of Austin’s electronic music scene, Apellum crafts a sound that is immersive, hypnotic, and deeply attuned to the dancefloor. As a producer and DJ, Apellum channels an intricate interplay of rhythm and texture, creating music that traverses the cerebral and physical, inviting listeners to lose themselves in the groove.
+					Rooted in Austin’s vibrant electronic music scene, Apellum is a producer and DJ crafting hypnotic, and groove-driven soundscapes. He channels an intricate interplay of rhythm and texture to create music that evokes a visceral and cerebral response in his listeners.
 				`,
 					`
-					With a foundation in percussion, sound design, and audio engineering, Apellum’s studio work thrives on exploration. His forthcoming releases include multiple EPs and a contribution to a VA compilation, marking a pivotal moment in his artistic trajectory. Each project delves into distinct narratives, offering an evolving glimpse into his creative vision.
+					With a foundation in percussion, sound design, and audio engineering, Apellum’s studio work thrives on exploration. His forthcoming releases include multiple EPs and a contribution to a VA compilation, each offering an evolving glimpse into his creative vision.
 				`,
 				],
 			},
