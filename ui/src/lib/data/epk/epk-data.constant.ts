@@ -29,7 +29,7 @@ export const EPK_DATA: IEpkData = {
 				type: EpkBiographyType.Short,
 				text: [
 					`
-					Rooted in Austin’s vibrant electronic music scene, Apellum is a producer and DJ crafting hypnotic, and groove-driven soundscapes. Drawing from his background as a percussionist, sound designer, and audio engineer, he emphasizes intricate rhythms with evolving textures to create sonically immersive experiences. With multiple EPs and a VA compilation on the horizon, Apellum continues to push his artistic boundaries both in the studio and on the dancefloor.
+					Rooted in Austin’s vibrant electronic music scene, Apellum is a producer and DJ crafting hypnotic and groove-driven soundscapes. Drawing from his background as a percussionist, sound designer, and audio engineer, he emphasizes intricate rhythms with evolving textures to create sonically immersive experiences. With multiple EPs and a VA compilation on the horizon, Apellum continues to push his artistic boundaries both in the studio and on the dancefloor.
 				`,
 				],
 			},
