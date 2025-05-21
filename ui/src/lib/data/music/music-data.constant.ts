@@ -5,6 +5,19 @@ export const MUSIC_DATA: IMusicData = {
 	collections: {
 		[MusicCollectionType.Original]: [
 			{
+				image: 'music_original_mind-fog',
+				title: 'Mind Fog',
+				description:
+					'The sounds of a Mind adrift, lost in its own Fog. What is to be found within the beauty of mystery?',
+				urls: [
+					{
+						type: MusicUrlType.Spotify,
+						url: 'https://open.spotify.com/track/4k2Z4f243V7wySxxmdfmdy',
+					},
+				],
+				date: new Date('May 9, 2025'),
+			},
+			{
 				image: 'music_original_scenes-of-water',
 				title: 'Scenes of Water',
 				description:
