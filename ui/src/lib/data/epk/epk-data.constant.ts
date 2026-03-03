@@ -31,7 +31,7 @@ export const EPK_DATA: IEpkData = {
 					`
 					Apellum is an Austin-based producer and DJ crafting organic and hypnotic electronic music drawn from the vibrations of flora, water, and ether.
 					With a background in percussion and audio engineering, his work blends syncopated rhythms, earthy sound design, and field-recorded elements into something alive and introspective.
-					He is the founder of Mystic Twin, an electronic music label whose inaugural release, the four-track compilation Mystic Collections Vol. I, arrives March 6th, 2026.
+					He is the founder of Mystic Twin, an underground label born in Austin, devoted to deep, hypnotic electronic music.
 				`,
 				],
 			},
@@ -39,11 +39,11 @@ export const EPK_DATA: IEpkData = {
 				type: EpkBiographyType.Long,
 				text: [
 					`
-					Apellum is an Austin-based producer and DJ crafting organic and hypnotic electronic music drawn from the vibrations of flora, water, and ether.
-					With a background in percussion and audio engineering, his work blends syncopated rhythms, earthy sound design, and field-recorded elements into something alive and introspective.
+					Apellum is an Austin-based producer and DJ crafting organic and hypnotic electronic music drawn from the vibrations of flora, water, and ether. 
+					With a background in percussion and audio engineering, his work blends syncopated rhythm, earthy sound design, and field-recorded elements into something alive and introspective. 
 				`,
 					`
-					He is the founder of Mystic Twin, an electronic music label whose inaugural release, the four-track compilation Mystic Collections Vol. I, arrives March 6th, 2026.
+					He is the founder of Mystic Twin, an underground label born in Austin, devoted to deep, hypnotic electronic music.
 				`,
 				],
 			},
