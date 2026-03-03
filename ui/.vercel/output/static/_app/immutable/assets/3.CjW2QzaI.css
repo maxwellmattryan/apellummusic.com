@@ -1,0 +1,19 @@
+.is-left.svelte-10pri6x {
+	text-align: left;
+}
+@media (min-width: 1024px) {
+	.is-left.svelte-10pri6x {
+		text-align: left;
+	}
+}
+.is-right.svelte-10pri6x {
+	text-align: left;
+}
+@media (min-width: 1024px) {
+	.is-right.svelte-10pri6x {
+		text-align: right;
+	}
+}
+.about-section.svelte-1wnhg9f:not(:first-of-type) {
+	margin-top: 10vh;
+}

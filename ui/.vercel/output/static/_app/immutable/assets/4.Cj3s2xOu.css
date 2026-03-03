@@ -1,0 +1,97 @@
+epk-bio-selector-item.svelte-12lmixh {
+	opacity: 0.6;
+	transition-property: opacity;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 0.15s;
+	animation-fill-mode: both;
+}
+epk-bio-selector-item.svelte-12lmixh:hover,
+epk-bio-selector-item.selected.svelte-12lmixh {
+	opacity: 1;
+}
+epk-bio-selector-item.svelte-12lmixh:not(:first-of-type) {
+	margin-left: 1rem;
+}
+p.svelte-12lmixh:not(:first-of-type) {
+	margin-top: 1rem;
+}
+epk-bios-header.svelte-12lmixh svg {
+	height: 22px !important;
+	width: 22px !important;
+}
+epk-selected-bio.svelte-12lmixh {
+	height: auto;
+}
+@media (min-width: 1024px) {
+	epk-selected-bio.svelte-12lmixh {
+		height: var(--bio-height);
+	}
+}
+epk-selected-bio.svelte-12lmixh {
+	max-height: 50vh;
+}
+a.svelte-vpoxhj {
+	cursor: pointer;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 0.15s;
+}
+a.svelte-vpoxhj:hover {
+	--tw-bg-opacity: 1;
+	background-color: rgb(49 46 129 / var(--tw-bg-opacity));
+}
+@media (min-width: 1024px) {
+	.title.svelte-vpoxhj {
+		font-size: 1.125rem !important;
+		line-height: 1.75rem !important;
+	}
+}
+.date.svelte-vpoxhj {
+	opacity: 0.4;
+	font-size: 0.875rem !important;
+	line-height: 1.25rem !important;
+}
+.description.svelte-vpoxhj {
+	font-size: 0.75rem !important;
+	line-height: 1rem !important;
+}
+@media (min-width: 1024px) {
+	.description.svelte-vpoxhj {
+		font-size: 0.875rem !important;
+		line-height: 1.25rem !important;
+	}
+}
+epk-music-collection-selector-item.svelte-1l662ga {
+	opacity: 0.6;
+	transition-property: opacity;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 0.15s;
+	animation-fill-mode: both;
+}
+epk-music-collection-selector-item.svelte-1l662ga:hover,
+epk-music-collection-selector-item.selected.svelte-1l662ga {
+	opacity: 1;
+}
+epk-music-collection-selector-item.svelte-1l662ga:not(:first-of-type) {
+	margin-left: 1rem;
+}
+.epk-music-collection-item.svelte-1l662ga:not(:first-of-type) {
+	margin-top: 1rem;
+}
+epk-section:not(:first-of-type) {
+	margin-top: 10vh;
+}
+.download-link.svelte-gunkgp {
+	opacity: 0.6;
+	transition-property: opacity;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 0.15s;
+}
+.download-link.svelte-gunkgp:hover {
+	opacity: 1;
+}
+.download-link.svelte-gunkgp svg {
+	height: 20px;
+	width: 20px;
+	margin-left: 0.5rem;
+}

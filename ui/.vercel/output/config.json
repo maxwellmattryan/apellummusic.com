@@ -1,0 +1,39 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"src": "/_app/immutable/.+",
+			"headers": {
+				"cache-control": "public, immutable, max-age=31536000"
+			}
+		},
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "^/?(?:/__data.json)?$",
+			"dest": "/"
+		},
+		{
+			"src": "^/about/?(?:/__data.json)?$",
+			"dest": "/about"
+		},
+		{
+			"src": "^/epk/?(?:/__data.json)?$",
+			"dest": "/epk"
+		},
+		{
+			"src": "^/music/?(?:/__data.json)?$",
+			"dest": "/music"
+		},
+		{
+			"src": "^/sitemap\\.xml/?(?:/__data.json)?$",
+			"dest": "/sitemap.xml"
+		},
+		{
+			"src": "/.*",
+			"dest": "/![-]/catchall"
+		}
+	],
+	"overrides": {}
+}

@@ -1,0 +1,44 @@
+home-page-right.svelte-1r4n2qs {
+	background-image: var(--bg-image-url);
+	background-size: cover;
+	background-position: center;
+}
+h2.svelte-1r4n2qs {
+	font-size: 1.5rem !important;
+	line-height: 2rem !important;
+}
+@media (min-width: 1024px) {
+	h2.svelte-1r4n2qs {
+		font-size: 2.25rem !important;
+		line-height: 2.5rem !important;
+	}
+}
+h2.svelte-1r4n2qs {
+	text-align: left;
+}
+@media (min-width: 1024px) {
+	h2.svelte-1r4n2qs {
+		text-align: right;
+	}
+}
+h2.svelte-1r4n2qs {
+	--tw-text-opacity: 1;
+	color: rgb(224 231 255 / var(--tw-text-opacity));
+	opacity: 0.95;
+}
+@media (min-width: 1024px) {
+	h2.svelte-1r4n2qs {
+		opacity: 0.8;
+	}
+}
+h2.svelte-1r4n2qs {
+	position: absolute;
+}
+@media (min-width: 1024px) {
+	h2.svelte-1r4n2qs {
+		position: static;
+	}
+}
+h2.svelte-1r4n2qs {
+	top: 10vh;
+}
