@@ -16,7 +16,7 @@
 >
 	<about-section-paragraph class="px-[1vw] pb-[4vh] flex flex-col justify-between opacity-90">
 		<about-section-paragraph-header
-			class="w-full mb-[2vh] md:mb-[8vh] pb-4 border-b-2 border-solid border-[{justifyLeft
+			class="w-full mb-[2vh] md:mb-[4vh] pb-4 border-b-2 border-solid border-[{justifyLeft
 				? '#4c5adb'
 				: '#ef2e5e'}]"
 		>

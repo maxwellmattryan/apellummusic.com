@@ -6,13 +6,13 @@ const BIOGRAPHY_PARAGRAPHS = EPK_DATA.biographyData.biographies[EpkBiographyType
 export const ABOUT_DATA: IAboutData = {
 	sections: [
 		{
-			image: 'press_about-01.jpg',
-			header: 'Influences across genres',
+			image: 'press_about-01.webp',
+			header: '',
 			paragraph: BIOGRAPHY_PARAGRAPHS[0],
 		},
 		{
 			image: 'press_about-02.jpg',
-			header: 'Exploration in the studio',
+			header: '',
 			paragraph: BIOGRAPHY_PARAGRAPHS[1],
 		},
 	],

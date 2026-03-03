@@ -29,9 +29,9 @@ export const EPK_DATA: IEpkData = {
 				type: EpkBiographyType.Short,
 				text: [
 					`
-					Rooted in Austin’s vibrant electronic music scene, Apellum is a producer and DJ crafting hypnotic and groove-driven soundscapes. 
-					Drawing from his background as a percussionist, sound designer, and audio engineer, he explores rhythm and texture to create immersive dancefloor experiences. 
-					He'll be releasing Twilight Grove EP on May 31st with Aum Recordings, which is a depiction of a forest at night with all of its mysterious inhabitants, real or imagined.
+					Apellum is an Austin-based producer and DJ crafting organic and hypnotic electronic music drawn from the vibrations of flora, water, and ether.
+					With a background in percussion and audio engineering, his work blends syncopated rhythms, earthy sound design, and field-recorded elements into something alive and introspective.
+					He is the founder of Mystic Twin, an electronic music label whose inaugural release, the four-track compilation Mystic Collections Vol. I, arrives March 6th, 2026.
 				`,
 				],
 			},
@@ -39,13 +39,11 @@ export const EPK_DATA: IEpkData = {
 				type: EpkBiographyType.Long,
 				text: [
 					`
-					Rooted in Austin’s vibrant electronic music scene, Apellum is a producer and DJ crafting hypnotic and groove-driven soundscapes. 
-					He channels an intricate interplay of rhythm and texture to create music that evokes a visceral and cerebral response in his listeners.
+					Apellum is an Austin-based producer and DJ crafting organic and hypnotic electronic music drawn from the vibrations of flora, water, and ether.
+					With a background in percussion and audio engineering, his work blends syncopated rhythms, earthy sound design, and field-recorded elements into something alive and introspective.
 				`,
 					`
-					With a foundation in percussion, sound design, and audio engineering, Apellum’s studio work thrives on exploration. 
-					His upcoming release, Twilight Grove EP, is a depiction of a forest at night with all of its mysterious inhabitants, real or imagined.
-					It will be released on May 31st with Aum Recordings.
+					He is the founder of Mystic Twin, an electronic music label whose inaugural release, the four-track compilation Mystic Collections Vol. I, arrives March 6th, 2026.
 				`,
 				],
 			},
