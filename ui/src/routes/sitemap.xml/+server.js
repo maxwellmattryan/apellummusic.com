@@ -1,5 +1,3 @@
-export const prerender = true
-
 export async function GET() {
 	return new Response(`
         <?xml version="1.0" encoding="UTF-8" ?>
