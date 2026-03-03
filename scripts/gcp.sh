@@ -8,7 +8,7 @@ fi
 
 start_time=$(date +%s)
 
-NODE_VERSION=18.18-alpine
+NODE_VERSION=22-alpine
 
 UI_IMAGE=apellum-ui
 DOMAIN=apellum.com
