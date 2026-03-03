@@ -3,7 +3,7 @@
 	import { base } from '$app/paths'
 	import { AppRoute, getPageTitle, setAppRoute, isMobile } from '@lib/app'
 
-	const backgroundImageUrl = `${base}/images/press_home.jpg`
+	const backgroundImageUrl = `${base}/images/press_home.webp`
 
 	onMount(() => {
 		setAppRoute(AppRoute.Home)

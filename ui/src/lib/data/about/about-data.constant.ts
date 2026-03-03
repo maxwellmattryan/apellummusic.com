@@ -11,7 +11,7 @@ export const ABOUT_DATA: IAboutData = {
 			paragraph: BIOGRAPHY_PARAGRAPHS[0],
 		},
 		{
-			image: 'press_about-02.jpg',
+			image: 'press_about-02.webp',
 			header: '',
 			paragraph: BIOGRAPHY_PARAGRAPHS[1],
 		},
