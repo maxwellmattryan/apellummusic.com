@@ -1,9 +1,16 @@
 {
 	"name": "apellum.com",
 	"private": true,
-	"workspaces": [
-		"ui"
-	],
+	"workspaces": {
+		"packages": [
+			"ui"
+		],
+		"nohoist": [
+			"**/@sveltejs/**",
+			"**/svelte",
+			"**/svelte/**"
+		]
+	},
 	"scripts": {
 		"prepare": "husky install",
 		"format": "yarn format:fix",
